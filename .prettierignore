@@ -1,0 +1,18 @@
+# folders
+/node_modules
+/.next
+/.husky
+/public
+/.vscode
+
+# CSS
+*.css
+
+# files
+README.md
+next-env.d.ts
+
+# dependencies files
+yarn.lock
+package-lock.json
+pnpm-lock.yaml
