@@ -2,13 +2,23 @@
 // tailwind.config.cjs
 const { nextui } = require('@nextui-org/react');
 
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
 	content: [
 		'./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
 		'./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
 	],
 	theme: {
-		extend: {},
+		extend: {
+			fontFamily: {
+				sans: ['Poppins', ...defaultTheme.fontFamily.sans],
+			},
+		},
+		screens: {
+			xs: '360px',
+			...defaultTheme.screens,
+		},
 	},
 	darkMode: 'class',
 	plugins: [
