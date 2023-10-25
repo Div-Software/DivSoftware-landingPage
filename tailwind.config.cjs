@@ -14,6 +14,21 @@ module.exports = {
 			fontFamily: {
 				sans: ['Poppins', ...defaultTheme.fontFamily.sans],
 			},
+			keyframes: {
+				float: {
+					'0%': {
+						transform: 'translatey(0px)',
+					},
+
+					'50%': {
+						transform: 'translatey(-25px)',
+					},
+
+					'100%': {
+						transform: 'translatey(0px)',
+					},
+				},
+			},
 		},
 		screens: {
 			xs: '360px',
