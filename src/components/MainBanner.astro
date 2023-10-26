@@ -1,5 +1,6 @@
 <section
-	class='container mx-auto flex w-screen flex-col justify-center overflow-hidden px-4 py-20 md:min-h-[50vh] md:py-32 lg:max-w-max lg:flex-row lg:gap-6 xl:gap-24'
+	id='banner'
+	class='container mx-auto flex w-screen flex-col justify-center overflow-hidden px-4 py-20 md:min-h-[50vh] md:pt-32 lg:max-w-max lg:flex-row lg:py-32'
 >
 	<aside class='flex flex-col items-center gap-2 sm:flex-row sm:gap-8 xl:ml-40'>
 		<div
@@ -15,7 +16,7 @@
 				/>
 			</div>
 		</div>
-		<div class='w-full sm:w-[20rem] lg:w-2/4 xl:w-2/5'>
+		<div class='w-full sm:w-[20rem] lg:w-2/4'>
 			<h1
 				class='text-center text-2xl font-bold text-white sm:text-left sm:text-3xl md:text-4xl lg:text-5xl'
 			>
@@ -26,13 +27,22 @@
 		</div>
 	</aside>
 	<aside class='relative flex items-end justify-center lg:top-20'>
-		<div
-			class='flex h-72 w-96 items-center justify-center rounded-[542px] bg-[radial-gradient(50%_40%_at_50%_50%,_#763CAC_0%,_rgba(50,_15,_133,_0)_100%)] md:h-[300px] md:w-[450px] xl:h-[330px] xl:w-[542px]'
+		<!-- <div
+			class='relative bottom-10 left-[27rem] rounded-[50%] border-2 border-l-1 border-r-1 border-t-0 border-solid border-[#763CAC] xl:h-[269px] xl:w-[764px]'
 		>
+		</div>
+		<div
+			class='relative bottom-10 right-96 rounded-[50%] border-2 border-l-1 border-r-1 border-t-0 border-solid border-[#763CAC] xl:h-[269px] xl:w-[881px]'
+		>
+		</div> -->
+		<div
+			class='relative flex h-72 w-96 items-center justify-center rounded-[542px] bg-[radial-gradient(50%_40%_at_50%_50%,_#763CAC_0%,_rgba(50,_15,_133,_0)_100%)] md:h-[300px] md:w-[450px] xl:h-[350px] xl:w-[550px]'
+		>
+			<div class='h-[164px] w-[295px] rounded-[50%] border-b-2 border-solid border-[#763CAC]'></div>
 			<img
-				src='/img/div-astronaut.webp'
+				src='src/assets/div-astronaut.webp'
 				alt='div-astronaut'
-				class='relative z-10 animate-[float_6s_ease-in-out_infinite] [transform:translatey(0px)]'
+				class='absolute z-10 animate-[float_6s_ease-in-out_infinite] [transform:translatey(0px)]'
 			/>
 		</div>
 	</aside>
