@@ -1,8 +1,10 @@
 <section
 	id='banner'
-	class='container mx-auto flex w-screen flex-col justify-center overflow-hidden px-4 py-20 md:min-h-[50vh] md:pt-32 lg:max-w-max lg:flex-row lg:py-32'
+	class='mx-auto flex w-screen flex-col justify-center overflow-hidden px-10 pt-20 xs:pb-10 md:min-h-[50vh] md:pt-32 lg:flex-row lg:pb-20 lg:pt-40'
 >
-	<aside class='flex flex-col items-center gap-2 sm:flex-row sm:gap-8 xl:ml-40'>
+	<aside
+		class='flex max-w-screen-lg flex-col items-center gap-2 sm:flex-row sm:justify-center sm:gap-8'
+	>
 		<div
 			class='flex h-56 w-48 flex-shrink-0 items-center justify-center rounded-[431px] bg-[radial-gradient(50%_50%_at_50%_50%,_#763CAC_0%,_rgba(50,_15,_133,_0.00)_100%)] md:h-[320px] md:w-[300px] xl:h-[431px] xl:w-[385px]'
 		>
@@ -16,10 +18,8 @@
 				/>
 			</div>
 		</div>
-		<div class='w-full sm:w-[20rem] lg:w-2/4'>
-			<h1
-				class='text-center text-2xl font-bold text-white sm:text-left sm:text-3xl md:text-4xl lg:text-5xl'
-			>
+		<div class='w-full sm:w-[20rem] md:w-full xl:w-2/5'>
+			<h1 class='text-center text-2xl font-bold text-white xs:text-3xl sm:text-left md:text-5xl'>
 				Let's create something great
 				<span class='text-primary-300'>together</span>
 				 ...
@@ -27,23 +27,29 @@
 		</div>
 	</aside>
 	<aside class='relative flex items-end justify-center lg:top-20'>
-		<!-- <div
-			class='relative bottom-10 left-[27rem] rounded-[50%] border-2 border-l-1 border-r-1 border-t-0 border-solid border-[#763CAC] xl:h-[269px] xl:w-[764px]'
-		>
-		</div>
 		<div
-			class='relative bottom-10 right-96 rounded-[50%] border-2 border-l-1 border-r-1 border-t-0 border-solid border-[#763CAC] xl:h-[269px] xl:w-[881px]'
+			class='flex h-60 w-full flex-col items-center justify-center rounded-[542px] bg-[radial-gradient(50%_40%_at_50%_50%,_#763CAC_0%,_rgba(50,_15,_133,_0)_100%)] md:h-[300px] md:w-[450px] lg:w-[400px] xl:h-[350px] xl:w-[550px]'
 		>
-		</div> -->
-		<div
-			class='relative flex h-72 w-96 items-center justify-center rounded-[542px] bg-[radial-gradient(50%_40%_at_50%_50%,_#763CAC_0%,_rgba(50,_15,_133,_0)_100%)] md:h-[300px] md:w-[450px] xl:h-[350px] xl:w-[550px]'
-		>
-			<div class='h-[164px] w-[295px] rounded-[50%] border-b-2 border-solid border-[#763CAC]'></div>
-			<img
-				src='src/assets/div-astronaut.webp'
-				alt='div-astronaut'
-				class='absolute z-10 animate-[float_6s_ease-in-out_infinite] [transform:translatey(0px)]'
-			/>
+			<div
+				id='first-border-line'
+				class='relative top-1 flex h-[150px] w-full flex-col items-center rounded-[50%] border-b-2 border-l-1 border-r-1 border-solid border-primary-400 sm:h-[140px] md:w-[120%] lg:w-full 2xl:w-[110%]'
+			>
+				<div
+					id='second-border-line'
+					class='flex h-[150px] w-[95%] flex-col items-center justify-center rounded-[50%] border-b-2 border-l-1 border-r-1 border-solid border-primary-400 sm:h-[140px] lg:w-[95%]'
+				>
+					<div
+						id='third-border-line'
+						class='absolute bottom-4 h-[140px] w-[260px] rounded-[50%] border-b-2 border-solid border-primary-400 sm:w-[295px]'
+					>
+						<img
+							src='src/assets/div-astronaut.webp'
+							alt='div-astronaut'
+							class='relative left-20 z-10 animate-[float_6s_ease-in-out_infinite] [transform:translatey(0px)]'
+						/>
+					</div>
+				</div>
+			</div>
 		</div>
 	</aside>
 </section>
