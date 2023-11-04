@@ -14,10 +14,36 @@ import logo from '/div-software-logo.svg?url';
 export function NavbarHome() {
 	const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-	const menuItems = ['Home', 'About', 'Services', 'Contact'];
+	const menuItems = [
+		{ title: 'Home', href: '#banner' },
+		{ title: 'About', href: '#about' },
+		{ title: 'Services', href: '#services' },
+		{ title: 'Contact', href: '#contact' },
+	];
+
+	/**
+	 * A function used to scroll into the selected section with an smooth animation
+	 * @param {string} id The id of the section component
+	 */
+	const scrollIntoSection = (id: string) => {
+		const targetElement = document.querySelector(id)!;
+
+		if (targetElement) {
+			window.scrollTo({
+				behavior: 'smooth',
+				top: targetElement.getBoundingClientRect().top + window.scrollY,
+			});
+			setTimeout(() => setIsMenuOpen(false), 1000);
+		}
+	};
 
 	return (
-		<Navbar onMenuOpenChange={setIsMenuOpen} maxWidth='2xl' className='fixed bg-primary-50'>
+		<Navbar
+			onMenuOpenChange={setIsMenuOpen}
+			isMenuOpen={isMenuOpen}
+			maxWidth='2xl'
+			className='fixed bg-primary-50'
+		>
 			<NavbarBrand>
 				<Link href='/' className='flex gap-1 xs:gap-2'>
 					<img src={logo} alt='Div Software' className='h-4 xs:h-5 md:h-6' />
@@ -36,9 +62,15 @@ export function NavbarHome() {
 
 			<NavbarContent className='hidden sm:flex sm:gap-8 md:gap-16 lg:gap-32' justify='center'>
 				{menuItems.map((item, idx) => (
-					<NavbarItem key={`${item}-${idx}`}>
-						<Link color='foreground' className='w-full' href='#' size='lg'>
-							{item}
+					<NavbarItem key={`${item.title}-${idx}`} style={{ cursor: 'pointer' }}>
+						<Link
+							color='foreground'
+							className='w-full'
+							// href={item.href}
+							size='lg'
+							onClick={() => scrollIntoSection(item.href)}
+						>
+							{item.title}
 						</Link>
 					</NavbarItem>
 				))}
@@ -46,9 +78,15 @@ export function NavbarHome() {
 
 			<NavbarMenu>
 				{menuItems.map((item, index) => (
-					<NavbarMenuItem key={`${item}-${index}`}>
-						<Link color='foreground' className='w-full' href='#' size='lg'>
-							{item}
+					<NavbarMenuItem key={`${item.title}-${index}`}>
+						<Link
+							color='foreground'
+							className='w-full'
+							// href={item.href}
+							size='lg'
+							onClick={() => scrollIntoSection(item.href)}
+						>
+							{item.title}
 						</Link>
 					</NavbarMenuItem>
 				))}
