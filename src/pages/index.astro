@@ -1,5 +1,12 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import AboutBanner from '@components/AboutBanner.astro';
+import MainBanner from '@components/MainBanner.astro';
+import ServicesSection from '@components/ServicesSection.astro';
+import Layout from '@layouts/Layout.astro';
 ---
 
-<Layout title='Welcome to Astro.' />
+<Layout title='Welcome to <Div Software>'>
+	<MainBanner />
+	<AboutBanner />
+	<ServicesSection />
+</Layout>

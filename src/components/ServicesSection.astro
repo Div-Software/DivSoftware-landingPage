@@ -1,0 +1,72 @@
+---
+import ServiceCard from './ServiceCard.astro';
+
+interface ServiceInfo {
+	title: string;
+	text: string;
+	href: string;
+	img: string;
+	hasGradient: boolean;
+	id: string;
+}
+
+const servicesInfo: ServiceInfo[] = [
+	{
+		title: 'Web Apps',
+		text: 'We specialize in building custom web applications tailored to your unique needs and business goals. Our expert team will bring your web-based ideas to life with cutting-edge technology and user-friendly designs.',
+		href: '#',
+		img: '/src/assets/webdev.webp',
+		hasGradient: false,
+		id: 'webapplications',
+	},
+	{
+		title: 'Mobile Apps',
+		text: 'Our mobile app development team is dedicated to creating high-performance, intuitive, and visually appealing apps for both iOS and Android platforms. We turn your app concept into a reality.',
+		href: '#',
+		img: '/src/assets/mobileapps.webp',
+		hasGradient: true,
+		id: 'mobileapps',
+	},
+	{
+		title: 'Brand Creation',
+		text: 'Let us help you establish a strong and memorable brand identity. We offer brand creation services, including logo design, brand strategy, and visual assets that reflect your values and vision.',
+		href: '#',
+		img: '/src/assets/marketing.webp',
+		hasGradient: true,
+		id: 'brandcreation',
+	},
+	{
+		title: 'Web Design',
+		text: 'Our web design experts craft beautiful and responsive websites that make a lasting impression. We focus on user experience, performance, and aesthetics to ensure your site stands out.',
+		href: '#',
+		img: '/src/assets/uxui.webp',
+		hasGradient: false,
+		id: 'webdesign',
+	},
+];
+---
+
+<section
+	id='services'
+	class='container mx-auto flex flex-col items-center justify-center gap-10 p-10'
+>
+	<h3
+		class='text-center text-2xl font-semibold text-white sm:text-left sm:text-3xl md:text-4xl lg:text-5xl'
+	>
+		Our Services
+	</h3>
+	<aside class='grid items-center gap-12 gap-y-unit-xl sm:grid-cols-2 lg:gap-20'>
+		{
+			servicesInfo.map((service, idx) => (
+				<ServiceCard
+					title={service.title}
+					href={service.href}
+					hasGradient={service.hasGradient}
+					id={service.id}
+					img={service.img}
+					text={service.text}
+				/>
+			))
+		}
+	</aside>
+</section>
