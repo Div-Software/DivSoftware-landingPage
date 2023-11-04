@@ -16,15 +16,32 @@ const imgTitle: string = `${id} - Image`;
 ---
 
 <article
-	class={!hasGradient
-		? 'flex h-full max-w-[650px] flex-col items-center justify-center gap-5 rounded-2xl border-t-4 border-primary-400 bg-[linear-gradient(110deg,_#130428_19.95%,_#251043_67.64%,_#38126D_107.08%,_#261045_156.61%,_#190634_183.21%)] p-5 [box-shadow:4px_7px_26px_0px_rgba(0,_0,_0,_0.12)] lg:px-10'
-		: 'flex h-full max-w-[650px] flex-col items-center justify-center gap-5 rounded-2xl border-t-4 border-primary-400 bg-[linear-gradient(96deg,_#130428_0.58%,_#251043_16.32%,_#38126D_29.33%,_#261045_45.66%,_#190634_54.44%)] p-5 [box-shadow:4px_7px_26px_0px_rgba(0,_0,_0,_0.12)] lg:px-10'}
+	class={`flex h-ful w-full max-w-[650px] flex-col items-center justify-center gap-5 rounded-2xl border-t-4 border-primary-400 px-5 py-3 [box-shadow:4px_7px_26px_0px_rgba(0,_0,_0,_0.12)] lg:p-7 xl:px-10 ${
+		hasGradient
+			? 'bg-[linear-gradient(96deg,_#130428_0.58%,_#251043_16.32%,_#38126D_29.33%,_#261045_45.66%,_#190634_54.44%)]'
+			: 'bg-[linear-gradient(110deg,_#130428_19.95%,_#251043_67.64%,_#38126D_107.08%,_#261045_156.61%,_#190634_183.21%)]'
+	}`}
 >
-	<aside class='flex flex-col items-center justify-center gap-10 sm:flex-row'>
-		<div class='relative flex items-center'>
-			<img src={img} alt={imgTitle} class='relative z-10 h-40 w-40' />
+	<aside class='flex flex-col items-center justify-center gap-10 lg:flex-row'>
+		<div class='relative left-[20%] right-1/4 flex items-center lg:left-0 lg:right-0'>
+			<div class='absolute -left-[5%] bottom-[25%] h-1.5 w-1.5 rounded-full bg-zinc-100 lg:left-0'>
+			</div>
 			<div
-				class='relative top-[7.5rem] h-24 w-40 flex-shrink-0 origin-top-left rotate-[177deg] rounded-full bg-[linear-gradient(200deg,_#2C1250_0%,_#2C1250_19.79%,_rgba(44,_18,_80,_0.00)_90.1%)]'
+				class='absolute bottom-[40%] left-[60%] h-1.5 w-1.5 rounded-full bg-zinc-100 lg:bottom-[50%] lg:left-[100%]'
+			>
+			</div>
+			<div class='absolute -left-1 bottom-[60%] h-1.5 w-1.5 rounded-full bg-purple-800'></div>
+			<div
+				class='absolute bottom-1.5 left-[50%] h-1.5 w-1.5 rounded-full bg-purple-800 lg:bottom-1 lg:left-[70%]'
+			>
+			</div>
+			<img
+				src={img}
+				alt={imgTitle}
+				class='relative z-10 h-40 w-40 transform transition-transform duration-300 ease-in-out hover:scale-110'
+			/>
+			<div
+				class='relative top-24 h-16 w-40 flex-shrink-0 origin-top-left rotate-[175deg] rounded-full bg-[linear-gradient(180deg,_#2C1250_0%,_#2C1250_5%,_rgba(44,_18,_80,_0.00)_70%)]'
 			>
 			</div>
 		</div>
