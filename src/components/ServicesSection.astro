@@ -1,4 +1,8 @@
 ---
+import marketing from '@assets/marketing.webp';
+import mobileapps from '@assets/mobileapps.webp';
+import uxui from '@assets/uxui.webp';
+import webdev from '@assets/webdev.webp';
 import ServiceCard from './ServiceCard.astro';
 
 interface ServiceInfo {
@@ -15,7 +19,7 @@ const servicesInfo: ServiceInfo[] = [
 		title: 'Web Apps',
 		text: 'We specialize in building custom web applications tailored to your unique needs and business goals. Our expert team will bring your web-based ideas to life with cutting-edge technology and user-friendly designs.',
 		href: '#',
-		img: '/src/assets/webdev.webp',
+		img: webdev.src,
 		hasGradient: false,
 		id: 'webapplications',
 	},
@@ -23,7 +27,7 @@ const servicesInfo: ServiceInfo[] = [
 		title: 'Mobile Apps',
 		text: 'Our mobile app development team is dedicated to creating high-performance, intuitive, and visually appealing apps for both iOS and Android platforms. We turn your app concept into a reality.',
 		href: '#',
-		img: '/src/assets/mobileapps.webp',
+		img: mobileapps.src,
 		hasGradient: true,
 		id: 'mobileapps',
 	},
@@ -31,7 +35,7 @@ const servicesInfo: ServiceInfo[] = [
 		title: 'Brand Creation',
 		text: 'Let us help you establish a strong and memorable brand identity. We offer brand creation services, including logo design, brand strategy, and visual assets that reflect your values and vision.',
 		href: '#',
-		img: '/src/assets/marketing.webp',
+		img: marketing.src,
 		hasGradient: true,
 		id: 'brandcreation',
 	},
@@ -39,7 +43,7 @@ const servicesInfo: ServiceInfo[] = [
 		title: 'Web Design',
 		text: 'Our web design experts craft beautiful and responsive websites that make a lasting impression. We focus on user experience, performance, and aesthetics to ensure your site stands out.',
 		href: '#',
-		img: '/src/assets/uxui.webp',
+		img: uxui.src,
 		hasGradient: false,
 		id: 'webdesign',
 	},

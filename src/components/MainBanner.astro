@@ -1,3 +1,7 @@
+---
+import astronaut from '@assets/div-astronaut.webp';
+---
+
 <section
 	id='banner'
 	class='mx-auto flex w-screen flex-col justify-center overflow-hidden px-10 pt-20 xs:pb-10 md:min-h-[50vh] md:pt-32 lg:flex-row lg:pb-20 lg:pt-40'
@@ -43,7 +47,7 @@
 						class='absolute bottom-4 h-[140px] w-[260px] rounded-[50%] border-b-2 border-solid border-primary-400 sm:w-[295px]'
 					>
 						<img
-							src='src/assets/div-astronaut.webp'
+							src={astronaut.src}
 							alt='div-astronaut'
 							class='relative left-20 z-10 animate-[float_6s_ease-in-out_infinite] [transform:translatey(0px)]'
 						/>
