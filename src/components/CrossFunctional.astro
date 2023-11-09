@@ -1,0 +1,125 @@
+---
+import python from '@assets/technologies/python.svg';
+import javascript from '@assets/technologies/javascript.svg';
+import typescript from '@assets/technologies/typescript.svg';
+import css from '@assets/technologies/css.svg';
+import react from '@assets/technologies/react.svg';
+import next from '@assets/technologies/next.svg';
+import astro from '@assets/technologies/astroreal.svg';
+import vue from '@assets/technologies/vue.svg';
+import angular from '@assets/technologies/angular.svg';
+import django from '@assets/technologies/django.svg';
+import node from '@assets/technologies/node.svg';
+import express from '@assets/technologies/express.svg';
+import mongo from '@assets/technologies/mongo.svg';
+import flask from '@assets/technologies/flask.svg';
+import Xd from '@assets/technologies/Xd.svg';
+import Ai from '@assets/technologies/Ai.svg';
+import figma from '@assets/technologies/figma.svg';
+
+type TechnologiesProps = {
+	img: string;
+	alt: string;
+}[][];
+
+const technologies: TechnologiesProps = [
+	[
+		{
+			img: python.src,
+			alt: 'Astro',
+		},
+		{
+			img: javascript.src,
+			alt: 'Javascript',
+		},
+		{
+			img: typescript.src,
+			alt: 'Typescript',
+		},
+		{
+			img: css.src,
+			alt: 'CSS',
+		},
+		{
+			img: react.src,
+			alt: 'React',
+		},
+		{
+			img: next.src,
+			alt: 'Next',
+		},
+		{
+			img: angular.src,
+			alt: 'Angular',
+		},
+		{
+			img: astro.src,
+			alt: 'Astro',
+		},
+		{
+			img: vue.src,
+			alt: 'Vue',
+		},
+	],
+	[
+		{
+			img: django.src,
+			alt: 'Django',
+		},
+		{
+			img: node.src,
+			alt: 'Node',
+		},
+		{
+			img: express.src,
+			alt: 'Express',
+		},
+		{
+			img: mongo.src,
+			alt: 'Mongo',
+		},
+		{
+			img: flask.src,
+			alt: 'Postgress',
+		},
+		{
+			img: Xd.src,
+			alt: 'Xd',
+		},
+		{
+			img: Ai.src,
+			alt: 'Ai',
+		},
+		{
+			img: figma.src,
+			alt: 'Figma',
+		},
+	],
+];
+---
+
+<section
+	id='technologies'
+	class='mx-auto flex flex-row items-center justify-center gap-3 p-10 md:container'
+>
+	<div class='flex flex-col gap-3'>
+		<div class='flex flex-row gap-4'>
+			{
+				technologies[0].map((info, idx) => (
+					<div class='flex h-14 w-14 items-center justify-center rounded-full bg-[#251C31]'>
+						<img src={info.img} alt={info.alt} class='h-8 w-8' />
+					</div>
+				))
+			}
+		</div>
+		<div class='flex flex-row justify-center gap-4'>
+			{
+				technologies[1].map((info, idx) => (
+					<div class='flex h-14 w-14 items-center justify-center rounded-full bg-[#251C31]'>
+						<img src={info.img} alt={info.alt} class='h-8 w-8' />
+					</div>
+				))
+			}
+		</div>
+	</div>
+</section>
