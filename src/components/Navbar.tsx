@@ -14,6 +14,9 @@ import logo from '/div-software-logo.svg?url';
 export function NavbarHome() {
 	const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
+	/**
+	 * An object to identify each item from the Navigation menu
+	 */
 	const menuItems = [
 		{ title: 'Home', href: '#banner' },
 		{ title: 'About', href: '#about' },
@@ -60,6 +63,7 @@ export function NavbarHome() {
 				className='sm:hidden'
 			/>
 
+			{/* Navigation menu for Tablet - Desktop screens */}
 			<NavbarContent className='hidden sm:flex sm:gap-8 md:gap-16 lg:gap-32' justify='center'>
 				{menuItems.map((item, idx) => (
 					<NavbarItem key={`${item.title}-${idx}`} style={{ cursor: 'pointer' }}>
@@ -76,6 +80,7 @@ export function NavbarHome() {
 				))}
 			</NavbarContent>
 
+			{/* Navigation menu for mobile screens */}
 			<NavbarMenu>
 				{menuItems.map((item, index) => (
 					<NavbarMenuItem key={`${item.title}-${index}`}>
