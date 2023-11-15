@@ -16,7 +16,8 @@ import flask from '@assets/technologies/flask.svg';
 import Xd from '@assets/technologies/Xd.svg';
 import Ai from '@assets/technologies/Ai.svg';
 import figma from '@assets/technologies/figma.svg';
-
+import logo from '@assets/technologies/crossfunclogo.svg';
+import firstline from '@assets/technologies/firstline.svg';
 type TechnologiesProps = {
 	img: string;
 	alt: string;
@@ -100,26 +101,58 @@ const technologies: TechnologiesProps = [
 
 <section
 	id='technologies'
-	class='mx-auto flex flex-row items-center justify-center gap-3 p-10 md:container'
+	class='xs: mx-auto flex w-0 flex-row items-center justify-center gap-3 p-10 md:container'
 >
-	<div class='flex flex-col gap-3'>
-		<div class='flex flex-row gap-4'>
+	<div class='relative flex flex-col gap-3'>
+		<div class='flex flex-row xs:gap-1 sm:gap-2 md:gap-3 lg:gap-4'>
 			{
 				technologies[0].map((info, idx) => (
-					<div class='flex h-14 w-14 items-center justify-center rounded-full bg-[#251C31]'>
-						<img src={info.img} alt={info.alt} class='h-8 w-8' />
+					<div class='flex h-14 w-14 items-center justify-center rounded-full bg-[#251C31] xs:h-[30px] xs:w-[30px] sm:h-[45px] sm:w-[45px] md:h-[50px] md:w-[50px] lg:h-[65px] lg:w-[65px]'>
+						<img
+							src={info.img}
+							alt={info.alt}
+							class='h-8 w-8 xs:h-[20px] xs:w-[20px] sm:h-[30px] sm:w-[30px] md:h-[35px] md:w-[35px] lg:h-[40px] lg:w-[40px]'
+						/>
 					</div>
 				))
 			}
 		</div>
-		<div class='flex flex-row justify-center gap-4'>
-			{
-				technologies[1].map((info, idx) => (
-					<div class='flex h-14 w-14 items-center justify-center rounded-full bg-[#251C31]'>
-						<img src={info.img} alt={info.alt} class='h-8 w-8' />
-					</div>
-				))
-			}
+		<div>
+			<div class='relative flex flex-row justify-center gap-4 xs:gap-1 sm:gap-2 md:gap-3'>
+				{
+					technologies[1].map((info, idx) => (
+						<div class='flex  h-14 w-14 items-center justify-center rounded-full bg-[#251C31] xs:h-[30px] xs:w-[30px] sm:h-[45px] sm:w-[45px]  md:h-[50px] md:w-[50px] lg:h-[65px] lg:w-[65px]'>
+							<img
+								src={info.img}
+								alt={info.alt}
+								class='h-8 w-8 xs:h-[20px] xs:w-[20px] sm:h-[30px] sm:w-[30px] md:h-[35px] md:w-[35px] lg:h-[40px] lg:w-[40px]'
+							/>
+						</div>
+					))
+				}
+			</div>
+		</div>
+		<img
+			src={firstline.src}
+			alt='firstLine'
+			class='absolute left-[15%] right-[15%] top-[19%] h-[65%]'
+		/>
+		<div class='mt-[300px] flex justify-center'>
+			<div
+				class='top-6 flex h-60 w-full flex-col items-center justify-center rounded-[542px] bg-[radial-gradient(50%_40%_at_50%_50%,_#763CAC_0%,_rgba(50,_15,_133,_0)_100%)] md:h-[200px] md:w-[450px] lg:w-[400px] xl:h-[250px] xl:w-[550px]'
+			>
+				<div
+					class='flex h-24 w-24 items-center justify-center rounded-full bg-[linear-gradient(180deg,_rgba(48,_16,_128,_0.60)_0%,_rgba(120,_64,_173,_0.36)_100%)] md:h-44 md:w-44'
+				>
+					<img
+						src={logo.src}
+						alt='div-software-logo'
+						class='h-20 w-20 transform transition-transform hover:animate-[spin_5s_ease-in-out_infinite] md:h-32 md:w-32'
+					/>
+				</div>
+			</div>
 		</div>
 	</div>
 </section>
+
+<style></style>

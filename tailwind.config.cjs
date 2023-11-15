@@ -39,7 +39,7 @@ module.exports = {
 			},
 		},
 		screens: {
-			xs: '360px',
+			xs: '320px',
 			...defaultTheme.screens,
 		},
 	},
