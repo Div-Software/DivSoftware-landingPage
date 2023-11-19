@@ -1,141 +1,95 @@
 ---
-import python from '@assets/technologies/python.svg';
-import javascript from '@assets/technologies/javascript.svg';
-import typescript from '@assets/technologies/typescript.svg';
-import css from '@assets/technologies/css.svg';
-import react from '@assets/technologies/react.svg';
-import next from '@assets/technologies/next.svg';
-import astro from '@assets/technologies/astroreal.svg';
-import vue from '@assets/technologies/vue.svg';
-import angular from '@assets/technologies/angular.svg';
-import django from '@assets/technologies/django.svg';
-import node from '@assets/technologies/node.svg';
-import express from '@assets/technologies/express.svg';
-import mongo from '@assets/technologies/mongo.svg';
-import flask from '@assets/technologies/flask.svg';
-import Xd from '@assets/technologies/Xd.svg';
-import Ai from '@assets/technologies/Ai.svg';
-import figma from '@assets/technologies/figma.svg';
 import logo from '@assets/technologies/crossfunclogo.svg';
-import firstline from '@assets/technologies/lines/firstline.svg';
-import secondline from '@assets/technologies/lines/secondline.svg';
-import thirdline from '@assets/technologies/lines/thirdline.svg';
-import fourthline from '@assets/technologies/lines/fourthline.svg';
-import fifthline from '@assets/technologies/lines/fifthline.svg';
-import sixthyline from '@assets/technologies/lines/sixthyline.svg';
-import sevenline from '@assets/technologies/lines/sevenline.svg';
-import eigthline from '@assets/technologies/lines/eigthline.svg';
+import { rootImages } from '@core/rootImages';
 
+/**
+ * Represents an array of arrays of objects containing properties of technologies.
+ * @typedef {Array<Array<{ img: string, alt: string }>>} TechnologiesProps.
+ */
 type TechnologiesProps = {
 	img: string;
 	alt: string;
 }[][];
 
+// Technologies images root paths
+const technologiesPath = rootImages.technologies;
+const linesPath = rootImages.technologies.techLines;
+
+/**
+ * Constant containing an array of technology object arrays.
+ * @type {TechnologiesProps}
+ */
 const technologies: TechnologiesProps = [
 	[
 		{
-			img: python.src,
+			img: technologiesPath.python,
 			alt: 'Astro',
 		},
 		{
-			img: javascript.src,
+			img: technologiesPath.javascript,
 			alt: 'Javascript',
 		},
 		{
-			img: typescript.src,
+			img: technologiesPath.typescript,
 			alt: 'Typescript',
 		},
 		{
-			img: css.src,
+			img: technologiesPath.css,
 			alt: 'CSS',
 		},
 		{
-			img: react.src,
+			img: technologiesPath.react,
 			alt: 'React',
 		},
 		{
-			img: next.src,
+			img: technologiesPath.next,
 			alt: 'Next',
 		},
 		{
-			img: angular.src,
+			img: technologiesPath.angular,
 			alt: 'Angular',
 		},
 		{
-			img: astro.src,
+			img: technologiesPath.astro,
 			alt: 'Astro',
 		},
 		{
-			img: vue.src,
+			img: technologiesPath.vue,
 			alt: 'Vue',
 		},
 	],
 	[
 		{
-			img: django.src,
+			img: technologiesPath.django,
 			alt: 'Django',
 		},
 		{
-			img: node.src,
+			img: technologiesPath.node,
 			alt: 'Node',
 		},
 		{
-			img: express.src,
+			img: technologiesPath.express,
 			alt: 'Express',
 		},
 		{
-			img: mongo.src,
+			img: technologiesPath.mongodb,
 			alt: 'Mongo',
 		},
 		{
-			img: flask.src,
+			img: technologiesPath.flask,
 			alt: 'Postgress',
 		},
 		{
-			img: Xd.src,
+			img: technologiesPath.Xd,
 			alt: 'Xd',
 		},
 		{
-			img: Ai.src,
+			img: technologiesPath.Ai,
 			alt: 'Ai',
 		},
 		{
-			img: figma.src,
+			img: technologiesPath.figma,
 			alt: 'Figma',
-		},
-	],
-	[
-		{
-			img: firstline.src,
-			alt: 'first line',
-		},
-		{
-			img: secondline.src,
-			alt: 'second line',
-		},
-		{
-			img: thirdline.src,
-			alt: 'first line',
-		},
-		{
-			img: fourthline.src,
-			alt: 'first line',
-		},
-		{
-			img: fifthline.src,
-			alt: 'first line',
-		},
-		{
-			img: sixthyline.src,
-			alt: 'first line',
-		},
-		{
-			img: sevenline.src,
-			alt: 'first line',
-		},
-		{
-			img: eigthline.src,
-			alt: 'first line',
 		},
 	],
 ];
@@ -148,7 +102,7 @@ const technologies: TechnologiesProps = [
 	<div class='relative flex flex-col gap-3'>
 		<div class='flex flex-row xs:gap-1 sm:gap-2 md:gap-3 lg:gap-4'>
 			{
-				technologies[0].map((info, idx) => (
+				technologies[0].map((info) => (
 					<div class='flex h-14 w-14 items-center justify-center rounded-full bg-[#251C31] xs:h-[30px] xs:w-[30px] sm:h-[45px] sm:w-[45px] md:h-[50px] md:w-[50px] lg:h-[65px] lg:w-[65px]'>
 						<img
 							src={info.img}
@@ -162,7 +116,7 @@ const technologies: TechnologiesProps = [
 		<div>
 			<div class='relative flex flex-row justify-center gap-4 xs:gap-1 sm:gap-2 md:gap-3'>
 				{
-					technologies[1].map((info, idx) => (
+					technologies[1].map((info) => (
 						<div class='flex  h-14 w-14 items-center justify-center rounded-full bg-[#251C31] xs:h-[30px] xs:w-[30px] sm:h-[45px] sm:w-[45px]  md:h-[50px] md:w-[50px] lg:h-[65px] lg:w-[65px]'>
 							<img
 								src={info.img}
@@ -177,43 +131,43 @@ const technologies: TechnologiesProps = [
 
 		<div class='flex w-[100%] flex-row items-center justify-center gap-[2rem]'>
 			<img
-				src={firstline.src}
+				src={linesPath.firstLine}
 				alt='firstLine'
 				class='absolute left-[15%] right-[15%] top-[18%] h-[65%]'
 			/>
 			<img
-				src={secondline.src}
-				alt='secondline'
+				src={linesPath.secondLine}
+				alt='secondLine'
 				class='absolute left-[24%] right-[24%] top-[19%] h-[65%]'
 			/>
 			<img
-				src={thirdline.src}
-				alt='thirdline'
+				src={linesPath.thirdLine}
+				alt='thirdLine'
 				class='absolute left-[35%] right-[35%] top-[19%] h-[65%]'
 			/>
 			<img
-				src={fourthline.src}
-				alt='fourthline'
+				src={linesPath.fourthLine}
+				alt='fourthLine'
 				class='absolute left-[45%] right-[45%] top-[19%] h-[65%]'
 			/>
 			<img
-				src={fifthline.src}
-				alt='fifthline'
+				src={linesPath.fifthLine}
+				alt='fifthLine'
 				class='absolute left-[48%] right-[48%] top-[19%] h-[65%]'
 			/>
 			<img
-				src={sixthyline.src}
-				alt='sixthyline'
+				src={linesPath.sixthLine}
+				alt='sixthyLine'
 				class='absolute left-[49%] right-[49%] top-[19%] h-[65%]'
 			/>
 			<img
-				src={sevenline.src}
-				alt='sevenline'
+				src={linesPath.seventhLine}
+				alt='sevenLine'
 				class='absolute left-[47%] right-[47%] top-[19%] h-[65%]'
 			/>
 			<img
-				src={eigthline.src}
-				alt='eigthline'
+				src={linesPath.eighthline}
+				alt='eigthLine'
 				class='absolute left-[58%] right-[58%] top-[19%] h-[65%]'
 			/>
 		</div>
