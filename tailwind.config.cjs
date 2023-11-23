@@ -53,6 +53,7 @@ module.exports = {
 						foreground: '#f0f0f0',
 						primary: {
 							50: '#1A0B2E',
+							75: '#2B0B3A',
 							100: '#2C1250',
 							200: '#4F228D',
 							300: '#693B93',

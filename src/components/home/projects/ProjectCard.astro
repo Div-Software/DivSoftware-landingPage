@@ -1,19 +1,43 @@
-<article class='flex'>
-	<aside class='flex flex-col justify-center gap-3'>
-		<div class='flex flex-col justify-center gap-1'>
-			<p class='font-medium text-primary-700'>Featured Project</p>
-			<h6 class='text-xl text-foreground'>Example Project</h6>
-		</div>
-		<didisv class='relative flex max-w-2xl items-center rounded-xl px-6 py-4 blur-sm'>
-			<p class='text-foreground-50'>
-				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus, possimus autem neque qui
-				quibusdam ipsa eum eaque nam doloribus nemo esse quia iste! Recusandae numquam est
-				veritatis! Alias, commodi architecto
-			</p>
-		</didisv>
-		<div></div>
-	</aside>
-	<aside class='rounded-[10px] bg-indigo-950 p-2'>
-		<img src='' alt='project-preview' width='400' />
-	</aside>
-</article>
+---
+import { projects } from '@helpers/projectsInfo';
+
+const evenIdx = (idx: number) => idx % 2 === 0;
+---
+
+<div class='relative flex flex-col gap-20'>
+	{
+		projects.map((p, idx) => (
+			<div class={`relative flex ${evenIdx(idx) ? 'flex-row' : 'flex-row-reverse'}`}>
+				<div
+					class={`absolute ${
+						evenIdx(idx) ? '-inset-y-20 inset-x-[700px]' : '-inset-x-10 -inset-y-10'
+					}
+          -z-1 h-96 w-96 rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,_#763CAC90_0%,_rgba(50,_15,_133,_0.00)_100%)]`}
+				/>
+				<div
+					class={`absolute ${
+						evenIdx(idx) ? '-inset-y-10 inset-x-[550px]' : '-inset-y-10 inset-x-40'
+					}
+          h-96 w-96 rounded-full bg-[radial-gradient(50%_50%_at_48.76%_38.89%,_#763CAC80_0%,_rgba(50,_15,_133,_0.00)_100%)]`}
+				/>
+				<aside class='flex flex-col justify-center gap-3'>
+					<div class='flex flex-col justify-center gap-1 pl-5'>
+						<p class='font-medium text-primary-700'>Featured Project</p>
+						<h6 class='text-xl text-foreground'>{p.title}</h6>
+					</div>
+					<div
+						class={`relative ${
+							evenIdx(idx) ? 'left-8' : '-left-8'
+						} flex w-full max-w-2xl items-center rounded-xl bg-white/5 p-8 backdrop-blur-2xl`}
+					>
+						<p class='w-11/12 text-foreground-50'>{p.description}</p>
+					</div>
+					<div />
+				</aside>
+				<aside class='bg-primary-75 rounded-[10px] p-4 px-10'>
+					<img src={p.image} alt='project-preview' width='400' height='250' />
+				</aside>
+			</div>
+		))
+	}
+</div>
