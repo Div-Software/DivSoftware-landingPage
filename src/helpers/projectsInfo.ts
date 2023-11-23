@@ -1,7 +1,10 @@
+import { rootImages } from '@core/rootImages';
+
 interface ProjectsI {
 	title: string;
 	description: string;
 	image: string;
+	url: string;
 }
 
 /**
@@ -14,24 +17,7 @@ export const projects: ProjectsI[] = [
 		title: 'Global Redex',
 		description: `We are a leading company in telecommunications, with extensive experience and the best products and services. 
     Our goal is to provide efficient solutions and to be recognized as the reliable option in the national market.`,
-		image: 'ruta-de-la-imagen-1.jpg',
-	},
-	{
-		title: 'Global Redex',
-		description: `We are a leading company in telecommunications, with extensive experience and the best products and services. 
-    Our goal is to provide efficient solutions and to be recognized as the reliable option in the national market.`,
-		image: 'ruta-de-la-imagen-1.jpg',
-	},
-	{
-		title: 'Global Redex',
-		description: `We are a leading company in telecommunications, with extensive experience and the best products and services. 
-    Our goal is to provide efficient solutions and to be recognized as the reliable option in the national market.`,
-		image: 'ruta-de-la-imagen-1.jpg',
-	},
-	{
-		title: 'Global Redex',
-		description: `We are a leading company in telecommunications, with extensive experience and the best products and services. 
-    Our goal is to provide efficient solutions and to be recognized as the reliable option in the national market.`,
-		image: 'ruta-de-la-imagen-1.jpg',
+		image: rootImages.projects.globalredex,
+		url: 'https://globalredex.com/',
 	},
 ];

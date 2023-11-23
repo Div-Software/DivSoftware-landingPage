@@ -1,4 +1,5 @@
 const dirRoot = '/src/assets';
+const dirProjects = '/src/assets/projects/';
 const dirServices = '/src/assets/services/';
 const dirTechnologies = '/src/assets/technologies/';
 
@@ -6,6 +7,9 @@ const dirTechnologies = '/src/assets/technologies/';
  * An object that contains all the images path from the project
  */
 export const rootImages = {
+	projects: {
+		globalredex: `${dirProjects}globalredex-desktop.webp`,
+	},
 	services: {
 		uiux: `${dirServices}uxui.webp`,
 		webdev: `${dirServices}webdev.webp`,
