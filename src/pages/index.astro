@@ -2,11 +2,20 @@
 import AboutBanner from '@components/AboutBanner.astro';
 import MainBanner from '@components/MainBanner.astro';
 import ServicesSection from '@components/ServicesSection.astro';
+import TechnologiesSection from '@components/TechnologiesSection.astro';
+import ProjectsSection from '@components/home/projects/ProjectsSection.astro';
 import Layout from '@layouts/Layout.astro';
 ---
 
-<Layout title='Welcome to <Div Software>'>
+<Layout
+	title='Welcome to <Div Software>'
+	description=`At DivSoftware, we combine technology and design to empower businesses with tailored solutions. 
+	Our cutting-edge software technologies create engaging experiences that prioritize excellence and optimization. 
+	Discover innovation and aesthetics with DivSoftware.`
+>
 	<MainBanner />
 	<AboutBanner />
 	<ServicesSection />
+	<TechnologiesSection />
+	<ProjectsSection />
 </Layout>

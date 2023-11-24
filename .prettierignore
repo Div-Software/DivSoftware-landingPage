@@ -10,7 +10,7 @@
 
 # files
 README.md
-next-env.d.ts
+env.d.ts
 
 # dependencies files
 yarn.lock

@@ -1,8 +1,5 @@
 ---
-import marketing from '@assets/marketing.webp';
-import mobileapps from '@assets/mobileapps.webp';
-import uxui from '@assets/uxui.webp';
-import webdev from '@assets/webdev.webp';
+import { rootImages } from '@core/rootImages';
 import ServiceCard from './ServiceCard.astro';
 
 interface ServiceInfo {
@@ -14,12 +11,20 @@ interface ServiceInfo {
 	id: string;
 }
 
+/**
+ * The services image's root paths
+ */
+const services = rootImages.services;
+
+/**
+ * An array of objects that has the information of each services
+ */
 const servicesInfo: ServiceInfo[] = [
 	{
 		title: 'Web Apps',
 		text: 'We specialize in building custom web applications tailored to your unique needs and business goals. Our expert team will bring your web-based ideas to life with cutting-edge technology and user-friendly designs.',
 		href: '#',
-		img: webdev.src,
+		img: services.webdev,
 		hasGradient: false,
 		id: 'webapplications',
 	},
@@ -27,7 +32,7 @@ const servicesInfo: ServiceInfo[] = [
 		title: 'Mobile Apps',
 		text: 'Our mobile app development team is dedicated to creating high-performance, intuitive, and visually appealing apps for both iOS and Android platforms. We turn your app concept into a reality.',
 		href: '#',
-		img: mobileapps.src,
+		img: services.mobile,
 		hasGradient: true,
 		id: 'mobileapps',
 	},
@@ -35,7 +40,7 @@ const servicesInfo: ServiceInfo[] = [
 		title: 'Brand Creation',
 		text: 'Let us help you establish a strong and memorable brand identity. We offer brand creation services, including logo design, brand strategy, and visual assets that reflect your values and vision.',
 		href: '#',
-		img: marketing.src,
+		img: services.marketing,
 		hasGradient: true,
 		id: 'brandcreation',
 	},
@@ -43,7 +48,7 @@ const servicesInfo: ServiceInfo[] = [
 		title: 'Web Design',
 		text: 'Our web design experts craft beautiful and responsive websites that make a lasting impression. We focus on user experience, performance, and aesthetics to ensure your site stands out.',
 		href: '#',
-		img: uxui.src,
+		img: services.uiux,
 		hasGradient: false,
 		id: 'webdesign',
 	},
@@ -51,11 +56,11 @@ const servicesInfo: ServiceInfo[] = [
 ---
 
 <section
-	id='services'
+	id='sertecvices'
 	class='container mx-auto flex flex-col items-center justify-center gap-10 p-10'
 >
 	<h3
-		class='text-center text-2xl font-semibold text-white sm:text-left sm:text-3xl md:text-4xl lg:text-5xl'
+		class='text-center text-2xl font-semibold text-foreground sm:text-left sm:text-3xl md:text-4xl lg:text-5xl'
 	>
 		Our Services
 	</h3>
