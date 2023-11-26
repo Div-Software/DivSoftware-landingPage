@@ -49,12 +49,26 @@ export function NavbarHome() {
 		>
 			<NavbarBrand>
 				<Link href='/' className='flex gap-1 xs:gap-2'>
-					<img src={logo} alt='Div Software' className='h-4 xs:h-5 md:h-6' />
+					<img
+						src={logo}
+						alt='Div Software'
+						width={'100%'}
+						height={16}
+						loading='lazy'
+						className='h-4 xs:h-5 md:h-6'
+					/>
 					<div aria-label='logo name' className='flex flex-row gap-3'>
 						<p className='text-xl font-bold text-foreground-200 xs:text-2xl md:text-3xl'>Div</p>
-						<p className='text-xl font-bold text-primary-200 xs:text-2xl md:text-3xl'>Software</p>
+						<p className='text-xl font-bold text-primary-500 xs:text-2xl md:text-3xl'>Software</p>
 					</div>
-					<img src={logo} alt='Div Software' className='h-4 rotate-180 xs:h-5 md:h-6' />
+					<img
+						src={logo}
+						alt='Div Software'
+						width={'100%'}
+						height={16}
+						loading='lazy'
+						className='h-4 rotate-180 xs:h-5 md:h-6'
+					/>
 				</Link>
 			</NavbarBrand>
 
@@ -68,13 +82,12 @@ export function NavbarHome() {
 				{menuItems.map((item, idx) => (
 					<NavbarItem key={`${item.title}-${idx}`} style={{ cursor: 'pointer' }}>
 						<Link
-							color='foreground'
 							className='w-full'
 							// href={item.href}
 							size='lg'
 							onClick={() => scrollIntoSection(item.href)}
 						>
-							{item.title}
+							<p className='font-bold text-foreground-50'>{item.title}</p>
 						</Link>
 					</NavbarItem>
 				))}

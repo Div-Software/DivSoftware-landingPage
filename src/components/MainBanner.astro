@@ -20,6 +20,7 @@ import { rootImages } from '@core/rootImages';
 				<img
 					src='/logo-divsoftware.svg'
 					alt='div-software-logo'
+					loading='lazy'
 					class='h-20 w-20 transform transition-transform hover:animate-[spin_5s_ease-in-out_infinite] md:h-32 md:w-32'
 				/>
 			</div>
@@ -30,7 +31,7 @@ import { rootImages } from '@core/rootImages';
 				class='text-center text-2xl font-bold text-foreground xs:text-3xl sm:text-left md:text-5xl'
 			>
 				Let's create something great
-				<span class='text-primary-400'>together</span>
+				<span class='text-primary-500'>together</span>
 				 ...
 			</h1>
 		</div>
@@ -55,7 +56,10 @@ import { rootImages } from '@core/rootImages';
 						<img
 							src={rootImages.astronaut}
 							alt='div-astronaut'
-							class='relative left-20 z-10 animate-[float_6s_ease-in-out_infinite] [transform:translatey(0px)]'
+							width={102}
+							height={'100%'}
+							loading='lazy'
+							class='relative left-20 z-10 h-auto animate-[float_6s_ease-in-out_infinite] [transform:translatey(0px)]'
 						/>
 					</div>
 				</div>

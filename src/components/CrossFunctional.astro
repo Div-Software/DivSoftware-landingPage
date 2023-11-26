@@ -106,6 +106,7 @@ const technologies: TechnologiesProps = [
 						<img
 							src={info.img}
 							alt={info.alt}
+							loading='lazy'
 							class='h-8 w-8 xs:h-[20px] xs:w-[20px] sm:h-[30px] sm:w-[30px] md:h-[35px] md:w-[35px] lg:h-[40px] lg:w-[40px]'
 						/>
 					</div>
@@ -115,15 +116,28 @@ const technologies: TechnologiesProps = [
 		<div>
 			<div class='relative flex flex-row justify-center gap-4 xs:gap-1 sm:gap-2 md:gap-3'>
 				{
-					technologies[1].map((info) => (
-						<div class='flex  h-14 w-14 items-center justify-center rounded-full bg-[#251C31] xs:h-[30px] xs:w-[30px] sm:h-[45px] sm:w-[45px]  md:h-[50px] md:w-[50px] lg:h-[65px] lg:w-[65px]'>
-							<img
-								src={info.img}
-								alt={info.alt}
-								class='h-8 w-8 xs:h-[20px] xs:w-[20px] sm:h-[30px] sm:w-[30px] md:h-[35px] md:w-[35px] lg:h-[40px] lg:w-[40px]'
-							/>
-						</div>
-					))
+					technologies[1].map((info) => {
+						const mongo = info.alt.includes('Node');
+						const express = info.alt.includes('Express');
+
+						return (
+							<div class='flex h-14 w-14 items-center justify-center rounded-full bg-[#251C31] xs:h-[30px] xs:w-[30px] sm:h-[45px] sm:w-[45px] md:h-[50px] md:w-[50px] lg:h-[65px] lg:w-[65px]'>
+								<img
+									src={info.img}
+									alt={info.alt}
+									loading='lazy'
+									class={`h-8 w-8 ${
+										mongo
+											? 'xs:h-7 xs:w-7 sm:h-14 sm:w-14'
+											: express
+											? 'xs:h-8 xs:w-8 sm:h-16 sm:w-16'
+											: 'xs:h-[20px] xs:w-[20px] sm:h-[30px] sm:w-[30px] md:h-[35px] md:w-[35px] lg:h-10 lg:w-10'
+									}
+									`}
+								/>
+							</div>
+						);
+					})
 				}
 			</div>
 		</div>
@@ -180,6 +194,7 @@ const technologies: TechnologiesProps = [
 					<img
 						src={rootImages.technologies.crossLogo}
 						alt='div-software-logo'
+						loading='lazy'
 						class='h-20 w-20 transform transition-transform hover:animate-[spin_5s_ease-in-out_infinite] md:h-32 md:w-32'
 					/>
 				</div>
