@@ -1,0 +1,59 @@
+---
+import { projects } from '@helpers/projectsInfo';
+
+const evenIdx = (idx: number) => idx % 2 === 0;
+---
+
+<div class='relative flex flex-col gap-20'>
+	{
+		projects.map((p, idx) => (
+			<article
+				class={`relative flex flex-col-reverse items-center justify-center gap-4 md:gap-0 ${
+					evenIdx(idx) ? 'md:flex-row' : 'md:flex-row-reverse'
+				}`}
+			>
+				<div
+					class={`absolute hidden lg:block ${
+						evenIdx(idx)
+							? 'lg:-inset-y-16 lg:inset-x-[500px] xl:-inset-y-20 xl:inset-x-[800px]'
+							: '-inset-x-10 -inset-y-20'
+					}
+          h-96 w-96 rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,_#763CAC90_0%,_rgba(50,_15,_133,_0.00)_100%)]`}
+				/>
+				<div
+					class={`absolute hidden lg:block ${
+						evenIdx(idx)
+							? 'lg:-inset-y-6 lg:inset-x-[300px] xl:-inset-y-10 xl:inset-x-[600px]'
+							: '-inset-y-10 inset-x-48'
+					}
+					h-96 w-96 rounded-full bg-[radial-gradient(50%_50%_at_48.76%_38.89%,_#763CAC80_0%,_rgba(50,_15,_133,_0.00)_100%)]`}
+				/>
+				<aside class='z-20 flex flex-col justify-center gap-3 '>
+					<div class='flex flex-col justify-center gap-1 pl-5'>
+						<p class='text-lg font-medium text-primary-700'>Featured Project</p>
+						<p class='text-2xl text-foreground'>{p.title}</p>
+					</div>
+					<div
+						class={`relative ${
+							evenIdx(idx) ? 'md:left-8' : 'md:-left-2'
+						} flex w-full max-w-2xl items-center rounded-xl bg-white/5 p-8 shadow-lg backdrop-blur-2xl`}
+					>
+						<p class='w-11/12 text-foreground-50'>{p.description}</p>
+					</div>
+				</aside>
+				<aside class='z-10 rounded-[10px] bg-primary-75 p-4 sm:max-w-sm sm:px-10 md:max-w-md lg:max-w-[600px]'>
+					<a href={p.url} rel='noopener noreferrer' target='_blank'>
+						<img
+							src={p.image}
+							alt='project-preview'
+							width='100%'
+							height='auto'
+							loading='lazy'
+							class='ransform h-64 w-full rounded-md transition-transform duration-300 ease-in-out hover:scale-105 hover:brightness-95'
+						/>
+					</a>
+				</aside>
+			</article>
+		))
+	}
+</div>

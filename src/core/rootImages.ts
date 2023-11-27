@@ -1,11 +1,17 @@
-const dirRoot = '/src/assets';
-const dirServices = '/src/assets/services/';
-const dirTechnologies = '/src/assets/technologies/';
+const dirRoot = '/assets/';
+const dirProjects = '/assets/projects/';
+const dirServices = '/assets/services/';
+const dirSocial = '/assets/social/';
+const dirTechnologies = '/assets/technologies/';
 
 /**
  * An object that contains all the images path from the project
  */
 export const rootImages = {
+	astronaut: `${dirRoot}div-astronaut.webp`,
+	projects: {
+		globalredex: `${dirProjects}globalredex-desktop.webp`,
+	},
 	services: {
 		uiux: `${dirServices}uxui.webp`,
 		webdev: `${dirServices}webdev.webp`,
@@ -31,15 +37,20 @@ export const rootImages = {
 		typescript: `${dirTechnologies}typescript.svg`,
 		vue: `${dirTechnologies}vue.svg`,
 		Xd: `${dirTechnologies}Xd.svg`,
+		crossLogo: `${dirTechnologies}crossfunclogo.svg`,
 		techLines: {
-			firstLine: `${dirTechnologies}/lines/firstline.svg`,
-			secondLine: `${dirTechnologies}/lines/secondline.svg`,
-			thirdLine: `${dirTechnologies}/lines/thirdline.svg`,
-			fourthLine: `${dirTechnologies}/lines/fourthline.svg`,
-			fifthLine: `${dirTechnologies}/lines/fifthline.svg`,
-			sixthLine: `${dirTechnologies}/lines/sixthline.svg`,
-			seventhLine: `${dirTechnologies}/lines/seventhline.svg`,
-			eighthline: `${dirTechnologies}/lines/eighthline.svg`,
+			firstLine: `${dirTechnologies}lines/firstline.svg`,
+			secondLine: `${dirTechnologies}lines/secondline.svg`,
+			thirdLine: `${dirTechnologies}lines/thirdline.svg`,
+			fourthLine: `${dirTechnologies}lines/fourthline.svg`,
+			fifthLine: `${dirTechnologies}lines/fifthline.svg`,
+			sixthLine: `${dirTechnologies}lines/sixthline.svg`,
+			seventhLine: `${dirTechnologies}lines/seventhline.svg`,
+			eighthline: `${dirTechnologies}lines/eighthline.svg`,
 		},
 	},
+	social: {
+		whatsapp : `${dirSocial}whatsapplogo.webp`,
+		telegram : `${dirSocial}telegramlogo.webp`
+	}
 };

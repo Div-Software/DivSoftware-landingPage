@@ -1,5 +1,4 @@
-import telegramLogo from '@assets/social/telegramlogo.png';
-import whatsappLogo from '@assets/social/whatsapplogo.png';
+import { rootImages } from '@core/rootImages';
 
 export const Social = () => {
 	return (
@@ -13,8 +12,8 @@ export const Social = () => {
 			<div className='flex flex-col items-center justify-center '>
 				<div className=' my-4 flex items-center rounded-lg p-4 md:my-0'>
 					<div className='flex items-center bg-white/5 p-8 shadow-lg backdrop-blur-2xl'>
-						<div className='bg-whatsapp shadow-whatsapp flex h-24 w-36 items-center justify-center rounded-xl shadow backdrop-blur-3xl'>
-							<img src={whatsappLogo.src} alt='Telegram' className='h-12 w-12' />
+						<div className='flex h-24 w-36 items-center justify-center rounded-xl bg-whatsapp shadow shadow-whatsapp backdrop-blur-3xl'>
+							<img src={rootImages.social.whatsapp} alt='Telegram' className='h-12 w-12' />
 						</div>
 						<div className='ml-4'>
 							<p className='text-lg'>WhatsApp</p>
@@ -30,8 +29,8 @@ export const Social = () => {
 				</div>
 				<div className=' my-4 flex items-center rounded-lg p-4 md:my-0'>
 					<div className='flex items-center bg-white/5 p-8 shadow-lg backdrop-blur-2xl'>
-						<div className='bg-telegram shadow-whatsapp flex h-24 w-36 items-center justify-center rounded-xl shadow backdrop-blur-3xl'>
-							<img src={telegramLogo.src} alt='Telegram' className='h-12 w-12' />
+						<div className='flex h-24 w-36 items-center justify-center rounded-xl bg-telegram shadow shadow-whatsapp backdrop-blur-3xl'>
+							<img src={rootImages.social.telegram} alt='Telegram' className='h-12 w-12' />
 						</div>
 						<div className='ml-4'>
 							<p className='text-lg'>Telegram</p>

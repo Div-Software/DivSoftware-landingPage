@@ -50,18 +50,20 @@ module.exports = {
 				dark: {
 					colors: {
 						background: '#11071F',
-						foreground: '#ffffff',
+						foreground: '#f0f0f0',
 						primary: {
 							50: '#1A0B2E',
+							75: '#2B0B3A',
 							100: '#2C1250',
 							200: '#4F228D',
 							300: '#693B93',
 							400: '#7127BA',
 							500: '#763CAC',
 							600: '#9857D3',
-							700: '#A362FF',
+							700: '#9757D3',
+							800: '#A362FF',
 							DEFAULT: '#7127BA',
-							foreground: '#ffffff',
+							foreground: '#f0f0f0',
 						},
 						whatsapp: '#65b259',
 						telegram: '#f0f0f0',
