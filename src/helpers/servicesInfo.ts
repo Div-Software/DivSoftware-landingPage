@@ -1,6 +1,4 @@
----
 import { rootImages } from '@core/rootImages';
-import ServiceCard from './ServiceCard.astro';
 
 interface ServiceInfo {
 	title: string;
@@ -19,7 +17,7 @@ const services = rootImages.services;
 /**
  * An array of objects that has the information of each services
  */
-const servicesInfo: ServiceInfo[] = [
+export const servicesInfo: ServiceInfo[] = [
 	{
 		title: 'Web Apps',
 		text: 'We specialize in building custom web applications tailored to your unique needs and business goals. Our expert team will bring your web-based ideas to life with cutting-edge technology and user-friendly designs.',
@@ -53,29 +51,3 @@ const servicesInfo: ServiceInfo[] = [
 		id: 'webdesign',
 	},
 ];
----
-
-<section
-	id='services'
-	class='container mx-auto flex flex-col items-center justify-center gap-10 p-10'
->
-	<h3
-		class='text-center text-2xl font-semibold text-foreground sm:text-left sm:text-3xl md:text-4xl lg:text-5xl'
-	>
-		Our Services
-	</h3>
-	<aside class='grid items-center gap-12 gap-y-unit-xl sm:grid-cols-2 lg:gap-20'>
-		{
-			servicesInfo.map((service, idx) => (
-				<ServiceCard
-					title={service.title}
-					href={service.href}
-					hasGradient={service.hasGradient}
-					id={service.id}
-					img={service.img}
-					text={service.text}
-				/>
-			))
-		}
-	</aside>
-</section>
