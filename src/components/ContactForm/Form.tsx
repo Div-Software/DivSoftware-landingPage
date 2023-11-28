@@ -26,51 +26,78 @@ export const Form = () => {
 		console.log(formData);
 	};
 
+	const defaultClass = {
+		label: 'text-black dark:text-white/90',
+		input: ['bg-transparent', 'placeholder:text-default-700/50 dark:placeholder:text-white/60'],
+		innerWrapper: 'bg-transparent',
+		// inputWrapper: [
+		// 	'shadow-xl',
+		// 	'bg-default-200/50',
+		// 	'dark:bg-default/60',
+		// 	'backdrop-blur-xl',
+		// 	'backdrop-saturate-200',
+		// 	'hover:bg-default-200/70',
+		// 	'dark:hover:bg-default/70',
+		// 	'group-data-[focused=true]:bg-default-200/50',
+		// 	'dark:group-data-[focused=true]:bg-default/60',
+		// 	'!cursor-text',
+		// ],
+	};
+
 	const services = ['Frontend', 'Backend', 'Devops', 'Full Stack', 'QA'];
 	return (
 		<form onSubmit={handleSubmit} className=' shadow-lg'>
-			<div className=' flex w-full flex-col items-center divide-y divide-gray-400 rounded-md bg-primary-200/30  p-5 py-20  backdrop-blur-2xl  lg:flex-row lg:divide-x lg:divide-y-0  '>
-				<div className=' px-10  '>
-					<div className='flex w-full flex-wrap gap-9 md:flex-nowrap '>
+			<div className='flex w-full flex-col items-center divide-y divide-gray-400 overflow-x-hidden rounded-md bg-gradient-to-b from-primary-200 to-primary-50 p-5 py-20 backdrop-blur-2xl lg:flex-row lg:divide-x lg:divide-y-0'>
+				{' '}
+				<div className=' px-10 xs:mb-10  '>
+					<div className='my-6 flex w-full flex-wrap gap-4 md:flex-nowrap'>
 						<Input
+							color={'primary'}
 							isRequired
 							name='fullName'
 							type='text'
 							label='Full name'
-							defaultValue='Miguel Doe'
 							placeholder='Enter your name'
-							className='bg-blur '
 							value={formData.fullName}
 							onChange={handleChange}
+							classNames={defaultClass}
 						/>
 
 						<Input
+							color={'primary'}
 							isRequired
 							name='email'
 							type='email'
 							label='Email'
-							defaultValue='junior@nextui.org'
 							placeholder='Enter your email'
-							className='bg-blur '
 							value={formData.email}
 							onChange={handleChange}
+							className='w-full'
+							classNames={defaultClass}
 						/>
 					</div>
 
 					<div className='my-6 flex w-full flex-wrap gap-4 md:flex-nowrap'>
 						<Input
+							color={'primary'}
 							isRequired
 							name='phoneNumber'
 							type='number'
 							label='Phone number'
-							defaultValue='5839123942'
 							placeholder='Enter your phone'
-							className='bg-blur '
+							className='w-full'
 							value={formData.phoneNumber}
 							onChange={handleChange}
+							classNames={defaultClass}
 						/>
 
-						<Select label='Services' className='bg-blur' placeholder='Select a service'>
+						<Select
+							color={'primary'}
+							classNames={defaultClass}
+							label='Services'
+							className='w-full'
+							placeholder='Select a service'
+						>
 							{services.map((animal) => (
 								<SelectItem key={animal} value={animal}>
 									{animal}
@@ -79,17 +106,18 @@ export const Form = () => {
 						</Select>
 					</div>
 
-					<div className='my-6 flex w-full flex-wrap gap-4 md:flex-nowrap  '>
+					<div className='my-6 flex w-full flex-wrap gap-4 md:flex-nowrap'>
 						<Textarea
+							color={'primary'}
+							classNames={defaultClass}
 							label='Message'
 							name='message'
 							placeholder='Enter your description'
-							className='max-w bg-blur'
+							className='max-w w-full'
 							value={formData.message}
 							onChange={handleChange}
 						/>
 					</div>
-
 					<div>
 						<label>
 							Al enviar este formulario, accepta nuestros{' '}
@@ -106,7 +134,6 @@ export const Form = () => {
 						Enviar
 					</Button>
 				</div>
-
 				<div className='px-10'>
 					<Social />
 				</div>

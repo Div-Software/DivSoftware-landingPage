@@ -50,7 +50,7 @@ export const rootImages = {
 		},
 	},
 	social: {
-		whatsapp : `${dirSocial}whatsapplogo.webp`,
-		telegram : `${dirSocial}telegramlogo.webp`
-	}
+		whatsapp: `${dirSocial}whatsapplogo.webp`,
+		telegram: `${dirSocial}telegramlogo.webp`,
+	},
 };
