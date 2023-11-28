@@ -1,4 +1,5 @@
 const dirRoot = '/assets/';
+const dirIcons = '/assets/icons/';
 const dirProjects = '/assets/projects/';
 const dirServices = '/assets/services/';
 const dirTechnologies = '/assets/technologies/';
@@ -8,6 +9,11 @@ const dirTechnologies = '/assets/technologies/';
  */
 export const rootImages = {
 	astronaut: `${dirRoot}div-astronaut.webp`,
+	icons: {
+		facebook: `${dirIcons}facebook.svg`,
+		github: `${dirIcons}github.svg`,
+		instagram: `${dirIcons}instagram.svg`,
+	},
 	projects: {
 		globalredex: `${dirProjects}globalredex-desktop.webp`,
 	},
