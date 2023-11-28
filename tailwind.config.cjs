@@ -16,25 +16,24 @@ module.exports = {
 			},
 			keyframes: {
 				float: {
-					'0%': {
-						transform: 'translatey(25px)',
-					},
+					'0%': { transform: 'translatey(25px)' },
+					'50%': { transform: 'translatey(-25px)' },
 
-					'50%': {
-						transform: 'translatey(-25px)',
-					},
-
-					'100%': {
-						transform: 'translatey(25px)',
-					},
+					'100%': { transform: 'translatey(25px)' },
 				},
 				spin: {
-					'0%': {
-						transform: 'rotate(0deg)',
-					},
-					'100%': {
-						transform: 'rotate(360deg)',
-					},
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg)' },
+				},
+				changeToZinc: {
+					'0%': { background: '#F3F4F6' } /* bg-zinc-100 */,
+					'50%': { background: '#6D28D9' } /* bg-purple-800 */,
+					'100%': { background: '#F3F4F6' } /* bg-zinc-100 */,
+				},
+				changeToPurple: {
+					'0%': { background: '#6D28D9' } /* bg-zinc-100 */,
+					'50%': { background: '#F3F4F6' } /* bg-purple-800 */,
+					'100%': { background: '#6D28D9' } /* bg-zinc-100 */,
 				},
 			},
 		},

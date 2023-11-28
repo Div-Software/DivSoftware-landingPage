@@ -1,6 +1,4 @@
 ---
-import { Button, Link } from '@nextui-org/react';
-
 interface Props {
 	title: string;
 	text: string;
@@ -27,15 +25,20 @@ const imgTitle: string = `${id} - Image`;
 		<!-- Image container  -->
 		<div class='relative left-[20%] right-1/4 flex items-center lg:left-0 lg:right-0'>
 			<!-- Floating Circles -->
-			<div class='absolute -left-[5%] bottom-[25%] h-1.5 w-1.5 rounded-full bg-zinc-100 lg:left-0'>
-			</div>
 			<div
-				class='absolute bottom-[40%] left-[60%] h-1.5 w-1.5 rounded-full bg-zinc-100 lg:bottom-[50%] lg:left-[100%]'
+				class='common-props -left-[5%] bottom-[25%] animate-[changeToPurple_3s_ease-in-out_infinite] bg-zinc-100 lg:left-0'
 			>
 			</div>
-			<div class='absolute -left-1 bottom-[60%] h-1.5 w-1.5 rounded-full bg-purple-800'></div>
 			<div
-				class='absolute bottom-1.5 left-[50%] h-1.5 w-1.5 rounded-full bg-purple-800 lg:bottom-1 lg:left-[70%]'
+				class='common-props bottom-[40%] left-[60%] animate-[changeToPurple_3s_ease-in-out_infinite] bg-zinc-100 lg:bottom-[50%] lg:left-[100%]'
+			>
+			</div>
+			<div
+				class='common-props -left-1 bottom-[60%] animate-[changeToZinc_3s_ease-in-out_infinite] bg-purple-800'
+			>
+			</div>
+			<div
+				class='common-props bottom-1.5 left-[50%] animate-[changeToZinc_3s_ease-in-out_infinite] bg-purple-800 lg:bottom-1 lg:left-[70%]'
 			>
 			</div>
 			<!-- Service's image -->
@@ -53,7 +56,7 @@ const imgTitle: string = `${id} - Image`;
 			</div>
 		</div>
 
-		<!-- tService's title & description -->
+		<!-- Service's title & description -->
 		<div class='flex flex-col items-center justify-center gap-4 xl:h-40'>
 			<h3
 				class='w-full text-center text-sm font-bold text-foreground xs:text-base sm:text-lg lg:text-3xl'
@@ -67,7 +70,7 @@ const imgTitle: string = `${id} - Image`;
 	</aside>
 
 	<!-- Learn More Button side -->
-	<aside>
+	<!-- <aside>
 		<Link href={href}>
 			<Button
 				variant='bordered'
@@ -76,7 +79,7 @@ const imgTitle: string = `${id} - Image`;
 				Learn More
 			</Button>
 		</Link>
-	</aside>
+	</aside> -->
 </article>
 
 <style>
@@ -98,6 +101,12 @@ const imgTitle: string = `${id} - Image`;
 		padding: calc(1.5rem - 1px);
 		border-radius: 8px;
 		opacity: 0.8;
+	}
+	.common-props {
+		position: absolute;
+		height: 6px;
+		width: 6px;
+		border-radius: 50%;
 	}
 	h2 {
 		margin: 0;
