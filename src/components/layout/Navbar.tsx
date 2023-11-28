@@ -8,8 +8,9 @@ import {
 	NavbarMenuItem,
 	NavbarMenuToggle,
 } from '@nextui-org/react';
+import { scrollIntoSection } from '@utils/home.utils';
 import React from 'react';
-import logo from '/div-software-logo.svg?url';
+import { LogoComponent } from './LogoComponent';
 
 export function NavbarHome() {
 	const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -24,22 +25,6 @@ export function NavbarHome() {
 		{ title: 'Contact', href: '#contact' },
 	];
 
-	/**
-	 * A function used to scroll into the selected section with an smooth animation
-	 * @param {string} id The id of the section component
-	 */
-	const scrollIntoSection = (id: string) => {
-		const targetElement = document.querySelector(id)!;
-
-		if (targetElement) {
-			window.scrollTo({
-				behavior: 'smooth',
-				top: targetElement.getBoundingClientRect().top + window.scrollY,
-			});
-			setTimeout(() => setIsMenuOpen(false), 1000);
-		}
-	};
-
 	return (
 		<Navbar
 			onMenuOpenChange={setIsMenuOpen}
@@ -48,28 +33,7 @@ export function NavbarHome() {
 			className='fixed bg-primary-50'
 		>
 			<NavbarBrand>
-				<Link href='/' className='flex gap-1 xs:gap-2'>
-					<img
-						src={logo}
-						alt='Div Software'
-						width={'100%'}
-						height={16}
-						loading='lazy'
-						className='h-4 xs:h-5 md:h-6'
-					/>
-					<div aria-label='logo name' className='flex flex-row gap-3'>
-						<p className='text-xl font-bold text-foreground-200 xs:text-2xl md:text-3xl'>Div</p>
-						<p className='text-xl font-bold text-primary-500 xs:text-2xl md:text-3xl'>Software</p>
-					</div>
-					<img
-						src={logo}
-						alt='Div Software'
-						width={'100%'}
-						height={16}
-						loading='lazy'
-						className='h-4 rotate-180 xs:h-5 md:h-6'
-					/>
-				</Link>
+				<LogoComponent size='small' />
 			</NavbarBrand>
 
 			<NavbarMenuToggle
@@ -85,7 +49,7 @@ export function NavbarHome() {
 							className='w-full'
 							// href={item.href}
 							size='lg'
-							onClick={() => scrollIntoSection(item.href)}
+							onClick={() => scrollIntoSection(item.href, () => setIsMenuOpen(false))}
 						>
 							<p className='font-bold text-foreground-50'>{item.title}</p>
 						</Link>
@@ -102,7 +66,7 @@ export function NavbarHome() {
 							className='w-full'
 							// href={item.href}
 							size='lg'
-							onClick={() => scrollIntoSection(item.href)}
+							onClick={() => scrollIntoSection(item.href, () => setIsMenuOpen(false))}
 						>
 							{item.title}
 						</Link>

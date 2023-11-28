@@ -1,5 +1,6 @@
 ---
 import '@fontsource/poppins';
+import { Footer } from '../components/layout/Footer';
 import { NavbarHome } from '../components/layout/Navbar';
 
 interface Props {
@@ -23,6 +24,8 @@ const { title, description } = Astro.props;
 	<body class='bg-background text-foreground-100 dark'>
 		<NavbarHome client:visible />
 		<slot />
+
+		<Footer client:visible />
 	</body>
 </html>
 <style is:global>

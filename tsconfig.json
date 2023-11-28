@@ -9,7 +9,8 @@
 			"@components/*": ["src/components/*"],
 			"@layouts/*": ["src/layouts/*"],
 			"@core/*": ["src/core/*"],
-			"@helpers/*": ["src/helpers/*"]
+			"@helpers/*": ["src/helpers/*"],
+			"@utils/*": ["src/utils/*"]
 		}
 	}
 }
