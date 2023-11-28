@@ -16,25 +16,24 @@ module.exports = {
 			},
 			keyframes: {
 				float: {
-					'0%': {
-						transform: 'translatey(25px)',
-					},
+					'0%': { transform: 'translatey(25px)' },
+					'50%': { transform: 'translatey(-25px)' },
 
-					'50%': {
-						transform: 'translatey(-25px)',
-					},
-
-					'100%': {
-						transform: 'translatey(25px)',
-					},
+					'100%': { transform: 'translatey(25px)' },
 				},
 				spin: {
-					'0%': {
-						transform: 'rotate(0deg)',
-					},
-					'100%': {
-						transform: 'rotate(360deg)',
-					},
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg)' },
+				},
+				changeToZinc: {
+					'0%': { background: '#F3F4F6' } /* bg-zinc-100 */,
+					'50%': { background: '#6D28D9' } /* bg-purple-800 */,
+					'100%': { background: '#F3F4F6' } /* bg-zinc-100 */,
+				},
+				changeToPurple: {
+					'0%': { background: '#6D28D9' } /* bg-zinc-100 */,
+					'50%': { background: '#F3F4F6' } /* bg-purple-800 */,
+					'100%': { background: '#6D28D9' } /* bg-zinc-100 */,
 				},
 			},
 		},
@@ -50,18 +49,20 @@ module.exports = {
 				dark: {
 					colors: {
 						background: '#11071F',
-						foreground: '#ffffff',
+						foreground: '#f0f0f0',
 						primary: {
 							50: '#1A0B2E',
+							75: '#2B0B3A',
 							100: '#2C1250',
 							200: '#4F228D',
 							300: '#693B93',
 							400: '#7127BA',
 							500: '#763CAC',
 							600: '#9857D3',
-							700: '#A362FF',
+							700: '#9757D3',
+							800: '#A362FF',
 							DEFAULT: '#7127BA',
-							foreground: '#ffffff',
+							foreground: '#f0f0f0',
 						},
 					},
 				},
