@@ -1,6 +1,6 @@
 ---
+import Footer from '@components/layout/Footer.astro';
 import '@fontsource/poppins';
-import { Footer } from '../components/layout/Footer';
 import { NavbarHome } from '../components/layout/Navbar';
 
 interface Props {
@@ -25,7 +25,7 @@ const { title, description } = Astro.props;
 		<NavbarHome client:visible />
 		<slot />
 
-		<Footer client:visible />
+		<Footer />
 	</body>
 </html>
 <style is:global>

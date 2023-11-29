@@ -1,0 +1,76 @@
+---
+import { rootImages } from '@core/rootImages';
+import { LogoComponent } from './LogoComponent';
+
+const socialMedia = [
+	{
+		title: 'GitHub',
+		href: '#',
+		icon: rootImages.icons.github,
+	},
+	{
+		title: 'Facebook',
+		href: '#',
+		icon: rootImages.icons.facebook,
+	},
+	{
+		title: 'Instagram',
+		href: '#',
+		icon: rootImages.icons.instagram,
+	},
+];
+
+const links = [
+	{ href: '#', text: 'Teams' },
+	{ href: '#', text: 'Privacy' },
+	{ href: '#', text: 'Cookies' },
+];
+---
+
+<footer class='bg-primary-50 px-5 py-10 text-foreground-50'>
+	<div class='container mx-auto'>
+		<div class='flex flex-col items-center gap-4 text-center'>
+			<LogoComponent size='large' />
+			<p class='mx-auto mt-4 max-w-md text-lg font-semibold'>
+				Empowering business through design and technology.
+			</p>
+
+			<div class='justify mt-4 flex gap-3 sm:flex-row sm:items-center sm:justify-center'>
+				{
+					socialMedia.map((social) => (
+						<a href={social.href} target='_blank' rel='noopener noreferrer'>
+							<img
+								src={social.icon}
+								alt={social.title}
+								width={40}
+								height={40}
+								class='hover:brightness-200'
+							/>
+						</a>
+					))
+				}
+			</div>
+		</div>
+
+		<hr class='my-10 border-foreground-300 dark:border-foreground-400' />
+
+		<div class='flex flex-col items-center sm:flex-row sm:justify-between'>
+			<p class='text-sm text-foreground-50'>
+				© {new Date().getFullYear()} Div Software. All rights reserved.
+			</p>
+
+			<div class='-mx-2 mt-3 flex sm:mt-0'>
+				{
+					links.map((link) => (
+						<a
+							href={link.href}
+							class='mx-2 text-sm text-foreground-200 transition-colors duration-300 hover:text-foreground-200 dark:hover:text-foreground-400'
+						>
+							{link.text}
+						</a>
+					))
+				}
+			</div>
+		</div>
+	</div>
+</footer>
