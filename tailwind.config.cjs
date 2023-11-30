@@ -64,6 +64,8 @@ module.exports = {
 							DEFAULT: '#7127BA',
 							foreground: '#f0f0f0',
 						},
+						whatsapp: '#65b259',
+						telegram: '#f0f0f0',
 					},
 				},
 			},
