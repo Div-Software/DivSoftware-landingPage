@@ -2,6 +2,7 @@ const dirRoot = '/assets/';
 const dirIcons = '/assets/icons/';
 const dirProjects = '/assets/projects/';
 const dirServices = '/assets/services/';
+const dirSocial = '/assets/social/';
 const dirTechnologies = '/assets/technologies/';
 
 /**
@@ -53,5 +54,9 @@ export const rootImages = {
 			seventhLine: `${dirTechnologies}lines/seventhline.svg`,
 			eighthline: `${dirTechnologies}lines/eighthline.svg`,
 		},
+	},
+	social: {
+		whatsapp: `${dirSocial}whatsapplogo.webp`,
+		telegram: `${dirSocial}telegramlogo.webp`,
 	},
 };
