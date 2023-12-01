@@ -1,3 +1,4 @@
+import { withI18n } from '@components/WithI18Next';
 import {
 	Link,
 	Navbar,
@@ -9,20 +10,25 @@ import {
 	NavbarMenuToggle,
 } from '@nextui-org/react';
 import { scrollIntoSection } from '@utils/home.utils';
+import { type TFunction } from 'i18next';
 import React from 'react';
 import { LogoComponent } from './LogoComponent';
 
-export function NavbarHome() {
+interface Props {
+	t: TFunction;
+}
+
+function NavbarHome({ t }: Props) {
 	const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
 	/**
 	 * An object to identify each item from the Navigation menu
 	 */
 	const menuItems = [
-		{ title: 'Home', href: '#banner' },
-		{ title: 'About', href: '#about' },
-		{ title: 'Services', href: '#services' },
-		{ title: 'Contact', href: '#contact' },
+		{ title: t('home.navbar.home'), href: '#banner' },
+		{ title: t('home.navbar.about'), href: '#about' },
+		{ title: t('home.navbar.services'), href: '#services' },
+		{ title: t('home.navbar.contact'), href: '#contact' },
 	];
 
 	return (
@@ -76,3 +82,5 @@ export function NavbarHome() {
 		</Navbar>
 	);
 }
+
+export default withI18n(NavbarHome);

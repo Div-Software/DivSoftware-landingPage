@@ -1,0 +1,104 @@
+{
+  "site": {
+    "description": "At DivSoftware, we combine technology and design to empower businesses with tailored solutions. Our cutting-edge software technologies create engaging experiences that prioritize excellence and optimization. Discover innovation and aesthetics with DivSoftware."
+  },
+  "home": {
+    "navbar": {
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "banner": {
+      "title": "Let's create something great",
+      "highlight": " together"
+    },
+    "about": {
+      "title": "Welcome to <DivSoftware>",
+      "paragraphOne": "At DivSoftware, we stand at the intersection of technology and design. Our mission is to empower businesses with a full spectrum of technological and design solutions. Leveraging a diverse range of cutting-edge software technologies, we craft tailored experiences that resonate and engage.",
+      "paragraphTwo": "But our commitment goes beyond just delivering services. We prioritize excellence and optimization in every project, ensuring that our solutions are not only effective but also SEO-friendly. Dive into a world where innovation meets aesthetics with DivSoftware."
+    },
+    "services": {
+      "title": "Our Services",
+      "service": {
+        "web": {
+          "title": "Web Development",
+          "description": "We specialize in building custom web applications tailored to your unique needs and business goals. Our expert team will bring your web-based ideas to life with cutting-edge technology and user-friendly designs."
+        },
+        "mobile": {
+          "title": "Mobile Apps",
+          "description": "Our mobile app development team is dedicated to creating high-performance, intuitive, and visually appealing apps for both iOS and Android platforms. We turn your app concept into a reality."
+        },
+        "brands": {
+          "title": "Brand Creation",
+          "description": "Let us help you establish a strong and memorable brand identity. We offer brand creation services, including logo design, brand strategy, and visual assets that reflect your values and vision."
+        },
+        "design": {
+          "title": "UI/UX Design",
+          "description": "Our web design experts craft beautiful and responsive websites that make a lasting impression. We focus on user experience, performance, and aesthetics to ensure your site stands out."
+        }
+      }
+    },
+    "technologies": {
+      "title": "Technologies",
+      "description": "By leveraging the technologies showcased below, we promise optimized and scalable solutions for our customers"
+    },
+    "projects": {
+      "title": "Our Work",
+      "featured": "Featured Project",
+      "project": {
+        "globalRedex": {
+          "title": "Global Redex",
+          "description": "We are a leading company in telecommunications, with extensive experience and the best products and services. Our goal is to provide efficient solutions and to be recognized as the reliable option in the national market."
+        }
+      }
+    },
+    "contact": {
+      "title": "Contact Us",
+      "form": {
+        "name": {
+          "names": "Full name",
+          "placeholder": "Enter your full name"
+        },
+        "email": {
+          "email": "Email",
+          "placeholder": "Enter your email"
+        },
+        "phone": {
+          "phone": "Phone number",
+          "placeholder": "Enter your phone number"
+        },
+        "services": {
+          "services": "Services",
+          "placeholder": "Select a service"
+        },
+        "message": {
+          "message": "Message",
+          "placeholder": "Enter your message"
+        },
+        "terms": {
+          "acceptance": "By submitting this form, you accept our",
+          "termsAndConditions": "terms and conditions",
+          "andOur": "and our",
+          "privacyPolicy": "privacy policy",
+          "explanation": "which explains how we can collect, use, and disclose your personal data, even to third parties"
+        },
+        "submit": "Submit"
+      },
+      "social": {
+        "title": "Do you want a direct message?",
+        "subtitle": "Contact us and we will respond to you in less than 24 hours."
+      }
+    },
+    "footer": {
+      "slogan": "Empowering business through design and technology.",
+      "rights": "Div Software. All rights reserved.",
+      "links": {
+        "terms": "Terms",
+        "privacy": "Privacy",
+        "cookies": "Cookies"
+      }
+    }
+  }
+}
