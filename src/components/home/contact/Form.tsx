@@ -1,8 +1,13 @@
+import { withI18n } from '@components/WithI18Next';
 import { Button, Input, Select, SelectItem, Textarea } from '@nextui-org/react';
-
 import React, { useState } from 'react';
-import { Social } from './Social';
-export const Form = () => {
+import Social from './Social';
+
+interface Props {
+	t: any;
+}
+
+const Form = ({ t }: Props) => {
 	const [formData, setFormData] = useState({
 		fullName: '',
 		email: '',
@@ -45,6 +50,7 @@ export const Form = () => {
 	};
 
 	const services = ['Frontend', 'Backend', 'Devops', 'Full Stack', 'QA'];
+
 	return (
 		<form onSubmit={handleSubmit} className=' shadow-lg'>
 			<div className='flex w-full flex-col items-center divide-y divide-gray-400 overflow-x-hidden rounded-md bg-gradient-to-b from-primary-200 to-primary-50 p-5 py-20 backdrop-blur-2xl lg:flex-row lg:divide-x lg:divide-y-0'>
@@ -56,8 +62,8 @@ export const Form = () => {
 							isRequired
 							name='fullName'
 							type='text'
-							label='Full name'
-							placeholder='Enter your name'
+							label={t('home.contact.form.name.names')}
+							placeholder={t('home.contact.form.name.placeholder')}
 							value={formData.fullName}
 							onChange={handleChange}
 							classNames={defaultClass}
@@ -68,8 +74,8 @@ export const Form = () => {
 							isRequired
 							name='email'
 							type='email'
-							label='Email'
-							placeholder='Enter your email'
+							label={t('home.contact.form.email.email')}
+							placeholder={t('home.contact.form.email.placeholder')}
 							value={formData.email}
 							onChange={handleChange}
 							className='w-full'
@@ -83,8 +89,8 @@ export const Form = () => {
 							isRequired
 							name='phoneNumber'
 							type='number'
-							label='Phone number'
-							placeholder='Enter your phone'
+							label={t('home.contact.form.phone.phone')}
+							placeholder={t('home.contact.form.phone.placeholder')}
 							className='w-full'
 							value={formData.phoneNumber}
 							onChange={handleChange}
@@ -94,9 +100,9 @@ export const Form = () => {
 						<Select
 							color={'primary'}
 							classNames={defaultClass}
-							label='Services'
 							className='w-full'
-							placeholder='Select a service'
+							label={t('home.contact.form.services.services')}
+							placeholder={t('home.contact.form.services.placeholder')}
 						>
 							{services.map((animal) => (
 								<SelectItem key={animal} value={animal}>
@@ -120,10 +126,16 @@ export const Form = () => {
 					</div>
 					<div>
 						<label>
-							Al enviar este formulario, accepta nuestros{' '}
-							<span className='text-primary-700'>terminos y condiciones </span> y nuestra
-							<span className='text-primary-700'> politica de privacidad </span> que explica como
-							podemos recoger, utilizar y divulgar sus datos personales, incluso a terceros
+							<span className='text-primary-700'>{t('home.contact.form.terms.acceptance')}</span>
+							<span className='text-primary-700'>
+								{t('home.contact.form.terms.termsAndConditions')}{' '}
+							</span>
+							{t('home.contact.form.terms.andOur')}
+							<span className='text-primary-700'>
+								{' '}
+								{t('home.contact.form.terms.privacyPolicy')}{' '}
+							</span>{' '}
+							{t('home.contact.form.terms.explanation')}
 						</label>
 					</div>
 
@@ -141,3 +153,5 @@ export const Form = () => {
 		</form>
 	);
 };
+
+export default withI18n(Form);

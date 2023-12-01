@@ -1,4 +1,5 @@
 ---
+import { t } from 'i18next';
 import ProjectCard from './ProjectCard.astro';
 ---
 
@@ -9,7 +10,7 @@ import ProjectCard from './ProjectCard.astro';
 	<h3
 		class='text-center text-3xl font-semibold text-foreground sm:text-left sm:text-4xl lg:text-5xl'
 	>
-		Our Work
+		{t('home.projects.title')}
 	</h3>
 
 	<ProjectCard />

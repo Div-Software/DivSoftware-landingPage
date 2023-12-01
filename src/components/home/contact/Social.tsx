@@ -1,12 +1,20 @@
+import { withI18n } from '@components/WithI18Next';
 import { rootImages } from '@core/rootImages';
+import type { TFunction } from 'i18next';
 
-export const Social = () => {
+interface Props {
+	t: TFunction;
+}
+
+const Social = ({ t }: Props) => {
 	return (
 		<div className='container mx-auto text-center'>
 			<div className='py-8'>
-				<p className='text-center text-2xl font-bold sm:text-left'>Do you want a direct message?</p>
+				<p className='text-center text-2xl font-bold sm:text-left'>
+					{t('home.contact.social.title')}
+				</p>
 				<p className='mt-2 text-center text-base sm:text-left'>
-					Contact us and we will respond to you in less than 24 hours.
+					{t('home.contact.social.subtitle')}
 				</p>
 			</div>
 			<div className='flex flex-col items-center justify-center '>
@@ -48,3 +56,5 @@ export const Social = () => {
 		</div>
 	);
 };
+
+export default withI18n(Social);

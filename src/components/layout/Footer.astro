@@ -1,5 +1,6 @@
 ---
 import { rootImages } from '@core/rootImages';
+import { t } from 'i18next';
 import { LogoComponent } from './LogoComponent';
 
 const socialMedia = [
@@ -21,9 +22,9 @@ const socialMedia = [
 ];
 
 const links = [
-	{ href: '#', text: 'Teams' },
-	{ href: '#', text: 'Privacy' },
-	{ href: '#', text: 'Cookies' },
+	{ href: '#', text: t('home.footer.links.terms') },
+	{ href: '#', text: t('home.footer.links.privacy') },
+	{ href: '#', text: t('home.footer.links.cookies') },
 ];
 ---
 
@@ -32,7 +33,7 @@ const links = [
 		<div class='flex flex-col items-center gap-4 text-center'>
 			<LogoComponent size='large' />
 			<p class='mx-auto mt-4 max-w-md text-lg font-semibold'>
-				Empowering business through design and technology.
+				{t('home.footer.slogan')}
 			</p>
 
 			<div class='justify mt-4 flex gap-3 sm:flex-row sm:items-center sm:justify-center'>
@@ -56,7 +57,8 @@ const links = [
 
 		<div class='flex flex-col items-center sm:flex-row sm:justify-between'>
 			<p class='text-sm text-foreground-50'>
-				© {new Date().getFullYear()} Div Software. All rights reserved.
+				© {new Date().getFullYear()}{' '}
+				{t('home.footer.rights')}
 			</p>
 
 			<div class='-mx-2 mt-3 flex sm:mt-0'>

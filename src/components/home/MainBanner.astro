@@ -1,5 +1,6 @@
 ---
 import { rootImages } from '@core/rootImages';
+import { t } from 'i18next';
 ---
 
 <section
@@ -30,8 +31,10 @@ import { rootImages } from '@core/rootImages';
 			<h1
 				class='text-center text-2xl font-bold text-foreground xs:text-3xl sm:text-left md:text-5xl'
 			>
-				Let's create something great
-				<span class='text-primary-500'>together</span>
+				{t('home.banner.title')}
+				<span class='text-primary-500'>
+					{t('home.banner.highlight')}
+				</span>
 				 ...
 			</h1>
 		</div>

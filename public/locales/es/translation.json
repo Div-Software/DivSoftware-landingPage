@@ -1,0 +1,104 @@
+{
+  "site": {
+    "description": "En DivSoftware, combinamos tecnología y diseño para empoderar a las empresas con soluciones personalizadas. Nuestras tecnologías de software de vanguardia crean experiencias atractivas que priorizan la excelencia y la optimización. Descubre la innovación y la estética con DivSoftware."
+  },
+  "home": {
+    "navbar": {
+      "home": "Inicio",
+      "about": "Acerca de",
+      "services": "Servicios",
+      "projects": "Proyectos",
+      "contact": "Contacto"
+    },
+    "banner": {
+      "title": "Creemos algo grandioso",
+      "highlight": " juntos"
+    },
+    "about": {
+      "title": "Bienvenido a <DivSoftware>",
+      "paragraphOne": "En DivSoftware, nos situamos en la intersección de la tecnología y el diseño. Nuestra misión es empoderar a las empresas con un espectro completo de soluciones tecnológicas y de diseño. Aprovechando una diversa gama de tecnologías de software de vanguardia, creamos experiencias personalizadas que resuenan y atraen.",
+      "paragraphTwo": "Pero nuestro compromiso va más allá de simplemente ofrecer servicios. Priorizamos la excelencia y la optimización en cada proyecto, asegurando que nuestras soluciones no solo sean efectivas, sino también amigables con SEO. Sumérgete en un mundo donde la innovación se encuentra con la estética con DivSoftware."
+    },
+    "services": {
+      "title": "Nuestros Servicios",
+      "service": {
+        "web": {
+          "title": "Desarrollo Web",
+          "description": "Nos especializamos en la construcción de aplicaciones web personalizadas adaptadas a tus necesidades únicas y objetivos de negocio. Nuestro equipo de expertos dará vida a tus ideas basadas en la web con tecnología de vanguardia y diseños amigables para el usuario."
+        },
+        "mobile": {
+          "title": "Aplicaciones Móviles",
+          "description": "Nuestro equipo de desarrollo de aplicaciones móviles se dedica a crear aplicaciones de alto rendimiento, intuitivas y visualmente atractivas para las plataformas iOS y Android. Convertimos tu concepto de aplicación en realidad."
+        },
+        "brands": {
+          "title": "Creación de Marca",
+          "description": "Permítenos ayudarte a establecer una identidad de marca fuerte y memorable. Ofrecemos servicios de creación de marca, incluyendo diseño de logotipos, estrategia de marca y activos visuales que reflejan tus valores y visión."
+        },
+        "design": {
+          "title": "Diseño UI/UX",
+          "description": "Nuestros expertos en diseño web crean sitios web hermosos y responsivos que dejan una impresión duradera. Nos enfocamos en la experiencia del usuario, el rendimiento y la estética para asegurar que tu sitio se destaque."
+        }
+      }
+    },
+    "technologies": {
+      "title": "Tecnologías",
+      "description": "Al aprovechar las tecnologías que se muestran a continuación, prometemos soluciones optimizadas y escalables para nuestros clientes"
+    },
+    "projects": {
+      "title": "Nuestro Trabajo",
+      "featured": "Proyecto Destacado",
+      "project": {
+        "globalRedex": {
+          "title": "Global Redex",
+          "description": "Somos una empresa líder en telecomunicaciones, con amplia experiencia y los mejores productos y servicios. Nuestro objetivo es proporcionar soluciones eficientes y ser reconocidos como la opción confiable en el mercado nacional."
+        }
+      }
+    },
+    "contact": {
+      "title": "Contáctanos",
+      "form": {
+        "name": {
+          "names": "Nombre completo",
+          "placeholder": "Ingresa tu nombre completo"
+        },
+        "email": {
+          "email": "Correo electrónico",
+          "placeholder": "Ingresa tu correo electrónico"
+        },
+        "phone": {
+          "phone": "Número de teléfono",
+          "placeholder": "Ingresa tu número de teléfono"
+        },
+        "services": {
+          "services": "Servicios",
+          "placeholder": "Selecciona un servicio"
+        },
+        "message": {
+          "message": "Mensaje",
+          "placeholder": "Ingresa tu mensaje"
+        },
+        "terms": {
+          "acceptance": "Al enviar este formulario, aceptas nuestros",
+          "termsAndConditions": " términos y condiciones",
+          "andOur": " y nuestra",
+          "privacyPolicy": " política de privacidad",
+          "explanation": " que explica cómo podemos recopilar, usar y divulgar tus datos personales, incluso a terceros"
+        },
+        "submit": "Enviar"
+      },
+      "social": {
+        "title": "¿Quieres un mensaje directo?",
+        "subtitle": "Contáctanos y te responderemos en menos de 24 horas."
+      },
+      "footer": {
+        "slogan": "Potenciando negocios a través del diseño y la tecnología.",
+        "rights": "Div Software. Todos los derechos reservados.",
+        "links": {
+          "terms": "Términos",
+          "privacy": "Privacidad",
+          "cookies": "Cookies"
+        }
+      }
+    }
+  }
+}
