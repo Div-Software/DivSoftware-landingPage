@@ -1,4 +1,3 @@
-import { withI18n } from '@components/WithI18Next';
 import {
 	Link,
 	Navbar,
@@ -10,15 +9,11 @@ import {
 	NavbarMenuToggle,
 } from '@nextui-org/react';
 import { scrollIntoSection } from '@utils/home.utils';
-import { type TFunction } from 'i18next';
+import { t } from 'i18next';
 import React from 'react';
 import { LogoComponent } from './LogoComponent';
 
-interface Props {
-	t: TFunction;
-}
-
-function NavbarHome({ t }: Props) {
+export function NavbarHome() {
 	const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
 	/**
@@ -82,5 +77,3 @@ function NavbarHome({ t }: Props) {
 		</Navbar>
 	);
 }
-
-export default withI18n(NavbarHome);
