@@ -1,13 +1,9 @@
-import { withI18n } from '@components/WithI18Next';
 import { Button, Input, Select, SelectItem, Textarea } from '@nextui-org/react';
+import { t } from 'i18next';
 import React, { useState } from 'react';
 import Social from './Social';
 
-interface Props {
-	t: any;
-}
-
-const Form = ({ t }: Props) => {
+export const Form = () => {
 	const [formData, setFormData] = useState({
 		fullName: '',
 		email: '',
@@ -153,5 +149,3 @@ const Form = ({ t }: Props) => {
 		</form>
 	);
 };
-
-export default withI18n(Form);

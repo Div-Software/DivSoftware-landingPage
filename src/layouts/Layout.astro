@@ -2,7 +2,7 @@
 import Footer from '@components/layout/Footer.astro';
 import '@fontsource/poppins';
 import i18next, { t } from 'i18next';
-import NavbarHome from '../components/layout/Navbar';
+import { NavbarHome } from '../components/layout/Navbar';
 
 interface Props {
 	title: string;
@@ -22,7 +22,7 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body class='bg-background text-foreground-100 dark'>
-		<NavbarHome client:load />
+		<NavbarHome client:visible />
 		<slot />
 		<Footer />
 	</body>
