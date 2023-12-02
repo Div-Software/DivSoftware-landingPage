@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig, squooshImageService } from 'astro/config';
 
 import react from '@astrojs/react';
 import tailwind from '@astrojs/tailwind';
@@ -16,6 +16,9 @@ export default defineConfig({
 		}),
 		astroI18Next(),
 	],
+	image: {
+		service: squooshImageService(),
+	},
 	output: 'static',
 	adapter: vercel(),
 });

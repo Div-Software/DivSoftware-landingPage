@@ -1,4 +1,5 @@
-import { a as h, r as o } from './index.d4f15412.js';
+import { a as h, r as o } from './index.b3c965e4.js';
+import './_commonjsHelpers.725317a4.js';
 var l,
 	f,
 	d = h;
@@ -38,7 +39,7 @@ function N(t, r) {
 		return e;
 	} else return t ? o.createElement(u, { value: t }) : void 0;
 }
-const _ =
+const b =
 	(t) =>
 	(r, e, { default: a, ...s }, { client: E }) => {
 		if (!t.hasAttribute('ssr')) return;
@@ -56,4 +57,4 @@ const _ =
 			n.render(i), t.addEventListener('astro:unmount', () => n.unmount(), { once: !0 });
 		});
 	};
-export { _ as default };
+export { b as default };
