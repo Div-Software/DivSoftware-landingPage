@@ -1,5 +1,6 @@
 ---
 import { rootImages } from '@core/rootImages';
+import { Image } from 'astro:assets';
 
 /**
  * Represents an array of arrays of objects containing properties of technologies.
@@ -99,34 +100,36 @@ const technologies: TechnologiesProps = [
 	class='xs: mx-auto flex w-0 flex-row items-center justify-center gap-3 p-10 md:container'
 >
 	<div class='relative flex flex-col gap-3'>
-		<div class='flex flex-row xs:gap-1 sm:gap-2 md:gap-3 lg:gap-4'>
+		<div class='flex flex-row gap-0.5 xs:gap-1 sm:gap-2 md:gap-3 lg:gap-4'>
 			{
 				technologies[0].map((info) => (
-					<div class='flex h-14 w-14 items-center justify-center rounded-full bg-[#251C31] xs:h-[30px] xs:w-[30px] sm:h-[45px] sm:w-[45px] md:h-[50px] md:w-[50px] lg:h-[65px] lg:w-[65px]'>
-						<img
+					<div class='flex h-7 w-7 items-center justify-center rounded-full bg-[#251C31] xs:h-[30px] xs:w-[30px] sm:h-[45px] sm:w-[45px] md:h-[50px] md:w-[50px] lg:h-[65px] lg:w-[65px]'>
+						<Image
 							src={info.img}
 							alt={info.alt}
-							loading='lazy'
-							class='h-8 w-8 xs:h-[20px] xs:w-[20px] sm:h-[30px] sm:w-[30px] md:h-[35px] md:w-[35px] lg:h-[40px] lg:w-[40px]'
+							width={20}
+							height={20}
+							class='h-5 w-5 xs:h-[20px] xs:w-[20px] sm:h-[30px] sm:w-[30px] md:h-[35px] md:w-[35px] lg:h-[40px] lg:w-[40px]'
 						/>
 					</div>
 				))
 			}
 		</div>
 		<div>
-			<div class='relative flex flex-row justify-center gap-4 xs:gap-1 sm:gap-2 md:gap-3'>
+			<div class='relative flex flex-row justify-center gap-0.5 xs:gap-1 sm:gap-2 md:gap-3'>
 				{
 					technologies[1].map((info) => {
 						const node = info.alt.includes('Node');
 						const express = info.alt.includes('Express');
 
 						return (
-							<div class='flex h-14 w-14 items-center justify-center rounded-full bg-[#251C31] xs:h-[30px] xs:w-[30px] sm:h-[45px] sm:w-[45px] md:h-[50px] md:w-[50px] lg:h-[65px] lg:w-[65px]'>
-								<img
+							<div class='flex h-7 w-7 items-center justify-center rounded-full bg-[#251C31] xs:h-[30px] xs:w-[30px] sm:h-[45px] sm:w-[45px] md:h-[50px] md:w-[50px] lg:h-[65px] lg:w-[65px]'>
+								<Image
 									src={info.img}
 									alt={info.alt}
-									loading='lazy'
-									class={`h-8 w-8 ${
+									width={20}
+									height={20}
+									class={`h-5 w-5 ${
 										node
 											? 'xs:h-7 xs:w-7 sm:h-14 sm:w-14'
 											: express
@@ -142,7 +145,7 @@ const technologies: TechnologiesProps = [
 			</div>
 		</div>
 
-		<div class='flex w-[100%] flex-row items-center justify-center gap-[2rem]'>
+		<div class='hidden w-[100%] flex-row items-center justify-center gap-[2rem] xs:flex'>
 			<img
 				src={linesPath.firstLine}
 				alt='firstLine'
@@ -195,17 +198,17 @@ const technologies: TechnologiesProps = [
 			</div> -->
 			<div
 				id='first-border-line'
-				class='absolute top-[70%] flex items-center justify-center rounded-[50%] border border-solid border-primary-400 xs:top-[60%] xs:h-[150px] xs:w-[300px] sm:top-[60%] sm:h-[230px] sm:w-[600px] md:bottom-4 md:h-[230px] md:w-[730px] lg:top-[78%] lg:h-[250px] lg:w-[781px] xl:h-[250px] xl:w-[981px]'
+				class='absolute top-[40%] flex h-[150px] w-[270px] items-center justify-center rounded-[50%] border border-solid border-primary-400 xs:top-[60%] xs:w-[300px] sm:top-[60%] sm:h-[230px] sm:w-[600px] md:bottom-4 md:h-[230px] md:w-[730px] lg:top-[78%] lg:h-[250px] lg:w-[781px] xl:h-[250px] xl:w-[981px]'
 				style='clip-path: ellipse(100% 98% at 50% 100%); '
 			>
 				<div
-					id='first-border-line'
-					class='absolute flex items-center justify-center rounded-[50%] border border-solid border-primary-400 xs:h-[150px] xs:w-[270px] sm:h-[230px] sm:w-[520px] md:h-[230px] md:w-[610px] lg:h-[250px] lg:w-[681px] xl:w-[781px]'
+					id='second-border-line'
+					class='absolute flex h-[150px] w-[240px] items-center justify-center rounded-[50%] border border-solid border-primary-400 xs:w-[270px] sm:h-[230px] sm:w-[520px] md:h-[230px] md:w-[610px] lg:h-[250px] lg:w-[681px] xl:w-[781px]'
 					style='clip-path: ellipse(100% 98% at 50% 100%); '
 				>
 					<div
-						id='first-border-line'
-						class='absolute rounded-[50%] border border-solid border-primary-400 xs:h-[115px] xs:w-[220px] sm:h-[230px] sm:w-[440px] md:h-[230px] md:w-[500px] lg:h-[250px] lg:w-[581px] xl:w-[681px]'
+						id='center-border-line'
+						class='absolute h-[115px] w-[190px] rounded-[50%] border border-solid border-primary-400 xs:w-[220px] sm:h-[230px] sm:w-[440px] md:h-[230px] md:w-[500px] lg:h-[250px] lg:w-[581px] xl:w-[681px]'
 						style='clip-path: ellipse(100% 98% at 50% 100%); '
 					>
 					</div>
@@ -216,21 +219,22 @@ const technologies: TechnologiesProps = [
 			>
 				<div
 					id='first-border-line'
-					class='absolute rounded-[50%] border-b-2 border-solid border-primary-400 xs:bottom-[15%] xs:h-[100px] xs:h-[90px] xs:w-[100px] sm:bottom-[13%] sm:h-[110px] sm:w-[110px] md:bottom-4 md:h-[110px] md:w-[190px] lg:h-[100px] lg:w-[220px] xl:h-[140px] xl:w-[250px]'
+					class='absolute h-[100px] w-[100px] rounded-[50%] border-b-2 border-solid border-primary-400 xs:bottom-[15%] sm:bottom-[13%] sm:h-[110px] sm:w-[110px] md:bottom-4 md:h-[110px] md:w-[190px] lg:h-[100px] lg:w-[220px] xl:h-[140px] xl:w-[250px]'
 				>
 				</div>
 				<div
 					id='second-border-line'
-					class='absolute rounded-[50%] border-b-2 border-solid border-primary-400 xs:bottom-[13%] xs:h-[90px] xs:w-[80px] sm:bottom-[11%] sm:h-[90px] sm:w-[80px] md:bottom-4 md:top-[79%] md:h-[120px] md:w-[150px] lg:top-[81%] lg:h-[140px] lg:w-[160px] xl:top-[77%] xl:h-[170px] xl:w-[220px]'
+					class='absolute h-[90px] w-[80px] rounded-[50%] border-b-2 border-solid border-primary-400 xs:bottom-[13%] sm:bottom-[11%] sm:h-[90px] sm:w-[80px] md:bottom-4 md:top-[79%] md:h-[120px] md:w-[150px] lg:top-[81%] lg:h-[140px] lg:w-[160px] xl:top-[77%] xl:h-[170px] xl:w-[220px]'
 				>
 				</div>
 				<div
 					class='flex h-24 w-24 items-center justify-center rounded-full bg-[linear-gradient(180deg,_rgba(48,_16,_128,_0.60)_0%,_rgba(120,_64,_173,_0.36)_100%)] md:h-44 md:w-44'
 				>
-					<img
+					<Image
 						src={rootImages.technologies.crossLogo}
 						alt='div-software-logo'
-						loading='lazy'
+						width={80}
+						height={80}
 						class='h-20 w-20 transform transition-transform hover:animate-[spin_5s_ease-in-out_infinite] md:h-32 md:w-32'
 					/>
 				</div>

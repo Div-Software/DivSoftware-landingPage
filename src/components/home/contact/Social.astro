@@ -1,5 +1,6 @@
 ---
 import { rootImages } from '@core/rootImages';
+import { Image } from 'astro:assets';
 import { t } from 'i18next';
 ---
 
@@ -16,7 +17,13 @@ import { t } from 'i18next';
 				<div
 					class='flex h-24 w-36 items-center justify-center rounded-xl bg-whatsapp shadow shadow-whatsapp backdrop-blur-3xl'
 				>
-					<img src={rootImages.social.whatsapp} alt='Telegram' class='h-12 w-12' />
+					<Image
+						src={rootImages.social.whatsapp}
+						alt='WhatsApp'
+						width={102}
+						height={100}
+						class='h-12 w-12'
+					/>
 				</div>
 				<div>
 					<p class='text-lg'>WhatsApp</p>
@@ -39,7 +46,13 @@ import { t } from 'i18next';
 				<div
 					class='flex h-24 w-36 items-center justify-center rounded-xl bg-telegram shadow shadow-whatsapp backdrop-blur-3xl'
 				>
-					<img src={rootImages.social.telegram} alt='Telegram' class='h-12 w-12' />
+					<Image
+						src={rootImages.social.telegram}
+						alt='Telegram'
+						width={102}
+						height={100}
+						class='h-12 w-12'
+					/>
 				</div>
 				<div>
 					<p class='text-lg'>Telegram</p>
