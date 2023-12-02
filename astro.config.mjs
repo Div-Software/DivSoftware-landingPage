@@ -7,7 +7,15 @@ import astroI18Next from 'astro-i18next';
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [react(), tailwind(), astroI18Next()],
+	integrations: [
+		react(),
+		tailwind({
+			build: {
+				inlineStylesheets: 'always',
+			},
+		}),
+		astroI18Next(),
+	],
 	output: 'static',
 	adapter: vercel(),
 });

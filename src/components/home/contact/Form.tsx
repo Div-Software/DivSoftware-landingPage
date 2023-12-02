@@ -1,9 +1,12 @@
 import { Button, Input, Select, SelectItem, Textarea } from '@nextui-org/react';
 import { t } from 'i18next';
 import React, { useState } from 'react';
-import Social from './Social';
 
-export const Form = () => {
+interface Props {
+	children: JSX.Element;
+}
+
+export const Form = ({ children }: Props) => {
 	const [formData, setFormData] = useState({
 		fullName: '',
 		email: '',
@@ -142,9 +145,7 @@ export const Form = () => {
 						Enviar
 					</Button>
 				</div>
-				<div className='px-10'>
-					<Social />
-				</div>
+				<div className='px-10'>{children}</div>
 			</div>
 		</form>
 	);
