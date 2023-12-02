@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+
 interface Props {
 	title: string;
 	text: string;
@@ -8,7 +10,7 @@ interface Props {
 	id: string;
 }
 
-const { href, title, text, hasGradient, id, img } = Astro.props;
+const { title, text, hasGradient, id, img } = Astro.props;
 
 const imgTitle: string = `${id} - Image`;
 ---
@@ -44,12 +46,11 @@ const imgTitle: string = `${id} - Image`;
 			>
 			</div>
 			<!-- Service's image -->
-			<img
+			<Image
 				src={img}
 				alt={imgTitle}
-				width='100%'
-				height='auto'
-				loading='lazy'
+				width={160}
+				height={160}
 				class='relative z-10 h-40 w-40 transform transition-transform duration-300 ease-in-out hover:scale-110'
 			/>
 			<div
