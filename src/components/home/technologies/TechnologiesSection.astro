@@ -1,11 +1,16 @@
 ---
+import { motion } from 'framer-motion';
 import { t } from 'i18next';
 import CrossFunctional from './CrossFunctional.astro';
 ---
 
-<section
+<motion.section
+	initial={{ x: -100, opacity: 0 }}
+	animate={{ x: 0, opacity: 1 }}
+	transition={{ duration: 0.5, delay: 0.2 }}
+	client:visible
 	id='technologies'
-	class='mx-auto flex flex-col items-center justify-center gap-10 p-10 pt-20 md:container'
+	className='mx-auto flex flex-col items-center justify-center gap-10 p-10 pt-20 md:container'
 >
 	<h3
 		class='text-center text-2xl font-semibold text-foreground sm:text-left sm:text-3xl md:text-4xl lg:text-5xl'
@@ -22,4 +27,4 @@ import CrossFunctional from './CrossFunctional.astro';
 	</div>
 
 	<CrossFunctional />
-</section>
+</motion.section>

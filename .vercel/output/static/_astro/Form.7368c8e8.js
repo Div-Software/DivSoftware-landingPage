@@ -1,19 +1,19 @@
 import {
 	t as me,
-	d as Ae,
+	d as Fe,
 	g as lr,
 	c as Ke,
 	$ as ot,
 	a as Nt,
 	b as sr,
-	e as Rt,
+	e as At,
 	f as nr,
 	h as Qe,
 	i as or,
 	j as it,
 	k as E,
-	l as At,
-	m as Ft,
+	l as Ft,
+	m as Rt,
 	n as ir,
 	o as dt,
 	p as dr,
@@ -24,43 +24,43 @@ import {
 	v as at,
 	w as ve,
 	x as ur,
+	y as we,
+	z as Ie,
 	A as Dt,
-	y as rt,
-	z as we,
-	B as Ie,
-	C as Ot,
-	D as lt,
-	E as Fe,
-	F as M,
-	G as _e,
-	H as T,
-	I as Ee,
-	J as ke,
-	K as fr,
-	L as pr,
-	M as Le,
-	N as jt,
-	O as Et,
-	P as gr,
-	Q as br,
-	R as Bt,
-	S as hr,
-	T as mr,
-	U as Lt,
-	V as vr,
-	W as ut,
-	X as yr,
-	Y as xr,
-	Z as wr,
-	_ as Pr,
-	a0 as Sr,
-	a1 as $r,
-	a2 as ft,
-	a3 as Cr,
-	a4 as Kr,
-} from './index.1313ec55.js';
+	B as rt,
+	C as Re,
+	D as M,
+	E as _e,
+	F as T,
+	G as Ee,
+	H as ke,
+	I as fr,
+	J as pr,
+	K as Le,
+	L as Ot,
+	M as jt,
+	N as gr,
+	O as br,
+	P as Et,
+	Q as hr,
+	R as mr,
+	T as Bt,
+	S as vr,
+	U as ut,
+	V as yr,
+	W as xr,
+	X as wr,
+	Y as Pr,
+	Z as Sr,
+	_ as $r,
+	a0 as ft,
+	a1 as Cr,
+	a2 as Kr,
+} from './index.2644096b.js';
 import { t as ue } from './i18next.a4b2730f.js';
-import { r as c, a as Mr, R as Be } from './index.b3c965e4.js';
+import { r as c, $ as Be } from './index.9eb79d8f.js';
+import { r as Mr } from './index.414e2829.js';
+import { aj as Lt, g as lt } from './index.e17a3e1d.js';
 import './_commonjsHelpers.725317a4.js';
 function et() {
 	return (
@@ -121,7 +121,7 @@ var Ir = {
 		danger: 'border-default bg-default-100 text-danger',
 		foreground: 'border-default bg-default-100 text-foreground',
 	},
-	Rr = {
+	Ar = {
 		default: 'bg-transparent text-default-foreground',
 		primary: 'bg-transparent text-primary',
 		secondary: 'bg-transparent text-secondary',
@@ -130,7 +130,7 @@ var Ir = {
 		danger: 'bg-transparent text-danger',
 		foreground: 'bg-transparent text-foreground',
 	},
-	Ar = {
+	Fr = {
 		default: 'border-default text-default-foreground hover:!bg-default',
 		primary: 'border-primary text-primary hover:!text-primary-foreground hover:!bg-primary',
 		secondary:
@@ -140,7 +140,7 @@ var Ir = {
 		danger: 'border-danger text-danger hover:!text-danger-foreground hover:!bg-danger',
 		foreground: 'border-foreground text-foreground hover:!bg-foreground',
 	},
-	N = { solid: Ir, shadow: kr, bordered: _r, flat: zr, faded: Nr, light: Rr, ghost: Ar },
+	N = { solid: Ir, shadow: kr, bordered: _r, flat: zr, faded: Nr, light: Ar, ghost: Fr },
 	pt = me({
 		slots: {
 			base: 'relative inline-flex flex-col gap-2 items-center justify-center',
@@ -242,7 +242,7 @@ var Ir = {
 				'data-[placement=right-start]:before:top-1/4',
 				'data-[placement=right-end]:before:-left-[calc(theme(spacing.5)/4_-_3px)]',
 				'data-[placement=right-end]:before:bottom-1/4',
-				...Ae,
+				...Fe,
 			],
 			content: [
 				'z-10',
@@ -322,7 +322,7 @@ var Ir = {
 			},
 		],
 	}),
-	Fr = [
+	Rr = [
 		'data-[top-scroll=true]:[mask-image:linear-gradient(0deg,#000_calc(100%_-_var(--scroll-shadow-size)),transparent)]',
 		'data-[bottom-scroll=true]:[mask-image:linear-gradient(180deg,#000_calc(100%_-_var(--scroll-shadow-size)),transparent)]',
 		'data-[top-bottom-scroll=true]:[mask-image:linear-gradient(#000,#000,transparent_0,#000_var(--scroll-shadow-size),#000_calc(100%_-_var(--scroll-shadow-size)),transparent)]',
@@ -335,7 +335,7 @@ var Ir = {
 	bt = me({
 		base: [],
 		variants: {
-			orientation: { vertical: ['overflow-y-auto', ...Fr], horizontal: ['overflow-x-auto', ...Wr] },
+			orientation: { vertical: ['overflow-y-auto', ...Rr], horizontal: ['overflow-x-auto', ...Wr] },
 			hideScrollBar: { true: 'scrollbar-hide', false: '' },
 		},
 		defaultVariants: { orientation: 'vertical', hideScrollBar: !1 },
@@ -680,7 +680,7 @@ var Ir = {
 				variant: 'underlined',
 				class: { trigger: 'after:transition-width motion-reduce:after:transition-none' },
 			},
-			{ variant: ['flat', 'faded'], class: { trigger: [...Ae] } },
+			{ variant: ['flat', 'faded'], class: { trigger: [...Fe] } },
 			{
 				labelPlacement: 'inside',
 				color: 'default',
@@ -920,7 +920,7 @@ var Ir = {
 				'cursor-pointer',
 				'active:!opacity-70',
 				'rounded-full',
-				...Ae,
+				...Fe,
 			],
 			helperWrapper: 'flex absolute -bottom-[calc(theme(fontSize.tiny)*1.5)] flex-col gap-1.5 px-1',
 			description: 'text-tiny text-foreground-400',
@@ -1522,7 +1522,7 @@ var Ir = {
 				'outline-none',
 				'cursor-pointer',
 				'tap-highlight-transparent',
-				...Ae,
+				...Fe,
 				'data-[focus-visible=true]:dark:ring-offset-background-content1',
 			],
 			wrapper: 'w-full flex flex-col items-start justify-center',
@@ -1940,7 +1940,7 @@ var Ir = {
 			'subpixel-antialiased',
 			'overflow-hidden',
 			'tap-highlight-transparent',
-			...Ae,
+			...Fe,
 		],
 		variants: {
 			variant: {
@@ -2383,7 +2383,7 @@ function Zr(a) {
 			linkBehavior: x = 'action',
 		} = a,
 		{ direction: y } = sr(),
-		h = Rt(),
+		h = At(),
 		S = (m) => {
 			if ((m.altKey && m.key === 'Tab' && m.preventDefault(), !r.current.contains(m.target)))
 				return;
@@ -2422,7 +2422,7 @@ function Zr(a) {
 					break;
 				case 'ArrowUp':
 					if (t.getKeyAbove) {
-						var j, A;
+						var j, F;
 						m.preventDefault();
 						let I =
 							e.focusedKey != null
@@ -2432,7 +2432,7 @@ function Zr(a) {
 								: j.call(t);
 						I == null &&
 							l &&
-							(I = (A = t.getLastKey) === null || A === void 0 ? void 0 : A.call(t, e.focusedKey)),
+							(I = (F = t.getLastKey) === null || F === void 0 ? void 0 : F.call(t, e.focusedKey)),
 							z(I);
 					}
 					break;
@@ -2547,8 +2547,8 @@ function Zr(a) {
 			}
 			if (m.currentTarget.contains(m.target)) {
 				if ((e.setFocused(!0), e.focusedKey == null)) {
-					let O = (A) => {
-							A != null && (e.setFocusedKey(A), o && e.replaceSelection(A));
+					let O = (F) => {
+							F != null && (e.setFocusedKey(F), o && e.replaceSelection(F));
 						},
 						j = m.relatedTarget;
 					var z, D;
@@ -2591,7 +2591,7 @@ function Zr(a) {
 		e.isFocused && e.focusedKey == null && _.current != null && Qe(r.current),
 			(_.current = e.focusedKey);
 	}, [f, g, e.focusedKey, e.isFocused, r]);
-	let F = {
+	let R = {
 			onKeyDown: S,
 			onFocus: $,
 			onBlur: C,
@@ -2599,10 +2599,10 @@ function Zr(a) {
 				g.current === m.target && m.preventDefault();
 			},
 		},
-		{ typeSelectProps: R } = Tt({ keyboardDelegate: t, selectionManager: e });
-	i || (F = E(R, F));
+		{ typeSelectProps: A } = Tt({ keyboardDelegate: t, selectionManager: e });
+	i || (R = E(A, R));
 	let B;
-	return p || (B = e.focusedKey == null ? 0 : -1), { collectionProps: { ...F, tabIndex: B } };
+	return p || (B = e.focusedKey == null ? 0 : -1), { collectionProps: { ...R, tabIndex: B } };
 }
 function Jr(a) {
 	let {
@@ -2617,7 +2617,7 @@ function Jr(a) {
 			allowsDifferentPressOrigin: i,
 			linkBehavior: p = 'action',
 		} = a,
-		u = Rt(),
+		u = At(),
 		f = (w) => {
 			if (w.pointerType === 'keyboard' && tt(w)) e.toggleSelection(t);
 			else {
@@ -2668,8 +2668,8 @@ function Jr(a) {
 		C = v || $,
 		k = c.useRef(null),
 		_ = C && h,
-		F = c.useRef(!1),
 		R = c.useRef(!1),
+		A = c.useRef(!1),
 		B = (w) => {
 			o && o(), y && u.open(r.current, w);
 		},
@@ -2677,7 +2677,7 @@ function Jr(a) {
 	s
 		? ((m.onPressStart = (w) => {
 				(k.current = w.pointerType),
-					(F.current = _),
+					(R.current = _),
 					w.pointerType === 'keyboard' && (!C || xt()) && f(w);
 		  }),
 		  i
@@ -2695,8 +2695,8 @@ function Jr(a) {
 				  }))
 		: ((m.onPressStart = (w) => {
 				(k.current = w.pointerType),
-					(F.current = _),
-					(R.current = v),
+					(R.current = _),
+					(A.current = v),
 					h &&
 						((w.pointerType === 'mouse' && !v) || (w.pointerType === 'keyboard' && (!S || xt()))) &&
 						f(w);
@@ -2706,25 +2706,25 @@ function Jr(a) {
 					w.pointerType === 'pen' ||
 					w.pointerType === 'virtual' ||
 					(w.pointerType === 'keyboard' && C && yt()) ||
-					(w.pointerType === 'mouse' && R.current)) &&
+					(w.pointerType === 'mouse' && A.current)) &&
 					(C ? B(w) : h && f(w));
 		  })),
 		(g['data-key'] = t),
 		(m.preventFocusOnPress = l);
-	let { pressProps: z, isPressed: D } = At(m),
+	let { pressProps: z, isPressed: D } = Ft(m),
 		O = $
 			? (w) => {
 					k.current === 'mouse' && (w.stopPropagation(), w.preventDefault(), B(w));
 			  }
 			: void 0,
-		{ longPressProps: j } = Ft({
+		{ longPressProps: j } = Rt({
 			isDisabled: !_,
 			onLongPress(w) {
 				w.pointerType === 'touch' && (f(w), e.setSelectionBehavior('toggle'));
 			},
 		}),
-		A = (w) => {
-			k.current === 'touch' && F.current && w.preventDefault();
+		F = (w) => {
+			k.current === 'touch' && R.current && w.preventDefault();
 		},
 		X = e.isLink(t)
 			? (w) => {
@@ -2734,7 +2734,7 @@ function Jr(a) {
 	return {
 		itemProps: E(g, h || v ? z : {}, _ ? j : {}, {
 			onDoubleClick: O,
-			onDragStartCapture: A,
+			onDragStartCapture: F,
 			onClick: X,
 		}),
 		isPressed: D,
@@ -3544,7 +3544,7 @@ var bl = qt,
 		}
 		return a;
 	},
-	Re = new WeakMap(),
+	Ae = new WeakMap(),
 	pe = [];
 function yl(a, e = document.body) {
 	let t = new Set(a),
@@ -3568,9 +3568,9 @@ function yl(a, e = document.body) {
 		},
 		l = (o) => {
 			var i;
-			let p = (i = Re.get(o)) != null ? i : 0;
+			let p = (i = Ae.get(o)) != null ? i : 0;
 			(o.getAttribute('aria-hidden') === 'true' && p === 0) ||
-				(p === 0 && o.setAttribute('aria-hidden', 'true'), r.add(o), Re.set(o, p + 1));
+				(p === 0 && o.setAttribute('aria-hidden', 'true'), r.add(o), Ae.set(o, p + 1));
 		};
 	pe.length && pe[pe.length - 1].disconnect(), s(e);
 	let n = new MutationObserver((o) => {
@@ -3601,9 +3601,9 @@ function yl(a, e = document.body) {
 		() => {
 			n.disconnect();
 			for (let o of r) {
-				let i = Re.get(o);
+				let i = Ae.get(o);
 				i != null &&
-					(i === 1 ? (o.removeAttribute('aria-hidden'), Re.delete(o)) : Re.set(o, i - 1));
+					(i === 1 ? (o.removeAttribute('aria-hidden'), Ae.delete(o)) : Ae.set(o, i - 1));
 			}
 			d === pe[pe.length - 1]
 				? (pe.pop(), pe.length && pe[pe.length - 1].observe())
@@ -3611,7 +3611,7 @@ function yl(a, e = document.body) {
 		}
 	);
 }
-var [Ks, xl] = ur({ name: 'ButtonGroupContext', strict: !1 }),
+var [Is, xl] = ur({ name: 'ButtonGroupContext', strict: !1 }),
 	wl = (a, e, t) => Math.min(Math.max(a, e), t),
 	Gt = (a) => {
 		const { ripples: e = [], motionProps: t, color: r = 'currentColor', style: s, onClear: l } = a;
@@ -3619,10 +3619,10 @@ var [Ks, xl] = ur({ name: 'ButtonGroupContext', strict: !1 }),
 			children: e.map((n) => {
 				const d = wl(0.01 * n.size, 0.2, n.size > 100 ? 0.75 : 0.5);
 				return b.jsx(
-					Dt,
+					Lt,
 					{
 						mode: 'popLayout',
-						children: b.jsx(rt.span, {
+						children: b.jsx(lt.span, {
 							animate: { transform: 'scale(2)', opacity: 0 },
 							className: 'nextui-ripple',
 							exit: { opacity: 0 },
@@ -3692,15 +3692,15 @@ function $l(a) {
 			size: C = (t = i?.size) != null ? t : 'md',
 			color: k = (r = i?.color) != null ? r : 'default',
 			variant: _ = (s = i?.variant) != null ? s : 'solid',
-			disableAnimation: F = (l = i?.disableAnimation) != null ? l : !1,
-			radius: R = i?.radius,
+			disableAnimation: R = (l = i?.disableAnimation) != null ? l : !1,
+			radius: A = i?.radius,
 			disableRipple: B = (n = i?.disableRipple) != null ? n : !1,
 			isDisabled: m = (d = i?.isDisabled) != null ? d : !1,
 			isIconOnly: z = (o = i?.isIconOnly) != null ? o : !1,
 			isLoading: D = !1,
 			spinnerPlacement: O = 'start',
 			onPress: j,
-			onClick: A,
+			onClick: F,
 			...X
 		} = a,
 		w = f || 'button',
@@ -3714,28 +3714,28 @@ function $l(a) {
 					size: C,
 					color: k,
 					variant: _,
-					radius: R,
+					radius: A,
 					fullWidth: $,
 					isDisabled: G,
 					isInGroup: p,
-					disableAnimation: F,
+					disableAnimation: R,
 					isIconOnly: z,
 					className: S,
 				}),
-			[C, k, _, R, $, G, p, z, F, S]
+			[C, k, _, A, $, G, p, z, R, S]
 		),
 		{ onClick: Z, onClear: Q, ripples: ae } = Sl(),
 		re = c.useCallback(
 			(oe) => {
-				B || G || F || (P.current && Z(oe));
+				B || G || R || (P.current && Z(oe));
 			},
-			[B, G, F, P, Z]
+			[B, G, R, P, Z]
 		),
-		{ buttonProps: L, isPressed: fe } = Ot(
-			{ elementType: f, isDisabled: G, onPress: j, onClick: lt(A, re), ...X },
+		{ buttonProps: L, isPressed: fe } = Dt(
+			{ elementType: f, isDisabled: G, onPress: j, onClick: rt(F, re), ...X },
 			P
 		),
-		{ isHovered: ge, hoverProps: le } = Fe({ isDisabled: G }),
+		{ isHovered: ge, hoverProps: le } = Re({ isDisabled: G }),
 		ee = c.useCallback(
 			(oe = {}) => ({
 				'data-disabled': M(G),
@@ -3900,7 +3900,7 @@ function Ml(a, e) {
 	const v = { type: o, pattern: a.pattern };
 	var $;
 	return (
-		jt(e, ($ = i ?? p) !== null && $ !== void 0 ? $ : '', u),
+		Ot(e, ($ = i ?? p) !== null && $ !== void 0 ? $ : '', u),
 		{
 			labelProps: g,
 			inputProps: E(S, t === 'input' && v, {
@@ -3966,20 +3966,20 @@ function ta(a) {
 			},
 			[$]
 		),
-		[_, F] = at(e.value, e.defaultValue, k),
-		[R, B] = c.useState(!1),
+		[_, R] = at(e.value, e.defaultValue, k),
+		[A, B] = c.useState(!1),
 		m = s || 'div',
 		z = !!_,
-		D = z || R,
+		D = z || A,
 		O = T(u?.base, p, z ? 'is-filled' : ''),
 		j = a.isMultiline,
-		A = we(r),
+		F = we(r),
 		X = we(n),
 		w = we(d),
 		Y = we(v),
 		P = c.useCallback(() => {
-			F(''), A.current && ((A.current.value = ''), A.current.focus()), y?.();
-		}, [A, F, y]),
+			R(''), F.current && ((F.current.value = ''), F.current.focus()), y?.();
+		}, [F, R, y]),
 		{
 			labelProps: I,
 			inputProps: V,
@@ -3990,15 +3990,15 @@ function ta(a) {
 				...a,
 				'aria-label': Br(a?.['aria-label'], a?.label, a?.placeholder),
 				inputElementType: j ? 'textarea' : 'input',
-				onChange: F,
+				onChange: R,
 			},
-			A
+			F
 		),
 		{ isFocusVisible: q, isFocused: Z, focusProps: Q } = Ie({ autoFocus: f, isTextInput: !0 }),
-		{ isHovered: ae, hoverProps: re } = Fe({ isDisabled: !!a?.isDisabled }),
+		{ isHovered: ae, hoverProps: re } = Re({ isDisabled: !!a?.isDisabled }),
 		{ focusProps: L, isFocusVisible: fe } = Ie(),
-		{ focusWithinProps: ge } = Et({ onFocusWithinChange: B }),
-		{ pressProps: le } = At({ isDisabled: !!a?.isDisabled, onPress: P }),
+		{ focusWithinProps: ge } = jt({ onFocusWithinChange: B }),
+		{ pressProps: le } = Ft({ isDisabled: !!a?.isDisabled, onPress: P }),
 		ee = S === 'invalid' || a.isInvalid,
 		ne = c.useMemo(() => {
 			var W;
@@ -4015,7 +4015,7 @@ function ta(a) {
 		oe = !!o || !!i,
 		$e = ne === 'outside' || ne === 'outside-left',
 		te = ne === 'inside',
-		ce = A.current ? (!A.current.value || A.current.value === '' || !_ || _ === '') && de : !1,
+		ce = F.current ? (!F.current.value || F.current.value === '' || !_ || _ === '') && de : !1,
 		se = !!g,
 		ze = $e ? ne === 'outside-left' || de || (ne === 'outside' && se) : !1,
 		Ne = ne === 'outside' && !de && !se,
@@ -4030,7 +4030,7 @@ function ta(a) {
 				'data-slot': 'base',
 				'data-filled': M(z || de || se || ce),
 				'data-filled-within': M(D || de || se || ce),
-				'data-focus-within': M(R),
+				'data-focus-within': M(A),
 				'data-focus-visible': M(q),
 				'data-readonly': M(a.isReadOnly),
 				'data-focus': M(Z),
@@ -4056,7 +4056,7 @@ function ta(a) {
 				Pe,
 				ce,
 				se,
-				R,
+				A,
 				q,
 				D,
 				de,
@@ -4072,7 +4072,7 @@ function ta(a) {
 		),
 		We = c.useCallback(
 			(W = {}) => ({
-				ref: A,
+				ref: F,
 				'data-slot': 'input',
 				'data-filled': M(z),
 				'data-filled-within': M(D),
@@ -4088,7 +4088,7 @@ function ta(a) {
 				required: a.isRequired,
 				'aria-readonly': M(a.isReadOnly),
 				'aria-required': M(a.isRequired),
-				onChange: lt(V.onChange, h),
+				onChange: rt(V.onChange, h),
 			}),
 			[J, _, Q, V, C, z, D, se, x, u?.input, a.isReadOnly, a.isRequired, h]
 		),
@@ -4102,7 +4102,7 @@ function ta(a) {
 				className: J.inputWrapper({ class: T(u?.inputWrapper, _ ? 'is-filled' : '') }),
 				...E(W, re),
 				onClick: (Ce) => {
-					A.current && Ce.currentTarget === Ce.target && A.current.focus();
+					F.current && Ce.currentTarget === Ce.target && F.current.focus();
 				},
 				style: { cursor: 'text', ...W.style },
 			}),
@@ -4114,7 +4114,7 @@ function ta(a) {
 				ref: Y,
 				'data-slot': 'inner-wrapper',
 				onClick: (Ce) => {
-					A.current && Ce.currentTarget === Ce.target && A.current.focus();
+					F.current && Ce.currentTarget === Ce.target && F.current.focus();
 				},
 				className: J.innerWrapper({ class: T(u?.innerWrapper, W?.className) }),
 			}),
@@ -4169,7 +4169,7 @@ function ta(a) {
 	return {
 		Component: m,
 		classNames: u,
-		domRef: A,
+		domRef: F,
 		label: l,
 		description: o,
 		startContent: g,
@@ -4220,10 +4220,10 @@ var aa = ve((a, e) => {
 			getHelperWrapperProps: C,
 			getDescriptionProps: k,
 			getErrorMessageProps: _,
-			getClearButtonProps: F,
+			getClearButtonProps: R,
 		} = ta({ ...a, ref: e }),
-		R = r ? b.jsx('label', { ...y(), children: r }) : null,
-		B = c.useMemo(() => (l ? b.jsx('span', { ...F(), children: d || b.jsx(el, {}) }) : d), [l, F]),
+		A = r ? b.jsx('label', { ...y(), children: r }) : null,
+		B = c.useMemo(() => (l ? b.jsx('span', { ...R(), children: d || b.jsx(el, {}) }) : d), [l, R]),
 		m = c.useMemo(
 			() =>
 				i
@@ -4250,12 +4250,12 @@ var aa = ve((a, e) => {
 				f
 					? b.jsxs('div', {
 							...$(),
-							children: [b.jsxs('div', { ...v(), children: [u ? R : null, z] }), m],
+							children: [b.jsxs('div', { ...v(), children: [u ? A : null, z] }), m],
 					  })
-					: b.jsxs(b.Fragment, { children: [b.jsxs('div', { ...v(), children: [R, z] }), m] }),
-			[o, m, f, u, R, z, g, s, $, v, _, k]
+					: b.jsxs(b.Fragment, { children: [b.jsxs('div', { ...v(), children: [A, z] }), m] }),
+			[o, m, f, u, A, z, g, s, $, v, _, k]
 		);
-	return b.jsxs(t, { ...x(), children: [p ? R : null, D] });
+	return b.jsxs(t, { ...x(), children: [p ? A : null, D] });
 });
 aa.displayName = 'NextUI.Input';
 var Je = aa;
@@ -4316,7 +4316,7 @@ var kl = c.useLayoutEffect,
 		var r = e.scrollHeight;
 		return t.sizingStyle.boxSizing === 'border-box' ? r + t.borderSize : r - t.paddingSize;
 	};
-function Rl(a, e, t, r) {
+function Al(a, e, t, r) {
 	t === void 0 && (t = 1),
 		r === void 0 && (r = 1 / 0),
 		ie ||
@@ -4344,12 +4344,12 @@ function Rl(a, e, t, r) {
 	return d === 'border-box' && (u = u + s + l), (o = Math.min(u, o)), [o, i];
 }
 var _t = function () {},
-	Al = function (e, t) {
+	Fl = function (e, t) {
 		return e.reduce(function (r, s) {
 			return (r[s] = t[s]), r;
 		}, {});
 	},
-	Fl = [
+	Rl = [
 		'borderBottomWidth',
 		'borderLeftWidth',
 		'borderRightWidth',
@@ -4376,7 +4376,7 @@ var _t = function () {},
 	Dl = function (e) {
 		var t = window.getComputedStyle(e);
 		if (t === null) return null;
-		var r = Al(Fl, t),
+		var r = Fl(Rl, t),
 			s = r.boxSizing;
 		if (s === '') return null;
 		Wl &&
@@ -4434,13 +4434,13 @@ var jl = function (e) {
 					C = r && y.current ? y.current : Ol($);
 				if (C) {
 					y.current = C;
-					var k = Rl(C, $.value || $.placeholder || 'x', l, s),
+					var k = Al(C, $.value || $.placeholder || 'x', l, s),
 						_ = k[0],
-						F = k[1];
+						R = k[1];
 					x.current !== _ &&
 						((x.current = _),
 						$.style.setProperty('height', _ + 'px', 'important'),
-						i(_, { rowHeight: F }));
+						i(_, { rowHeight: R }));
 				}
 			},
 			S = function ($) {
@@ -4483,8 +4483,8 @@ var jl = function (e) {
 					getErrorMessageProps: C,
 				} = ta({ ...n, ref: d, isMultiline: !0 }),
 				[k, _] = c.useState(!1),
-				F = b.jsx('label', { ...y(), children: i }),
-				R = h(),
+				R = b.jsx('label', { ...y(), children: i }),
+				A = h(),
 				B = (z, D) => {
 					if (t > e) {
 						const O = z >= t * D.rowHeight;
@@ -4493,21 +4493,21 @@ var jl = function (e) {
 					l?.(z, D);
 				},
 				m = s
-					? b.jsx('textarea', { ...R, style: E(R.style, a ?? {}) })
+					? b.jsx('textarea', { ...A, style: E(A.style, a ?? {}) })
 					: b.jsx(Tl, {
-							...R,
+							...A,
 							cacheMeasurements: r,
 							'data-hide-scroll': M(!k),
 							maxRows: t,
 							minRows: e,
-							style: E(R.style, a ?? {}),
+							style: E(A.style, a ?? {}),
 							onHeightChange: B,
 					  });
 			return b.jsxs(o, {
 				...x(),
 				children: [
-					u ? F : null,
-					b.jsxs('div', { ...S(), children: [f ? F : null, m] }),
+					u ? R : null,
+					b.jsxs('div', { ...S(), children: [f ? R : null, m] }),
 					b.jsx('div', {
 						...v(),
 						children: g
@@ -4550,9 +4550,9 @@ function Hl(a, e) {
 				isKeyboardDismissDisabled: y,
 				shouldCloseOnInteractOutside:
 					g ||
-					((F) => {
-						let R = t?.current;
-						return !R || !R.contains(F);
+					((R) => {
+						let A = t?.current;
+						return !A || !A.contains(R);
 					}),
 			},
 			r
@@ -4604,15 +4604,15 @@ function Ul(a) {
 			placement: C = 'top',
 			triggerType: k = 'dialog',
 			showArrow: _ = !1,
-			offset: F = 7,
-			crossOffset: R = 0,
+			offset: R = 7,
+			crossOffset: A = 0,
 			boundaryElement: B,
 			isKeyboardDismissDisabled: m,
 			shouldCloseOnInteractOutside: z,
 			motionProps: D,
 			className: O,
 			classNames: j,
-			onClose: A,
+			onClose: F,
 			...X
 		} = r,
 		w = l || 'div',
@@ -4625,7 +4625,7 @@ function Ul(a) {
 			isOpen: g,
 			defaultOpen: u,
 			onOpenChange: (te) => {
-				f?.(te), te || A?.();
+				f?.(te), te || F?.();
 			},
 		}),
 		q = o || G,
@@ -4639,11 +4639,11 @@ function Ul(a) {
 				isNonModal: x,
 				popoverRef: Y,
 				placement: C,
-				offset: F,
+				offset: R,
 				scrollRef: p,
 				shouldCloseOnBlur: v,
 				boundaryElement: B,
-				crossOffset: R,
+				crossOffset: A,
 				shouldFlip: y,
 				containerPadding: h,
 				isKeyboardDismissDisabled: m,
@@ -4651,7 +4651,7 @@ function Ul(a) {
 			},
 			q
 		),
-		{ triggerProps: re } = Bt({ type: k }, q, V),
+		{ triggerProps: re } = Et({ type: k }, q, V),
 		{ isFocusVisible: L, isFocused: fe, focusProps: ge } = Ie(),
 		le = c.useMemo(() => gt({ ...s }), [...Object.values(s)]),
 		ee = T(j?.base, O),
@@ -4762,12 +4762,12 @@ var ql = ({
 	}) =>
 		r
 			? b.jsx('div', { ...l, children: a })
-			: b.jsx(rt.div, {
+			: b.jsx(lt.div, {
 					animate: 'enter',
 					exit: 'exit',
 					initial: 'initial',
 					style: { ...s, ...hl(t === 'center' ? 'top' : t) },
-					variants: Lt.scaleSpringOpacity,
+					variants: Bt.scaleSpringOpacity,
 					...E(l, e),
 					children: a,
 			  }),
@@ -4793,11 +4793,11 @@ var ql = ({
 						? null
 						: o
 						? b.jsx('div', { ...f() })
-						: b.jsx(rt.div, {
+						: b.jsx(lt.div, {
 								animate: 'enter',
 								exit: 'exit',
 								initial: 'exit',
-								variants: Lt.fade,
+								variants: Bt.fade,
 								...f(),
 						  }),
 				[n, o, f]
@@ -4917,18 +4917,18 @@ var Na = {};
 Na = {
 	longPressMessage: 'Нажмите и удерживайте или нажмите Alt + Стрелка вниз, чтобы открыть меню',
 };
-var Ra = {};
-Ra = {
-	longPressMessage:
-		'Ponuku otvoríte dlhým stlačením alebo stlačením klávesu Alt + klávesu so šípkou nadol',
-};
 var Aa = {};
 Aa = {
 	longPressMessage:
-		'Za odprtje menija pritisnite in držite gumb ali pritisnite Alt+puščica navzdol',
+		'Ponuku otvoríte dlhým stlačením alebo stlačením klávesu Alt + klávesu so šípkou nadol',
 };
 var Fa = {};
 Fa = {
+	longPressMessage:
+		'Za odprtje menija pritisnite in držite gumb ali pritisnite Alt+puščica navzdol',
+};
+var Ra = {};
+Ra = {
 	longPressMessage: 'Dugo pritisnite ili pritisnite Alt + strelicu prema dole da otvorite meni',
 };
 var Wa = {};
@@ -4971,9 +4971,9 @@ na = {
 	'pt-PT': _a,
 	'ro-RO': za,
 	'ru-RU': Na,
-	'sk-SK': Ra,
-	'sl-SI': Aa,
-	'sr-SP': Fa,
+	'sk-SK': Aa,
+	'sl-SI': Fa,
+	'sr-SP': Ra,
 	'sv-SE': Wa,
 	'tr-TR': Da,
 	'uk-UA': Oa,
@@ -4983,7 +4983,7 @@ na = {
 function Xl(a, e, t) {
 	let { type: r = 'menu', isDisabled: s, trigger: l = 'press' } = a,
 		n = ke(),
-		{ triggerProps: d, overlayProps: o } = Bt({ type: r }, e, t),
+		{ triggerProps: d, overlayProps: o } = Et({ type: r }, e, t),
 		i = (g) => {
 			if (!s && !(l === 'longPress' && !g.altKey) && t && t.current)
 				switch (g.key) {
@@ -5003,7 +5003,7 @@ function Xl(a, e, t) {
 				}
 		},
 		p = yr(Yl(na)),
-		{ longPressProps: u } = Ft({
+		{ longPressProps: u } = Rt({
 			isDisabled: s || l !== 'longPress',
 			accessibilityDescription: p.format('longPressMessage'),
 			onLongPressStart() {
@@ -5273,7 +5273,7 @@ function rs(a, e, t) {
 		p = wr(),
 		{ visuallyHiddenProps: u } = Pr();
 	return (
-		jt(a.selectRef, e.selectedKey, e.setSelectedKey),
+		Ot(a.selectRef, e.selectedKey, e.setSelectedKey),
 		{
 			containerProps: { ...u, 'aria-hidden': !0, 'data-a11y-ignore': 'aria-hidden-focus' },
 			inputProps: {
@@ -5465,7 +5465,7 @@ function os(a, e, t) {
 		},
 		triggerProps: E(y, {
 			...h,
-			onKeyDown: lt(h.onKeyDown, i, a.onKeyDown),
+			onKeyDown: rt(h.onKeyDown, i, a.onKeyDown),
 			onKeyUp: a.onKeyUp,
 			'aria-labelledby': [
 				S,
@@ -5526,15 +5526,15 @@ function is(a) {
 			onSelectionChange: C,
 			placeholder: k,
 			children: _,
-			disallowEmptySelection: F = !1,
-			selectionMode: R = 'single',
+			disallowEmptySelection: R = !1,
+			selectionMode: A = 'single',
 			spinnerRef: B,
 			scrollRef: m,
 			popoverProps: z = {},
 			scrollShadowProps: D = {},
 			listboxProps: O = {},
 			spinnerProps: j = {},
-			validationState: A,
+			validationState: F,
 			onChange: X,
 			onClose: w,
 			className: Y,
@@ -5567,8 +5567,8 @@ function is(a) {
 		L = ns({
 			...r,
 			isOpen: o,
-			selectionMode: R,
-			disallowEmptySelection: F,
+			selectionMode: A,
+			disallowEmptySelection: R,
 			children: _,
 			isRequired: a?.isRequired,
 			isDisabled: a?.isDisabled,
@@ -5592,10 +5592,10 @@ function is(a) {
 			menuProps: ee,
 			descriptionProps: ne,
 			errorMessageProps: ye,
-		} = os({ ...r, disallowEmptySelection: F, isDisabled: a?.isDisabled }, L, Q),
-		{ isPressed: Pe, buttonProps: de } = Ot(ge, Q),
+		} = os({ ...r, disallowEmptySelection: R, isDisabled: a?.isDisabled }, L, Q),
+		{ isPressed: Pe, buttonProps: de } = Dt(ge, Q),
 		{ focusProps: xe, isFocused: oe, isFocusVisible: $e } = Ie(),
-		{ isHovered: te, hoverProps: ce } = Fe({ isDisabled: a?.isDisabled }),
+		{ isHovered: te, hoverProps: ce } = Re({ isDisabled: a?.isDisabled }),
 		se = c.useMemo(() => {
 			var K;
 			return (!a.labelPlacement || a.labelPlacement === 'inside') && !i
@@ -5606,7 +5606,7 @@ function is(a) {
 		}, [a.labelPlacement, i]),
 		ze = !!S || !!v,
 		Ne = !!k,
-		J = A === 'invalid' || a.isInvalid,
+		J = F === 'invalid' || a.isInvalid,
 		Te = se === 'outside-left' || (se === 'outside' && (Ne || !!a.isMultiline)),
 		Ve = se === 'inside',
 		We = L.isOpen || Ne || !!L.selectedItems || !!y || !!h || !!a.isMultiline,
@@ -5663,7 +5663,7 @@ function is(a) {
 				state: L,
 				triggerRef: Q,
 				selectRef: Z,
-				selectionMode: R,
+				selectionMode: A,
 				label: a?.label,
 				name: a?.name,
 				isRequired: a?.isRequired,
@@ -5672,7 +5672,7 @@ function is(a) {
 				onChange: X,
 				...K,
 			}),
-			[L, R, a?.label, a?.autoComplete, a?.name, a?.isDisabled, Q]
+			[L, A, a?.label, a?.autoComplete, a?.name, a?.isDisabled, Q]
 		),
 		W = c.useCallback(
 			(K = {}) => ({
@@ -5812,7 +5812,7 @@ function is(a) {
 		labelPlacement: se,
 		hasPlaceholder: Ne,
 		renderValue: $,
-		selectionMode: R,
+		selectionMode: A,
 		disableAnimation: l,
 		shouldLabelBeOutside: Te,
 		shouldLabelBeInside: Ve,
@@ -5876,7 +5876,7 @@ function fs(a, e, t) {
 			disabledKeys: e.disabledKeys,
 			linkBehavior: l,
 		}),
-		{ focusWithinProps: d } = Et({
+		{ focusWithinProps: d } = jt({
 			onFocusWithin: a.onFocus,
 			onBlurWithin: a.onBlur,
 			onFocusWithinChange: a.onFocusChange,
@@ -5934,8 +5934,8 @@ function ps(a, e, t) {
 	}
 	let {
 			itemProps: _,
-			isPressed: F,
-			isFocused: R,
+			isPressed: R,
+			isFocused: A,
 			hasAction: B,
 			allowsSelection: m,
 		} = Jr({
@@ -5955,7 +5955,7 @@ function ps(a, e, t) {
 				: void 0,
 			linkBehavior: l?.linkBehavior,
 		}),
-		{ hoverProps: z } = Fe({
+		{ hoverProps: z } = Re({
 			isDisabled: d || !g,
 			onHoverStart() {
 				ft() || (e.selectionManager.setFocused(!0), e.selectionManager.setFocusedKey(s));
@@ -5970,11 +5970,11 @@ function ps(a, e, t) {
 			optionProps: { ...C, ...E(D, _, z), id: us(e, s) },
 			labelProps: { id: v },
 			descriptionProps: { id: $ },
-			isFocused: R,
-			isFocusVisible: R && ft(),
+			isFocused: A,
+			isFocusVisible: A && ft(),
 			isSelected: i,
 			isDisabled: d,
-			isPressed: F,
+			isPressed: R,
 			allowsSelection: m,
 			hasAction: B,
 		}
@@ -6013,13 +6013,13 @@ function bs(a) {
 		C = a.disableAnimation,
 		k = c.useRef(null),
 		_ = r || (a.href ? 'a' : 'li'),
-		F = typeof _ == 'string',
-		{ rendered: R, key: B } = s,
+		R = typeof _ == 'string',
+		{ rendered: A, key: B } = s,
 		m = l.disabledKeys.has(B) || a.isDisabled,
 		z = l.selectionManager.selectionMode !== 'none',
 		D = Jl(),
 		{ pressProps: O, isPressed: j } = Cr({ ref: k, isDisabled: m, onPress: x }),
-		{ isHovered: A, hoverProps: X } = Fe({ isDisabled: m }),
+		{ isHovered: F, hoverProps: X } = Re({ isDisabled: m }),
 		{ isFocusVisible: w, focusProps: Y } = Ie({ autoFocus: g }),
 		{
 			isFocused: P,
@@ -6035,10 +6035,10 @@ function bs(a) {
 		),
 		Q = T(f?.base, u);
 	v && (q = Vr(q));
-	const ae = c.useMemo(() => (h && P ? !0 : D ? A || j : A), [A, j, P, D, h]),
+	const ae = c.useMemo(() => (h && P ? !0 : D ? F || j : F), [F, j, P, D, h]),
 		re = (ee = {}) => ({
 			ref: k,
-			...E({ onClick: y }, q, v ? {} : E(Y, O), X, Se($, { enabled: F }), ee),
+			...E({ onClick: y }, q, v ? {} : E(Y, O), X, Se($, { enabled: R }), ee),
 			'data-selectable': M(z),
 			'data-focus': M(P),
 			'data-hover': M(ae),
@@ -6072,7 +6072,7 @@ function bs(a) {
 		isSelectable: z,
 		isSelected: I,
 		isDisabled: m,
-		rendered: R,
+		rendered: A,
 		description: n,
 		startContent: d,
 		endContent: o,
@@ -6178,8 +6178,8 @@ var Va = Ta,
 							'data-slot': 'group',
 							children: [
 								[...a.childNodes].map((k) => {
-									const { key: _, props: F } = k;
-									let R = b.jsx(
+									const { key: _, props: R } = k;
+									let A = b.jsx(
 										Va,
 										{
 											classNames: p,
@@ -6188,11 +6188,11 @@ var Va = Ta,
 											item: k,
 											state: e,
 											variant: r,
-											...F,
+											...R,
 										},
 										_
 									);
-									return k.wrapper && (R = k.wrapper(R)), R;
+									return k.wrapper && (A = k.wrapper(A)), A;
 								}),
 								o && b.jsx(bl, { as: 'li', className: y.divider({ class: S }), ...i }),
 							],
@@ -6230,14 +6230,14 @@ function ms(a) {
 		C = t || 'ul',
 		k = typeof C == 'string',
 		_ = we(e),
-		F = Ba({ ...a, children: d, onSelectionChange: o }),
-		R = r || F,
-		{ listBoxProps: B } = fs({ ...a, onAction: n }, R, _),
+		R = Ba({ ...a, children: d, onSelectionChange: o }),
+		A = r || R,
+		{ listBoxProps: B } = fs({ ...a, onAction: n }, A, _),
 		m = c.useMemo(() => Dr({ className: u }), [, u]),
 		z = T(v?.base, u);
 	return {
 		Component: C,
-		state: R,
+		state: A,
 		variant: s,
 		color: l,
 		slots: m,
@@ -6251,24 +6251,24 @@ function ms(a) {
 		disableAnimation: i,
 		className: u,
 		itemClasses: p,
-		getBaseProps: (A = {}) => ({
+		getBaseProps: (F = {}) => ({
 			ref: _,
 			'data-slot': 'base',
 			className: m.base({ class: z }),
 			...Se($, { enabled: k }),
-			...A,
+			...F,
 		}),
-		getListProps: (A = {}) => ({
+		getListProps: (F = {}) => ({
 			'data-slot': 'list',
 			className: m.list({ class: v?.list }),
 			...B,
-			...A,
+			...F,
 		}),
-		getEmptyContentProps: (A = {}) => ({
+		getEmptyContentProps: (F = {}) => ({
 			'data-slot': 'empty-content',
 			children: x,
 			className: m.emptyContent({ class: v?.emptyContent }),
-			...A,
+			...F,
 		}),
 	};
 }
@@ -6348,18 +6348,18 @@ function Ua(a, e) {
 			getListboxProps: C,
 			getPopoverProps: k,
 			getSpinnerProps: _,
-			getMainWrapperProps: F,
-			shouldLabelBeOutside: R,
+			getMainWrapperProps: R,
+			shouldLabelBeOutside: A,
 			getInnerWrapperProps: B,
 			getHiddenSelectProps: m,
 			getHelperWrapperProps: z,
 			getListboxWrapperProps: D,
 			getDescriptionProps: O,
 			getErrorMessageProps: j,
-			getSelectorIconProps: A,
+			getSelectorIconProps: F,
 		} = is({ ...a, ref: e }),
 		X = s ? b.jsx('label', { ...S(), children: s }) : null,
-		w = c.cloneElement(o, A()),
+		w = c.cloneElement(o, F()),
 		Y = c.useMemo(
 			() =>
 				l
@@ -6407,14 +6407,14 @@ function Ua(a, e) {
 		...h(),
 		children: [
 			b.jsx(ls, { ...m() }),
-			R ? X : null,
+			A ? X : null,
 			b.jsxs('div', {
-				...F(),
+				...R(),
 				children: [
 					b.jsxs(t, {
 						...v(),
 						children: [
-							R ? null : X,
+							A ? null : X,
 							b.jsxs('div', {
 								...B(),
 								children: [
@@ -6432,13 +6432,13 @@ function Ua(a, e) {
 					Y,
 				],
 			}),
-			y ? V : b.jsx(Dt, { children: V }),
+			y ? V : b.jsx(Lt, { children: V }),
 		],
 	});
 }
 var ws = ve(Ua);
 Ua.displayName = 'NextUI.Select';
-const Ms = ({ children: a }) => {
+const ks = ({ children: a }) => {
 	const [e, t] = c.useState({
 			fullName: '',
 			email: '',
@@ -6572,4 +6572,4 @@ const Ms = ({ children: a }) => {
 		}),
 	});
 };
-export { Ms as Form };
+export { ks as Form };

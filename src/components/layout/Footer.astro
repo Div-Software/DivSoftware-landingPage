@@ -1,6 +1,7 @@
 ---
 import { rootImages } from '@core/rootImages';
 import { Image } from 'astro:assets';
+import { motion } from 'framer-motion';
 import { t } from 'i18next';
 import LogoComponent from './LogoComponent.astro';
 
@@ -30,7 +31,13 @@ const links = [
 ---
 
 <footer class='bg-primary-50 px-5 py-10 text-foreground-50'>
-	<div class='container mx-auto'>
+	<motion.div
+		initial={{ x: -100, opacity: 0 }}
+		animate={{ x: 0, opacity: 1 }}
+		client:visible
+		transition={{ duration: 0.5, delay: 0.2 }}
+		className='container mx-auto'
+	>
 		<div class='flex flex-col items-center gap-4 text-center'>
 			<LogoComponent size='large' />
 			<p class='mx-auto mt-4 max-w-md text-lg font-semibold'>
@@ -75,5 +82,5 @@ const links = [
 				}
 			</div>
 		</div>
-	</div>
+	</motion.div>
 </footer>

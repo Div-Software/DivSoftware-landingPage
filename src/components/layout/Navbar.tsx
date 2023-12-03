@@ -1,3 +1,4 @@
+import { rootImages } from '@core/rootImages';
 import {
 	Navbar,
 	NavbarBrand,
@@ -7,15 +8,17 @@ import {
 	NavbarMenuItem,
 	NavbarMenuToggle,
 } from '@nextui-org/react';
+import { motion } from 'framer-motion';
 import { t } from 'i18next';
-import React from 'react';
+import { useEffect, useState } from 'react';
 
 interface Props {
-	children: JSX.Element;
+	children: JSX.Element | JSX.Element[];
 }
 
 export function NavbarHome({ children }: Props) {
-	const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
+	const [pathname, setPathname] = useState('');
 
 	/**
 	 * An object to identify each item from the Navigation menu
@@ -27,6 +30,12 @@ export function NavbarHome({ children }: Props) {
 		{ title: t('home.navbar.contact'), href: '#contact' },
 	];
 
+	useEffect(() => {
+		if (typeof window !== 'undefined') {
+			setPathname(window.location.pathname);
+		}
+	}, []);
+
 	return (
 		<Navbar
 			onMenuOpenChange={setIsMenuOpen}
@@ -36,21 +45,36 @@ export function NavbarHome({ children }: Props) {
 		>
 			<NavbarBrand>{children}</NavbarBrand>
 
+			{/* Navigation menu for Tablet - Desktop screens */}
+			<NavbarContent className='sm:gap-8 md:gap-16 lg:gap-32' justify='center'>
+				{menuItems.map((item, idx) => (
+					<NavbarItem key={`${item.title}-${idx}`} className='hidden cursor-pointer sm:flex'>
+						<motion.a
+							initial={{ x: -100, opacity: 0 }}
+							animate={{ x: 0, opacity: 1 }}
+							transition={{ duration: 0.2 }}
+							className='a-scroll w-full'
+							href={item.href}
+						>
+							<p className='font-bold text-foreground-50'>{item.title}</p>
+						</motion.a>
+					</NavbarItem>
+				))}
+
+				<a href={pathname === '/' ? '/en' : '/'}>
+					<img
+						src={pathname === '/' ? rootImages.icons.english : rootImages.icons.spanish}
+						alt='Language Flag'
+						width={25}
+						height={25}
+					/>
+				</a>
+			</NavbarContent>
+
 			<NavbarMenuToggle
 				aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
 				className='sm:hidden'
 			/>
-
-			{/* Navigation menu for Tablet - Desktop screens */}
-			<NavbarContent className='hidden sm:flex sm:gap-8 md:gap-16 lg:gap-32' justify='center'>
-				{menuItems.map((item, idx) => (
-					<NavbarItem key={`${item.title}-${idx}`} style={{ cursor: 'pointer' }}>
-						<a className='a-scroll w-full' href={item.href}>
-							<p className='font-bold text-foreground-50'>{item.title}</p>
-						</a>
-					</NavbarItem>
-				))}
-			</NavbarContent>
 
 			{/* Navigation menu for mobile screens */}
 			<NavbarMenu>
