@@ -1,12 +1,18 @@
 ---
 import { servicesInfo } from '@helpers/servicesInfo';
+import { motion } from 'framer-motion';
 import { t } from 'i18next';
+
 import ServiceCard from './ServiceCard.astro';
 ---
 
-<section
+<motion.section
 	id='services'
-	class='container mx-auto flex flex-col items-center justify-center gap-10 p-10 pt-20'
+	initial={{ x: -100, opacity: 0 }}
+	animate={{ x: 0, opacity: 1 }}
+	transition={{ duration: 0.5, delay: 0.2 }}
+	client:visible
+	className='container mx-auto flex flex-col items-center justify-center gap-10 p-10 pt-20'
 >
 	<h3
 		class='text-center text-2xl font-semibold text-foreground sm:text-left sm:text-3xl md:text-4xl lg:text-5xl'
@@ -27,4 +33,4 @@ import ServiceCard from './ServiceCard.astro';
 			))
 		}
 	</aside>
-</section>
+</motion.section>

@@ -8,6 +8,7 @@ import {
 	NavbarMenuItem,
 	NavbarMenuToggle,
 } from '@nextui-org/react';
+import { motion } from 'framer-motion';
 import { t } from 'i18next';
 import { useEffect, useState } from 'react';
 
@@ -48,9 +49,15 @@ export function NavbarHome({ children }: Props) {
 			<NavbarContent className='sm:gap-8 md:gap-16 lg:gap-32' justify='center'>
 				{menuItems.map((item, idx) => (
 					<NavbarItem key={`${item.title}-${idx}`} className='hidden cursor-pointer sm:flex'>
-						<a className='a-scroll w-full' href={item.href}>
+						<motion.a
+							initial={{ x: -100, opacity: 0 }}
+							animate={{ x: 0, opacity: 1 }}
+							transition={{ duration: 0.2 }}
+							className='a-scroll w-full'
+							href={item.href}
+						>
 							<p className='font-bold text-foreground-50'>{item.title}</p>
-						</a>
+						</motion.a>
 					</NavbarItem>
 				))}
 
