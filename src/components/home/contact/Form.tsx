@@ -52,9 +52,9 @@ export const Form = ({ children }: Props) => {
 
 	return (
 		<form onSubmit={handleSubmit} className=' shadow-lg'>
-			<div className='flex w-full flex-col items-center divide-y divide-gray-400 overflow-x-hidden rounded-md bg-gradient-to-b from-primary-200 to-primary-50 p-5 py-20 backdrop-blur-2xl lg:flex-row lg:divide-x lg:divide-y-0'>
+			<div className='flex w-full flex-col items-center  divide-gray-400 overflow-x-hidden rounded-md bg-gradient-to-b from-primary-200 to-primary-50 p-5  backdrop-blur-2xl lg:flex-row lg:divide-x xs:divide-y lg:divide-y-0'>
 				{' '}
-				<div className=' px-10 xs:mb-10  '>
+				<div className=' px-5 xs:mb-10 sm:px-10  '>
 					<div className='my-6 flex w-full flex-wrap gap-4 md:flex-nowrap'>
 						<Input
 							color={'primary'}
@@ -145,7 +145,7 @@ export const Form = ({ children }: Props) => {
 						Enviar
 					</Button>
 				</div>
-				<div className='px-10'>{children}</div>
+				<div className='xs:px-10 pt-6 lg:pt-0'>{children}</div>
 			</div>
 		</form>
 	);
