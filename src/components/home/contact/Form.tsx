@@ -1,13 +1,13 @@
 import { withI18n } from '@components/WithI18Next';
 import { Button, Input, Select, SelectItem, Textarea } from '@nextui-org/react';
+import { t } from 'i18next';
 import React, { useState } from 'react';
-import Social from './Social';
 
 interface Props {
-	t: any;
+	children: JSX.Element;
 }
 
-const Form = ({ t }: Props) => {
+export const Form = ({ children }: Props) => {
 	const [formData, setFormData] = useState({
 		fullName: '',
 		email: '',
@@ -53,9 +53,9 @@ const Form = ({ t }: Props) => {
 
 	return (
 		<form onSubmit={handleSubmit} className=' shadow-lg'>
-			<div className='flex w-full flex-col items-center divide-y divide-gray-400 overflow-x-hidden rounded-md bg-gradient-to-b from-primary-200 to-primary-50 p-5 py-20 backdrop-blur-2xl lg:flex-row lg:divide-x lg:divide-y-0'>
+			<div className='flex w-full flex-col items-center divide-y divide-gray-400 overflow-x-hidden rounded-md bg-gradient-to-b from-primary-200 to-primary-50 p-5  backdrop-blur-2xl lg:flex-row lg:divide-x lg:divide-y-0'>
 				{' '}
-				<div className=' px-10 xs:mb-10  '>
+				<div className=' px-5 sm:px-10 xs:mb-10  '>
 					<div className='my-6 flex w-full flex-wrap gap-4 md:flex-nowrap'>
 						<Input
 							color={'primary'}
@@ -146,12 +146,9 @@ const Form = ({ t }: Props) => {
 						Enviar
 					</Button>
 				</div>
-				<div className='px-10'>
-					<Social />
-				</div>
+				<div className='px-10'>{children}</div>
 			</div>
 		</form>
 	);
 };
 
-export default withI18n(Form);

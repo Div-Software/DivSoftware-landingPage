@@ -1,8 +1,8 @@
-const dirRoot = '/assets/';
+const dirRoot = '/src/assets/';
 const dirIcons = '/assets/icons/';
-const dirProjects = '/assets/projects/';
-const dirServices = '/assets/services/';
-const dirSocial = '/assets/social/';
+const dirProjects = '/src/assets/projects/';
+const dirServices = '/src/assets/services/';
+const dirSocial = '/src/assets/social/';
 const dirTechnologies = '/assets/technologies/';
 
 /**
@@ -14,6 +14,8 @@ export const rootImages = {
 		facebook: `${dirIcons}facebook.svg`,
 		github: `${dirIcons}github.svg`,
 		instagram: `${dirIcons}instagram.svg`,
+		english: `${dirIcons}english.svg`,
+		spanish: `${dirIcons}spanish.svg`,
 	},
 	projects: {
 		globalredex: `${dirProjects}globalredex-desktop.webp`,

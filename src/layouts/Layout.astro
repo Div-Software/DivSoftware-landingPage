@@ -1,8 +1,9 @@
 ---
 import Footer from '@components/layout/Footer.astro';
+import LogoComponent from '@components/layout/LogoComponent.astro';
 import '@fontsource/poppins';
 import i18next, { t } from 'i18next';
-import NavbarHome from '../components/layout/Navbar';
+import { NavbarHome } from '../components/layout/Navbar';
 
 interface Props {
 	title: string;
@@ -22,16 +23,47 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body class='bg-background text-foreground-100 dark'>
-		<NavbarHome client:load />
+		<NavbarHome client:visible>
+			<LogoComponent size='small' />
+		</NavbarHome>
 		<slot />
 		<Footer />
 	</body>
 </html>
 <style is:global>
+	html {
+		scroll-behavior: smooth;
+		scrollbar-width: thin;
+		scrollbar-color: #4f228d;
+	}
+
+	::-webkit-scrollbar {
+		width: 8px;
+		height: 5px;
+		background-color: #1A0B2E;
+		
+	}
+
+	::-webkit-scrollbar-thumb {
+		background-color: #4f228d;
+		border-radius: 0px;
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		background-color: #2b0b3a;
+	}
+
+	::-webkit-scrollbar-thumb:active {
+		background-color: #4F228D;
+	}
 	body {
 		width: 100vw;
 		min-height: 100vh;
 		overflow-y: overlay;
 		overflow-x: hidden;
+	}
+	.a-scroll {
+		scroll-snap-align: center;
+		scroll-snap-type: proximity;
 	}
 </style>

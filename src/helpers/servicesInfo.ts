@@ -1,4 +1,7 @@
-import { rootImages } from '@core/rootImages';
+import marketing from '@assets/services/marketing.webp?url';
+import mobile from '@assets/services/mobileapps.webp?url';
+import uiux from '@assets/services/uxui.webp?url';
+import webdev from '@assets/services/webdev.webp?url';
 import { t } from 'i18next';
 
 interface ServiceInfo {
@@ -11,11 +14,6 @@ interface ServiceInfo {
 }
 
 /**
- * The services image's root paths
- */
-const services = rootImages.services;
-
-/**
  * An array of objects that has the information of each services
  */
 export const servicesInfo: ServiceInfo[] = [
@@ -23,7 +21,7 @@ export const servicesInfo: ServiceInfo[] = [
 		title: t('home.services.service.web.title'),
 		text: t('home.services.service.web.description'),
 		href: '#',
-		img: services.webdev,
+		img: webdev,
 		hasGradient: false,
 		id: 'webapplications',
 	},
@@ -31,7 +29,7 @@ export const servicesInfo: ServiceInfo[] = [
 		title: t('home.services.service.mobile.title'),
 		text: t('home.services.service.mobile.description'),
 		href: '#',
-		img: services.mobile,
+		img: mobile,
 		hasGradient: true,
 		id: 'mobileapps',
 	},
@@ -39,7 +37,7 @@ export const servicesInfo: ServiceInfo[] = [
 		title: t('home.services.service.brands.title'),
 		text: t('home.services.service.brands.description'),
 		href: '#',
-		img: services.marketing,
+		img: marketing,
 		hasGradient: true,
 		id: 'brandcreation',
 	},
@@ -47,7 +45,7 @@ export const servicesInfo: ServiceInfo[] = [
 		title: t('home.services.service.design.title'),
 		text: t('home.services.service.design.description'),
 		href: '#',
-		img: services.uiux,
+		img: uiux,
 		hasGradient: false,
 		id: 'webdesign',
 	},

@@ -1,11 +1,18 @@
 ---
-import { rootImages } from '@core/rootImages';
+import astronaut from '@assets/div-astronaut.webp';
+import { Image } from 'astro:assets';
+import { motion } from 'framer-motion';
 import { t } from 'i18next';
+import logo from '/public/logo-divsoftware.svg';
 ---
 
-<section
+<motion.section
 	id='banner'
-	class='mx-auto flex w-screen flex-col justify-center overflow-hidden px-10 pt-20 xs:pb-10 md:min-h-[50vh] md:pt-32 lg:flex-row lg:pb-20 lg:pt-40'
+	initial={{ x: -100, opacity: 0 }}
+	animate={{ x: 0, opacity: 1 }}
+	transition={{ duration: 0.5, delay: 0.2 }}
+	client:visible
+	className='mx-auto flex w-screen flex-col justify-center overflow-hidden px-10 pt-20 xs:pb-10 md:min-h-[50vh] md:pt-32 lg:flex-row lg:pb-20 lg:pt-40'
 >
 	<!-- Logo & slogan side -->
 	<aside
@@ -18,10 +25,9 @@ import { t } from 'i18next';
 			<div
 				class='flex h-24 w-24 animate-[float_6s_ease-in-out_infinite] items-center justify-center rounded-full bg-[linear-gradient(180deg,_rgba(48,_16,_128,_0.60)_0%,_rgba(120,_64,_173,_0.36)_100%)] [transform:translatey(0px)] md:h-44 md:w-44'
 			>
-				<img
-					src='/logo-divsoftware.svg'
-					alt='div-software-logo'
-					loading='lazy'
+				<Image
+					src={logo}
+					alt={'DivSoftware-logo'}
 					class='h-20 w-20 transform transition-transform hover:animate-[spin_5s_ease-in-out_infinite] md:h-32 md:w-32'
 				/>
 			</div>
@@ -56,12 +62,11 @@ import { t } from 'i18next';
 						id='third-border-line'
 						class='absolute bottom-4 h-[140px] w-[260px] rounded-[50%] border-b-2 border-solid border-primary-400 sm:w-[295px]'
 					>
-						<img
-							src={rootImages.astronaut}
+						<Image
+							src={astronaut}
 							alt='div-astronaut'
 							width={102}
-							height={'100%'}
-							loading='lazy'
+							height={100}
 							class='relative left-20 z-10 h-auto animate-[float_6s_ease-in-out_infinite] [transform:translatey(0px)]'
 						/>
 					</div>
@@ -69,4 +74,4 @@ import { t } from 'i18next';
 			</div>
 		</div>
 	</aside>
-</section>
+</motion.section>
