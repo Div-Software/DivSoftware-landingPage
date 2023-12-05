@@ -5,41 +5,46 @@ import { Image } from 'astro:assets';
 import { t } from 'i18next';
 
 const messagingPlatforms = [
-  {
-    name: 'WhatsApp',
-	bg: 'whatsapp',
-    imageSrc: whatsapp,
-    link: 'https://api.whatsapp.com/send/?phone=584126712946&text&type=phone_number&app_absent=0'
-  },
-  {
-    name: 'Telegram',
-	bg: 'telegram',
-    imageSrc: telegram,
-    link: 'https://api.telegram.com/send/?phone=584126712946&text&type=phone_number&app_absent=0'
-  },
-  // Agrega más plataformas si es necesario
+	{
+		name: 'WhatsApp',
+		bg: 'whatsapp',
+		imageSrc: whatsapp,
+		link: 'https://api.whatsapp.com/send/?phone=584126712946&text&type=phone_number&app_absent=0',
+	},
+	{
+		name: 'Telegram',
+		bg: 'telegram',
+		imageSrc: telegram,
+		link: 'https://api.telegram.com/send/?phone=584126712946&text&type=phone_number&app_absent=0',
+	},
+	// Agrega más plataformas si es necesario
 ];
-
 ---
 
 <div class='container mx-auto text-center'>
 	<div class='flex flex-col items-center justify-center'>
-		{messagingPlatforms.map((platform, index) => (
-		  <div class='my-4 flex items-center rounded-lg p-4 md:my-0'>
-			<div class='flex flex-col items-center gap-4 bg-white/5 p-3 shadow-lg backdrop-blur-2xl sm:flex-row sm:p-8 sm:w-full'>
-				<div class={`flex h-16 w-24 items-center justify-center rounded-xl bg-${platform.bg} shadow shadow-${platform.bg} backdrop-blur-3xl sm:h-24 sm:w-36`}>			
-						<Image src={platform.imageSrc} alt={platform.name} width={102} height={100} class='h-12 w-12' />
-			  </div>
-			  <div>
-				<p class='mb-1 text-lg text-center'>{platform.name}</p>
-				<p class='text-xs'>
-				  {platform.link.slice(0, 20) + '...'}
-				</p>
-			  </div>
-			</div>
-		  </div>
-		))}
-	  </div>
+		{
+			messagingPlatforms.map((platform, index) => (
+				<div class='my-4 flex items-center rounded-lg p-4 md:my-0'>
+					<div class='flex flex-col items-center gap-4 bg-white/5 p-3 shadow-lg backdrop-blur-2xl sm:w-full sm:flex-row sm:p-8'>
+						<div
+							class={`flex h-16 w-24 items-center justify-center rounded-xl bg-${platform.bg} shadow shadow-${platform.bg} backdrop-blur-3xl sm:h-24 sm:w-36`}
+						>
+							<Image
+								src={platform.imageSrc}
+								alt={platform.name}
+								width={102}
+								height={100}
+								class='h-12 w-12'
+							/>
+						</div>
+						<div>
+							<p class='mb-1 text-center text-lg'>{platform.name}</p>
+							<p class='text-xs'>{platform.link.slice(0, 20) + '...'}</p>
+						</div>
+					</div>
+				</div>
+			))
+		}
+	</div>
 </div>
-
-		 
