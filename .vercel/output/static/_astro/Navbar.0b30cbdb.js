@@ -3,24 +3,24 @@ import {
 	d as qe,
 	v as je,
 	x as Ze,
-	w as X,
+	w as z,
 	y as Y,
 	F as U,
 	u as m,
 	D as A,
 	k as ne,
-	S as Ge,
-	a3 as me,
+	X as Ge,
+	a6 as me,
 	E as Qe,
-	a4 as Je,
+	a7 as Je,
 	A as Ke,
 	B as et,
 	z as tt,
 	C as rt,
-} from './index.2644096b.js';
+} from './index.c329b6ce.js';
 import { t as oe } from './i18next.a4b2730f.js';
 import { r as u } from './index.9eb79d8f.js';
-import { aj as nt, g as pe } from './index.e17a3e1d.js';
+import { aj as nt, g as pe } from './index.ffe82eb6.js';
 import './index.414e2829.js';
 import './_commonjsHelpers.725317a4.js';
 var H = function () {
@@ -248,11 +248,11 @@ var ge = Ye({
 				p = Symbol.for('react.suspense'),
 				h = Symbol.for('react.memo'),
 				g = Symbol.for('react.lazy'),
-				b = Symbol.iterator;
+				w = Symbol.iterator;
 			function $(r) {
 				return r === null || typeof r != 'object'
 					? null
-					: ((r = (b && r[b]) || r['@@iterator']), typeof r == 'function' ? r : null);
+					: ((r = (w && r[w]) || r['@@iterator']), typeof r == 'function' ? r : null);
 			}
 			var P = {
 					isMounted: function () {
@@ -264,27 +264,27 @@ var ge = Ye({
 				},
 				f = Object.assign,
 				v = {};
-			function w(r, s, y) {
+			function b(r, s, y) {
 				(this.props = r), (this.context = s), (this.refs = v), (this.updater = y || P);
 			}
-			(w.prototype.isReactComponent = {}),
-				(w.prototype.setState = function (r, s) {
+			(b.prototype.isReactComponent = {}),
+				(b.prototype.setState = function (r, s) {
 					if (typeof r != 'object' && typeof r != 'function' && r != null)
 						throw Error(
 							'setState(...): takes an object of state variables to update or a function which returns an object of state variables.'
 						);
 					this.updater.enqueueSetState(this, r, s, 'setState');
 				}),
-				(w.prototype.forceUpdate = function (r) {
+				(b.prototype.forceUpdate = function (r) {
 					this.updater.enqueueForceUpdate(this, r, 'forceUpdate');
 				});
 			function O() {}
-			O.prototype = w.prototype;
+			O.prototype = b.prototype;
 			function S(r, s, y) {
 				(this.props = r), (this.context = s), (this.refs = v), (this.updater = y || P);
 			}
 			var I = (S.prototype = new O());
-			(I.constructor = S), f(I, w.prototype), (I.isPureReactComponent = !0);
+			(I.constructor = S), f(I, b.prototype), (I.isPureReactComponent = !0);
 			var j = Array.isArray,
 				B = Object.prototype.hasOwnProperty,
 				L = { current: null },
@@ -421,8 +421,8 @@ var ge = Ye({
 				throw r._result;
 			}
 			var T = { current: null },
-				z = { transition: null },
-				Xe = { ReactCurrentDispatcher: T, ReactCurrentBatchConfig: z, ReactCurrentOwner: L };
+				X = { transition: null },
+				ze = { ReactCurrentDispatcher: T, ReactCurrentBatchConfig: X, ReactCurrentOwner: L };
 			(e.Children = {
 				map: x,
 				forEach: function (r, s, y) {
@@ -456,13 +456,13 @@ var ge = Ye({
 					return r;
 				},
 			}),
-				(e.Component = w),
+				(e.Component = b),
 				(e.Fragment = a),
 				(e.Profiler = i),
 				(e.PureComponent = S),
 				(e.StrictMode = o),
 				(e.Suspense = p),
-				(e.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = Xe),
+				(e.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = ze),
 				(e.cloneElement = function (r, s, y) {
 					if (r == null)
 						throw Error(
@@ -530,12 +530,12 @@ var ge = Ye({
 					return { $$typeof: h, type: r, compare: s === void 0 ? null : s };
 				}),
 				(e.startTransition = function (r) {
-					var s = z.transition;
-					z.transition = {};
+					var s = X.transition;
+					X.transition = {};
 					try {
 						r();
 					} finally {
-						z.transition = s;
+						X.transition = s;
 					}
 				}),
 				(e.unstable_act = function () {
@@ -761,12 +761,12 @@ var Oe = xt(),
 			p = e.removeScrollBar,
 			h = e.enabled,
 			g = e.shards,
-			b = e.sideCar,
+			w = e.sideCar,
 			$ = e.noIsolation,
 			P = e.inert,
 			f = e.allowPinchZoom,
 			v = e.as,
-			w = v === void 0 ? 'div' : v,
+			b = v === void 0 ? 'div' : v,
 			O = e.gapMode,
 			S = $e(e, [
 				'forwardProps',
@@ -782,7 +782,7 @@ var Oe = xt(),
 				'as',
 				'gapMode',
 			]),
-			I = b,
+			I = w,
 			j = bt([n, t]),
 			B = H(H({}, S), o);
 		return u.createElement(
@@ -802,7 +802,7 @@ var Oe = xt(),
 				}),
 			l
 				? u.cloneElement(u.Children.only(c), H(H({}, B), { ref: j }))
-				: u.createElement(w, H({}, B, { className: d, ref: j }), c)
+				: u.createElement(b, H({}, B, { className: d, ref: j }), c)
 		);
 	});
 fe.defaultProps = { enabled: !0, removeScrollBar: !0, inert: !1 };
@@ -1099,19 +1099,19 @@ var Q = he ? { passive: !1 } : !1,
 			p = !1,
 			h = l > 0,
 			g = 0,
-			b = 0;
+			w = 0;
 		do {
 			var $ = Be(e, c),
 				P = $[0],
 				f = $[1],
 				v = $[2],
-				w = f - v - i * P;
-			(P || w) && Te(e, c) && ((g += w), (b += P)),
+				b = f - v - i * P;
+			(P || b) && Te(e, c) && ((g += b), (w += P)),
 				c instanceof ShadowRoot ? (c = c.host) : (c = c.parentNode);
 		} while ((!d && c !== document.body) || (d && (t.contains(c) || t === c)));
 		return (
 			((h && ((o && Math.abs(g) < 1) || (!o && l > g))) ||
-				(!h && ((o && Math.abs(b) < 1) || (!o && -l > b)))) &&
+				(!h && ((o && Math.abs(w) < 1) || (!o && -l > w)))) &&
 				(p = !0),
 			p
 		);
@@ -1144,13 +1144,13 @@ var Q = he ? { passive: !1 } : !1,
 `
 			);
 	},
-	zt = 0,
+	Xt = 0,
 	J = [];
-function Xt(e) {
+function zt(e) {
 	var t = u.useRef([]),
 		n = u.useRef([0, 0]),
 		a = u.useRef(),
-		o = u.useState(zt++)[0],
+		o = u.useState(Xt++)[0],
 		i = u.useState(Ie)[0],
 		l = u.useRef(e);
 	u.useEffect(
@@ -1181,10 +1181,10 @@ function Xt(e) {
 		);
 	var c = u.useCallback(function (f, v) {
 			if ('touches' in f && f.touches.length === 2) return !l.current.allowPinchZoom;
-			var w = ie(f),
+			var b = ie(f),
 				O = n.current,
-				S = 'deltaX' in f ? f.deltaX : O[0] - w[0],
-				I = 'deltaY' in f ? f.deltaY : O[1] - w[1],
+				S = 'deltaX' in f ? f.deltaX : O[0] - b[0],
+				I = 'deltaY' in f ? f.deltaY : O[1] - b[1],
 				j,
 				B = f.target,
 				L = Math.abs(S) > Math.abs(I) ? 'h' : 'v';
@@ -1199,12 +1199,12 @@ function Xt(e) {
 		d = u.useCallback(function (f) {
 			var v = f;
 			if (!(!J.length || J[J.length - 1] !== i)) {
-				var w = 'deltaY' in v ? Se(v) : ie(v),
+				var b = 'deltaY' in v ? Se(v) : ie(v),
 					O = t.current.filter(function (j) {
 						return (
 							j.name === v.type &&
 							(j.target === v.target || v.target === j.shadowParent) &&
-							Ft(j.delta, w)
+							Ft(j.delta, b)
 						);
 					})[0];
 				if (O && O.should) {
@@ -1223,8 +1223,8 @@ function Xt(e) {
 				}
 			}
 		}, []),
-		p = u.useCallback(function (f, v, w, O) {
-			var S = { name: f, delta: v, target: w, should: O, shadowParent: Yt(w) };
+		p = u.useCallback(function (f, v, b, O) {
+			var S = { name: f, delta: v, target: b, should: O, shadowParent: Yt(b) };
 			t.current.push(S),
 				setTimeout(function () {
 					t.current = t.current.filter(function (I) {
@@ -1238,13 +1238,13 @@ function Xt(e) {
 		g = u.useCallback(function (f) {
 			p(f.type, Se(f), f.target, c(f, e.lockRef.current));
 		}, []),
-		b = u.useCallback(function (f) {
+		w = u.useCallback(function (f) {
 			p(f.type, ie(f), f.target, c(f, e.lockRef.current));
 		}, []);
 	u.useEffect(function () {
 		return (
 			J.push(i),
-			e.setCallbacks({ onScrollCapture: g, onWheelCapture: g, onTouchMoveCapture: b }),
+			e.setCallbacks({ onScrollCapture: g, onWheelCapture: g, onTouchMoveCapture: w }),
 			document.addEventListener('wheel', d, Q),
 			document.addEventListener('touchmove', d, Q),
 			document.addEventListener('touchstart', h, Q),
@@ -1272,7 +1272,7 @@ function Yt(e) {
 		e instanceof ShadowRoot && ((t = e.host), (e = e.host)), (e = e.parentNode);
 	return t;
 }
-const qt = _t(Oe, Xt);
+const qt = _t(Oe, zt);
 var Le = u.forwardRef(function (e, t) {
 	return u.createElement(fe, H({}, e, { ref: t, sideCar: qt }));
 });
@@ -1291,23 +1291,23 @@ var [Gt, K] = Ze({
 		},
 		exit: { height: 0, transition: { duration: 0.25, easings: 'easeIn' } },
 	},
-	Ae = X((e, t) => {
+	Ae = z((e, t) => {
 		var n, a;
 		const { className: o, children: i, portalContainer: l, motionProps: c, style: d, ...p } = e,
 			h = Y(t),
-			{ slots: g, isMenuOpen: b, height: $, disableAnimation: P, classNames: f } = K(),
+			{ slots: g, isMenuOpen: w, height: $, disableAnimation: P, classNames: f } = K(),
 			v = U(f?.menu, o),
-			w = u.useCallback(
+			b = u.useCallback(
 				({ children: S }) =>
-					m.jsx(Zt, { forwardProps: !0, enabled: b, removeScrollBar: !1, children: S }),
-				[b]
+					m.jsx(Zt, { forwardProps: !0, enabled: w, removeScrollBar: !1, children: S }),
+				[w]
 			),
 			O = P
-				? m.jsx(w, {
+				? m.jsx(b, {
 						children: m.jsx('ul', {
 							ref: h,
 							className: (n = g.menu) == null ? void 0 : n.call(g, { class: v }),
-							'data-open': A(b),
+							'data-open': A(w),
 							style: { '--navbar-height': $ },
 							...p,
 							children: i,
@@ -1315,14 +1315,14 @@ var [Gt, K] = Ze({
 				  })
 				: m.jsx(nt, {
 						mode: 'wait',
-						children: b
-							? m.jsx(w, {
+						children: w
+							? m.jsx(b, {
 									children: m.jsx(pe.ul, {
 										ref: h,
 										layoutScroll: !0,
 										animate: 'enter',
 										className: (a = g.menu) == null ? void 0 : a.call(g, { class: v }),
-										'data-open': A(b),
+										'data-open': A(w),
 										exit: 'exit',
 										initial: 'exit',
 										style: { '--navbar-height': $, ...d },
@@ -1381,12 +1381,12 @@ function tr(e) {
 			disableScrollHandler: p = !1,
 			onScrollPositionChange: h,
 			isMenuOpen: g,
-			isMenuDefaultOpen: b,
+			isMenuDefaultOpen: w,
 			onMenuOpenChange: $ = () => {},
 			motionProps: P,
 			className: f,
 			classNames: v,
-			...w
+			...b
 		} = n,
 		O = i || 'nav',
 		S = Y(o),
@@ -1399,7 +1399,7 @@ function tr(e) {
 			},
 			[$]
 		),
-		[D, q] = je(g, b, W),
+		[D, q] = je(g, w, W),
 		F = () => {
 			if (S.current) {
 				const x = S.current.offsetWidth;
@@ -1426,18 +1426,18 @@ function tr(e) {
 			h?.(G.y),
 				d &&
 					L((T) => {
-						const z = G.y > x.y && G.y > j.current;
-						return z !== T ? z : T;
+						const X = G.y > x.y && G.y > j.current;
+						return X !== T ? X : T;
 					});
 		},
 	});
 	const te = (x = {}) => ({
-			...ne(w, x),
+			...ne(b, x),
 			'data-hidden': A(B),
 			'data-menu-open': A(D),
 			ref: S,
 			className: ee.base({ class: U(ae, x?.className) }),
-			style: { '--navbar-height': c, ...x?.style },
+			style: { '--navbar-height': c, ...b?.style, ...x?.style },
 		}),
 		Z = (x = {}) => ({
 			...x,
@@ -1460,7 +1460,7 @@ function tr(e) {
 		getWrapperProps: Z,
 	};
 }
-var De = X((e, t) => {
+var De = z((e, t) => {
 	const { children: n, ...a } = e,
 		o = tr({ ...a, ref: t }),
 		i = o.Component,
@@ -1483,7 +1483,7 @@ var De = X((e, t) => {
 });
 De.displayName = 'NextUI.Navbar';
 var rr = De,
-	Ve = X((e, t) => {
+	Ve = z((e, t) => {
 		var n;
 		const { as: a, className: o, children: i, ...l } = e,
 			c = a || 'div',
@@ -1499,16 +1499,16 @@ var rr = De,
 	});
 Ve.displayName = 'NextUI.NavbarBrand';
 var nr = Ve,
-	He = X((e, t) => {
+	He = z((e, t) => {
 		var n;
 		const { as: a, className: o, children: i, justify: l = 'start', ...c } = e,
 			d = a || 'ul',
 			p = Y(t),
 			{ slots: h, classNames: g } = K(),
-			b = U(g?.content, o);
+			w = U(g?.content, o);
 		return m.jsx(d, {
 			ref: p,
-			className: (n = h.content) == null ? void 0 : n.call(h, { class: b }),
+			className: (n = h.content) == null ? void 0 : n.call(h, { class: w }),
 			'data-justify': l,
 			...c,
 			children: i,
@@ -1516,16 +1516,16 @@ var nr = Ve,
 	});
 He.displayName = 'NextUI.NavbarContent';
 var ar = He,
-	Fe = X((e, t) => {
+	Fe = z((e, t) => {
 		var n;
 		const { as: a, className: o, children: i, isActive: l, ...c } = e,
 			d = a || 'li',
 			p = Y(t),
 			{ slots: h, classNames: g } = K(),
-			b = U(g?.item, o);
+			w = U(g?.item, o);
 		return m.jsx(d, {
 			ref: p,
-			className: (n = h.item) == null ? void 0 : n.call(h, { class: b }),
+			className: (n = h.item) == null ? void 0 : n.call(h, { class: w }),
 			'data-active': A(l),
 			...c,
 			children: i,
@@ -1533,7 +1533,7 @@ var ar = He,
 	});
 Fe.displayName = 'NextUI.NavbarItem';
 var or = Fe,
-	Ue = X((e, t) => {
+	Ue = z((e, t) => {
 		var n;
 		const { className: a, children: o, isActive: i, ...l } = e,
 			c = Y(t),
@@ -1555,20 +1555,20 @@ function ir(e, t, n) {
 		{ isPressed: o, buttonProps: i } = Ke({ ...e, onPress: et(t.toggle, e.onPress) }, n);
 	return { isPressed: o, buttonProps: ne(i, { 'aria-pressed': a }) };
 }
-var ze = X((e, t) => {
+var Xe = z((e, t) => {
 	var n;
 	const { as: a, icon: o, className: i, onChange: l, autoFocus: c, srOnlyText: d, ...p } = e,
 		h = a || 'button',
 		g = Y(t),
-		{ slots: b, classNames: $, isMenuOpen: P, setIsMenuOpen: f } = K(),
-		w = ht({
+		{ slots: w, classNames: $, isMenuOpen: P, setIsMenuOpen: f } = K(),
+		b = ht({
 			...p,
 			isSelected: P,
 			onChange: (F) => {
 				l?.(F), f(F);
 			},
 		}),
-		{ buttonProps: O, isPressed: S } = ir(e, w, g),
+		{ buttonProps: O, isPressed: S } = ir(e, b, g),
 		{ isFocusVisible: I, focusProps: j } = tt({ autoFocus: c }),
 		{ isHovered: B, hoverProps: L } = rt({}),
 		W = U($?.toggle, i),
@@ -1576,26 +1576,26 @@ var ze = X((e, t) => {
 			() =>
 				typeof o == 'function'
 					? o(P ?? !1)
-					: o || m.jsx('span', { className: b.toggleIcon({ class: $?.toggleIcon }) }),
-			[o, P, b.toggleIcon, $?.toggleIcon]
+					: o || m.jsx('span', { className: w.toggleIcon({ class: $?.toggleIcon }) }),
+			[o, P, w.toggleIcon, $?.toggleIcon]
 		),
 		q = u.useMemo(
-			() => d || (w.isSelected ? 'close navigation menu' : 'open navigation menu'),
+			() => d || (b.isSelected ? 'close navigation menu' : 'open navigation menu'),
 			[d, P]
 		);
 	return m.jsxs(h, {
 		ref: g,
-		className: (n = b.toggle) == null ? void 0 : n.call(b, { class: W }),
+		className: (n = w.toggle) == null ? void 0 : n.call(w, { class: W }),
 		'data-focus-visible': A(I),
 		'data-hover': A(B),
 		'data-open': A(P),
 		'data-pressed': A(S),
 		...ne(O, j, L, p),
-		children: [m.jsx('span', { className: b.srOnly(), children: q }), D],
+		children: [m.jsx('span', { className: w.srOnly(), children: q }), D],
 	});
 });
-ze.displayName = 'NextUI.NavbarMenuToggle';
-var lr = ze;
+Xe.displayName = 'NextUI.NavbarMenuToggle';
+var lr = Xe;
 const cr = '/src/assets/',
 	re = '/assets/icons/',
 	ur = '/src/assets/projects/',
@@ -1683,7 +1683,7 @@ function gr({ children: e }) {
 									children: m.jsx(pe.a, {
 										initial: { x: -100, opacity: 0 },
 										animate: { x: 0, opacity: 1 },
-										transition: { duration: 0.2 },
+										transition: { duration: 0.1 },
 										className: 'a-scroll w-full',
 										href: l.href,
 										children: m.jsx('p', {
