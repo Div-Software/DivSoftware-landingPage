@@ -3,59 +3,48 @@ import telegram from '@assets/social/telegramlogo.webp';
 import whatsapp from '@assets/social/whatsapplogo.webp';
 import { Image } from 'astro:assets';
 import { t } from 'i18next';
+
+const messagingPlatforms = [
+	{
+		name: 'WhatsApp',
+		bg: 'whatsapp',
+		imageSrc: whatsapp,
+		link: 'https://api.whatsapp.com/send/?phone=584126712946&text&type=phone_number&app_absent=0',
+	},
+	{
+		name: 'Telegram',
+		bg: 'telegram',
+		imageSrc: telegram,
+		link: 'https://api.telegram.com/send/?phone=584126712946&text&type=phone_number&app_absent=0',
+	},
+	// Agrega más plataformas si es necesario
+];
 ---
 
 <div class='container mx-auto text-center'>
-	<div class='py-8'>
-		<p class='text-center text-2xl font-bold sm:text-left'>{t('home.contact.social.title')}</p>
-		<p class='mt-2 text-center text-base sm:text-left'>{t('home.contact.social.subtitle')}</p>
-	</div>
 	<div class='flex flex-col items-center justify-center'>
-		<div class='my-4 flex items-center rounded-lg p-4 md:my-0'>
-			<div
-				class='flex flex-col items-center gap-4 bg-white/5 p-4 shadow-lg backdrop-blur-2xl sm:flex-row sm:p-8'
-			>
-				<div
-					class='flex h-24 w-36 items-center justify-center rounded-xl bg-whatsapp shadow shadow-whatsapp backdrop-blur-3xl'
-				>
-					<Image src={whatsapp} alt='WhatsApp' width={102} height={100} class='h-12 w-12' />
+		{
+			messagingPlatforms.map((platform, index) => (
+				<div class='my-4 flex items-center rounded-lg p-4 md:my-0'>
+					<div class='flex flex-col items-center gap-4 bg-white/5 p-3 shadow-lg backdrop-blur-2xl sm:w-full sm:flex-row sm:p-8'>
+						<div
+							class={`flex h-16 w-24 items-center justify-center rounded-xl bg-${platform.bg} shadow shadow-${platform.bg} backdrop-blur-3xl sm:h-24 sm:w-36`}
+						>
+							<Image
+								src={platform.imageSrc}
+								alt={platform.name}
+								width={102}
+								height={100}
+								class='h-12 w-12'
+							/>
+						</div>
+						<div>
+							<p class='mb-1 text-center text-lg'>{platform.name}</p>
+							<p class='text-xs'>{platform.link.slice(0, 20) + '...'}</p>
+						</div>
+					</div>
 				</div>
-				<div>
-					<p class='text-lg'>WhatsApp</p>
-					<p class='text-base'>
-						{
-							`https://api.whatsapp.com/send/?phone=584126712946&text&type=phone_number&app_absent=0`.slice(
-								0,
-								30
-							)
-						}
-						 ...
-					</p>
-				</div>
-			</div>
-		</div>
-		<div class='my-4 flex items-center rounded-lg p-4 md:my-0'>
-			<div
-				class='flex flex-col items-center gap-4 bg-white/5 p-4 shadow-lg backdrop-blur-2xl sm:flex-row sm:p-8'
-			>
-				<div
-					class='flex h-24 w-36 items-center justify-center rounded-xl bg-telegram shadow shadow-whatsapp backdrop-blur-3xl'
-				>
-					<Image src={telegram} alt='Telegram' width={102} height={100} class='h-12 w-12' />
-				</div>
-				<div>
-					<p class='text-lg'>Telegram</p>
-					<p class='text-base'>
-						{
-							`https://api.telegram.com/send/?phone=584126712946&text&type=phone_number&app_absent=0`.slice(
-								0,
-								30
-							)
-						}
-						 ...
-					</p>
-				</div>
-			</div>
-		</div>
+			))
+		}
 	</div>
 </div>
