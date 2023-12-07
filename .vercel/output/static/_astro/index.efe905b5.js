@@ -545,12 +545,12 @@ function we(e, t, n = 0) {
 		e.endsWith('px')
 			? (s = r)
 			: e.endsWith('%')
-			? (e = r / 100)
-			: e.endsWith('vw')
-			? (s = (r / 100) * document.documentElement.clientWidth)
-			: e.endsWith('vh')
-			? (s = (r / 100) * document.documentElement.clientHeight)
-			: (e = r);
+			  ? (e = r / 100)
+			  : e.endsWith('vw')
+			    ? (s = (r / 100) * document.documentElement.clientWidth)
+			    : e.endsWith('vh')
+			      ? (s = (r / 100) * document.documentElement.clientHeight)
+			      : (e = r);
 	}
 	return typeof e == 'number' && (s = t * e), n + s;
 }
@@ -877,12 +877,12 @@ function be(e, t, n, s) {
 	return typeof t == 'number'
 		? t
 		: t.startsWith('-') || t.startsWith('+')
-		? Math.max(0, e + parseFloat(t))
-		: t === '<'
-		? n
-		: (r = s.get(t)) !== null && r !== void 0
-		? r
-		: e;
+		  ? Math.max(0, e + parseFloat(t))
+		  : t === '<'
+		    ? n
+		    : (r = s.get(t)) !== null && r !== void 0
+		      ? r
+		      : e;
 }
 const Ke = (e, t, n) => {
 	const s = t - e;

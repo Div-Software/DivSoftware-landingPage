@@ -294,12 +294,12 @@ function Z(...e) {
 			o.charCodeAt(2) <= 90
 				? (t[o] = go(i, a))
 				: (o === 'className' || o === 'UNSAFE_className') &&
-				  typeof i == 'string' &&
-				  typeof a == 'string'
-				? (t[o] = fo(i, a))
-				: o === 'id' && i && a
-				? (t.id = vo(i, a))
-				: (t[o] = a !== void 0 ? a : i);
+				    typeof i == 'string' &&
+				    typeof a == 'string'
+				  ? (t[o] = fo(i, a))
+				  : o === 'id' && i && a
+				    ? (t.id = vo(i, a))
+				    : (t[o] = a !== void 0 ? a : i);
 		}
 	}
 	return t;
@@ -676,8 +676,8 @@ function Ae(e) {
 	return e.mozInputSource === 0 && e.isTrusted
 		? !0
 		: Fr() && e.pointerType
-		? e.type === 'click' && e.buttons === 1
-		: e.detail === 0 && !e.pointerType;
+		  ? e.type === 'click' && e.buttons === 1
+		  : e.detail === 0 && !e.pointerType;
 }
 function Rr(e) {
 	return (
@@ -1284,8 +1284,8 @@ function ir(e, t) {
 	return e instanceof HTMLInputElement
 		? !Hr(e, t)
 		: e instanceof HTMLButtonElement
-		? e.type !== 'submit' && e.type !== 'reset'
-		: !Wt(e);
+		  ? e.type !== 'submit' && e.type !== 'reset'
+		  : !Wt(e);
 }
 const Zo = new Set([
 	'checkbox',
@@ -1935,10 +1935,10 @@ function $a(e, t) {
 				(!K || Ze(K, e)) && _(c.target, e.current)
 					? ((K = e), (r.current = c.target))
 					: ke(e) && !Je(c.target, e)
-					? r.current
-						? r.current.focus()
-						: K && Qe(K.current)
-					: ke(e) && (r.current = c.target);
+					  ? r.current
+							? r.current.focus()
+							: K && Qe(K.current)
+					  : ke(e) && (r.current = c.target);
 			},
 			l = (c) => {
 				n.current && cancelAnimationFrame(n.current),
@@ -2133,8 +2133,8 @@ function se(e, t, r) {
 				return !(t == null || (a = t.from) === null || a === void 0) && a.contains(i)
 					? NodeFilter.FILTER_REJECT
 					: i.matches(n) && jr(i) && (!r || _(i, r)) && (!t?.accept || t.accept(i))
-					? NodeFilter.FILTER_ACCEPT
-					: NodeFilter.FILTER_SKIP;
+					  ? NodeFilter.FILTER_ACCEPT
+					  : NodeFilter.FILTER_SKIP;
 			},
 		});
 	return t?.from && (o.currentNode = t.from), o;
@@ -3061,14 +3061,14 @@ function Ja(e, t) {
 						return typeof a == 'string'
 							? t + a
 							: typeof a == 'object'
-							? Object.fromEntries(
-									Object.entries(a).map(function (l) {
-										var c = l[0],
-											p = l[1];
-										return [t + c, p];
-									})
-							  )
-							: a;
+							  ? Object.fromEntries(
+										Object.entries(a).map(function (l) {
+											var c = l[0],
+												p = l[1];
+											return [t + c, p];
+										})
+							    )
+							  : a;
 					});
 				return [n, i];
 		  })
@@ -4037,8 +4037,8 @@ var wi = Ct(Mt),
 						return typeof B == 'object' && typeof u == 'string' && B[u]
 							? xr(B, ae)
 							: B.length > 0
-							? (B.push(ae), B)
-							: ae;
+							  ? (B.push(ae), B)
+							  : ae;
 					},
 					S = () => (v ? Object.keys(v).map((d) => x(d, v)) : null),
 					A = (d, b) => {
@@ -4719,8 +4719,8 @@ function Mr(e, t) {
 	return e instanceof HTMLInputElement
 		? !zn(e, t)
 		: e instanceof HTMLButtonElement
-		? e.type !== 'submit' && e.type !== 'reset'
-		: !Vt(e);
+		  ? e.type !== 'submit' && e.type !== 'reset'
+		  : !Vt(e);
 }
 var Fi = new Set([
 	'checkbox',

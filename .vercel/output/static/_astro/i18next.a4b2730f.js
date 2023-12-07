@@ -737,15 +737,15 @@ class _ {
 				this.options.lowerCaseLng
 					? (s = s.map((n) => n.toLowerCase()))
 					: s.length === 2
-					? ((s[0] = s[0].toLowerCase()),
-					  (s[1] = s[1].toUpperCase()),
-					  t.indexOf(s[1].toLowerCase()) > -1 && (s[1] = B(s[1].toLowerCase())))
-					: s.length === 3 &&
-					  ((s[0] = s[0].toLowerCase()),
-					  s[1].length === 2 && (s[1] = s[1].toUpperCase()),
-					  s[0] !== 'sgn' && s[2].length === 2 && (s[2] = s[2].toUpperCase()),
-					  t.indexOf(s[1].toLowerCase()) > -1 && (s[1] = B(s[1].toLowerCase())),
-					  t.indexOf(s[2].toLowerCase()) > -1 && (s[2] = B(s[2].toLowerCase()))),
+					  ? ((s[0] = s[0].toLowerCase()),
+					    (s[1] = s[1].toUpperCase()),
+					    t.indexOf(s[1].toLowerCase()) > -1 && (s[1] = B(s[1].toLowerCase())))
+					  : s.length === 3 &&
+					    ((s[0] = s[0].toLowerCase()),
+					    s[1].length === 2 && (s[1] = s[1].toUpperCase()),
+					    s[0] !== 'sgn' && s[2].length === 2 && (s[2] = s[2].toUpperCase()),
+					    t.indexOf(s[1].toLowerCase()) > -1 && (s[1] = B(s[1].toLowerCase())),
+					    t.indexOf(s[2].toLowerCase()) > -1 && (s[2] = B(s[2].toLowerCase()))),
 				s.join('-')
 			);
 		}
@@ -983,21 +983,21 @@ let me = [
 			return i % 10 == 1 && i % 100 != 11
 				? 0
 				: i % 10 >= 2 && i % 10 <= 4 && (i % 100 < 10 || i % 100 >= 20)
-				? 1
-				: 2;
+				  ? 1
+				  : 2;
 		},
 		5: function (i) {
 			return i == 0
 				? 0
 				: i == 1
-				? 1
-				: i == 2
-				? 2
-				: i % 100 >= 3 && i % 100 <= 10
-				? 3
-				: i % 100 >= 11
-				? 4
-				: 5;
+				  ? 1
+				  : i == 2
+				    ? 2
+				    : i % 100 >= 3 && i % 100 <= 10
+				      ? 3
+				      : i % 100 >= 11
+				        ? 4
+				        : 5;
 		},
 		6: function (i) {
 			return i == 1 ? 0 : i >= 2 && i <= 4 ? 1 : 2;
@@ -1030,8 +1030,8 @@ let me = [
 			return i % 10 == 1 && i % 100 != 11
 				? 0
 				: i % 10 >= 2 && (i % 100 < 10 || i % 100 >= 20)
-				? 1
-				: 2;
+				  ? 1
+				  : 2;
 		},
 		16: function (i) {
 			return i % 10 == 1 && i % 100 != 11 ? 0 : i !== 0 ? 1 : 2;
@@ -1046,10 +1046,10 @@ let me = [
 			return i == 1
 				? 0
 				: i == 0 || (i % 100 > 1 && i % 100 < 11)
-				? 1
-				: i % 100 > 10 && i % 100 < 20
-				? 2
-				: 3;
+				  ? 1
+				  : i % 100 > 10 && i % 100 < 20
+				    ? 2
+				    : 3;
 		},
 		20: function (i) {
 			return i == 1 ? 0 : i == 0 || (i % 100 > 0 && i % 100 < 20) ? 1 : 2;
@@ -1152,14 +1152,14 @@ class Le {
 			? n === 1
 				? ''
 				: typeof n == 'number'
-				? `_plural_${n.toString()}`
-				: r()
+				  ? `_plural_${n.toString()}`
+				  : r()
 			: this.options.compatibilityJSON === 'v2' ||
-			  (this.options.simplifyPluralSuffix && e.numbers.length === 2 && e.numbers[0] === 1)
-			? r()
-			: this.options.prepend && s.toString()
-			? this.options.prepend + s.toString()
-			: s.toString();
+			    (this.options.simplifyPluralSuffix && e.numbers.length === 2 && e.numbers[0] === 1)
+			  ? r()
+			  : this.options.prepend && s.toString()
+			    ? this.options.prepend + s.toString()
+			    : s.toString();
 	}
 	shouldUseIntlApi() {
 		return !be.includes(this.options.compatibilityJSON);
@@ -1339,19 +1339,19 @@ function Oe(i) {
 		e === 'currency' && n.indexOf(':') < 0
 			? t.currency || (t.currency = n.trim())
 			: e === 'relativetime' && n.indexOf(':') < 0
-			? t.range || (t.range = n.trim())
-			: n.split(';').forEach((a) => {
-					if (!a) return;
-					const [l, ...o] = a.split(':'),
-						f = o
-							.join(':')
-							.trim()
-							.replace(/^'+|'+$/g, '');
-					t[l.trim()] || (t[l.trim()] = f),
-						f === 'false' && (t[l.trim()] = !1),
-						f === 'true' && (t[l.trim()] = !0),
-						isNaN(f) || (t[l.trim()] = parseInt(f, 10));
-			  });
+			  ? t.range || (t.range = n.trim())
+			  : n.split(';').forEach((a) => {
+						if (!a) return;
+						const [l, ...o] = a.split(':'),
+							f = o
+								.join(':')
+								.trim()
+								.replace(/^'+|'+$/g, '');
+						t[l.trim()] || (t[l.trim()] = f),
+							f === 'false' && (t[l.trim()] = !1),
+							f === 'true' && (t[l.trim()] = !0),
+							isNaN(f) || (t[l.trim()] = parseInt(f, 10));
+			    });
 	}
 	return { formatName: e, formatOptions: t };
 }
@@ -1940,10 +1940,10 @@ class E extends J {
 			!e && this.services.languageDetector && !this.services.languageDetector.async
 				? l(this.services.languageDetector.detect())
 				: !e && this.services.languageDetector && this.services.languageDetector.async
-				? this.services.languageDetector.detect.length === 0
-					? this.services.languageDetector.detect().then(l)
-					: this.services.languageDetector.detect(l)
-				: l(e),
+				  ? this.services.languageDetector.detect.length === 0
+						? this.services.languageDetector.detect().then(l)
+						: this.services.languageDetector.detect(l)
+				  : l(e),
 			n
 		);
 	}

@@ -152,13 +152,13 @@ function ke() {
 											this.append(l, a);
 									  }, this)
 									: Array.isArray(n)
-									? n.forEach(function (a) {
-											this.append(a[0], a[1]);
-									  }, this)
-									: n &&
-									  Object.getOwnPropertyNames(n).forEach(function (a) {
-											this.append(a, n[a]);
-									  }, this);
+									  ? n.forEach(function (a) {
+												this.append(a[0], a[1]);
+									    }, this)
+									  : n &&
+									    Object.getOwnPropertyNames(n).forEach(function (a) {
+												this.append(a, n[a]);
+									    }, this);
 						}
 						(y.prototype.append = function (n, a) {
 							(n = v(n)), (a = b(a));
@@ -253,29 +253,29 @@ function ke() {
 											? typeof n == 'string'
 												? (this._bodyText = n)
 												: c.blob && Blob.prototype.isPrototypeOf(n)
-												? (this._bodyBlob = n)
-												: c.formData && FormData.prototype.isPrototypeOf(n)
-												? (this._bodyFormData = n)
-												: c.searchParams && URLSearchParams.prototype.isPrototypeOf(n)
-												? (this._bodyText = n.toString())
-												: c.arrayBuffer && c.blob && w(n)
-												? ((this._bodyArrayBuffer = $(n.buffer)),
-												  (this._bodyInit = new Blob([this._bodyArrayBuffer])))
-												: c.arrayBuffer && (ArrayBuffer.prototype.isPrototypeOf(n) || h(n))
-												? (this._bodyArrayBuffer = $(n))
-												: (this._bodyText = n = Object.prototype.toString.call(n))
+												  ? (this._bodyBlob = n)
+												  : c.formData && FormData.prototype.isPrototypeOf(n)
+												    ? (this._bodyFormData = n)
+												    : c.searchParams && URLSearchParams.prototype.isPrototypeOf(n)
+												      ? (this._bodyText = n.toString())
+												      : c.arrayBuffer && c.blob && w(n)
+												        ? ((this._bodyArrayBuffer = $(n.buffer)),
+												          (this._bodyInit = new Blob([this._bodyArrayBuffer])))
+												        : c.arrayBuffer && (ArrayBuffer.prototype.isPrototypeOf(n) || h(n))
+												          ? (this._bodyArrayBuffer = $(n))
+												          : (this._bodyText = n = Object.prototype.toString.call(n))
 											: (this._bodyText = ''),
 										this.headers.get('content-type') ||
 											(typeof n == 'string'
 												? this.headers.set('content-type', 'text/plain;charset=UTF-8')
 												: this._bodyBlob && this._bodyBlob.type
-												? this.headers.set('content-type', this._bodyBlob.type)
-												: c.searchParams &&
-												  URLSearchParams.prototype.isPrototypeOf(n) &&
-												  this.headers.set(
-														'content-type',
-														'application/x-www-form-urlencoded;charset=UTF-8'
-												  ));
+												  ? this.headers.set('content-type', this._bodyBlob.type)
+												  : c.searchParams &&
+												    URLSearchParams.prototype.isPrototypeOf(n) &&
+												    this.headers.set(
+															'content-type',
+															'application/x-www-form-urlencoded;charset=UTF-8'
+												    ));
 								}),
 								c.blob &&
 									((this.blob = function () {
@@ -555,8 +555,8 @@ function ke() {
 			(typeof x < 'u' && x.fetch
 				? (t = x.fetch)
 				: typeof window < 'u' && window.fetch
-				? (t = window.fetch)
-				: (t = fetch)),
+				  ? (t = window.fetch)
+				  : (t = fetch)),
 		typeof Pe < 'u' && (typeof window > 'u' || typeof window.document > 'u'))
 	) {
 		var r = t || ke();
@@ -590,8 +590,8 @@ typeof fetch == 'function' &&
 	(typeof global < 'u' && global.fetch
 		? (_ = global.fetch)
 		: typeof window < 'u' && window.fetch
-		? (_ = window.fetch)
-		: (_ = fetch));
+		  ? (_ = window.fetch)
+		  : (_ = fetch));
 var D;
 oe() &&
 	(typeof global < 'u' && global.XMLHttpRequest

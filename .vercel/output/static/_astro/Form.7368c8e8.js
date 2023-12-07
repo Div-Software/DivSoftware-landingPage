@@ -2412,8 +2412,8 @@ function Zr(a) {
 							e.focusedKey != null
 								? t.getKeyBelow(e.focusedKey)
 								: (D = t.getFirstKey) === null || D === void 0
-								? void 0
-								: D.call(t);
+								  ? void 0
+								  : D.call(t);
 						I == null &&
 							l &&
 							(I = (O = t.getFirstKey) === null || O === void 0 ? void 0 : O.call(t, e.focusedKey)),
@@ -2428,8 +2428,8 @@ function Zr(a) {
 							e.focusedKey != null
 								? t.getKeyAbove(e.focusedKey)
 								: (j = t.getLastKey) === null || j === void 0
-								? void 0
-								: j.call(t);
+								  ? void 0
+								  : j.call(t);
 						I == null &&
 							l &&
 							(I = (F = t.getLastKey) === null || F === void 0 ? void 0 : F.call(t, e.focusedKey)),
@@ -2449,8 +2449,8 @@ function Zr(a) {
 										? void 0
 										: X.call(t, e.focusedKey)
 									: (w = t.getLastKey) === null || w === void 0
-									? void 0
-									: w.call(t, e.focusedKey)),
+									  ? void 0
+									  : w.call(t, e.focusedKey)),
 							z(I, y === 'rtl' ? 'first' : 'last');
 					}
 					break;
@@ -2467,8 +2467,8 @@ function Zr(a) {
 										? void 0
 										: Y.call(t, e.focusedKey)
 									: (P = t.getFirstKey) === null || P === void 0
-									? void 0
-									: P.call(t, e.focusedKey)),
+									  ? void 0
+									  : P.call(t, e.focusedKey)),
 							z(I, y === 'rtl' ? 'last' : 'first');
 					}
 					break;
@@ -2633,11 +2633,11 @@ function Jr(a) {
 						? e.toggleSelection(t)
 						: e.replaceSelection(t)
 					: w && w.shiftKey
-					? e.extendSelection(t)
-					: e.selectionBehavior === 'toggle' ||
-					  (w && (Me(w) || w.pointerType === 'touch' || w.pointerType === 'virtual'))
-					? e.toggleSelection(t)
-					: e.replaceSelection(t);
+					  ? e.extendSelection(t)
+					  : e.selectionBehavior === 'toggle' ||
+					      (w && (Me(w) || w.pointerType === 'touch' || w.pointerType === 'virtual'))
+					    ? e.toggleSelection(t)
+					    : e.replaceSelection(t);
 			}
 		};
 	c.useEffect(() => {
@@ -2801,8 +2801,8 @@ class Vt {
 				? this.getNextColumn(e, this.direction === 'rtl')
 				: this.findKey(e, (t) => this.getNextColumn(t, this.direction === 'rtl'), this.isSameColumn)
 			: this.orientation === 'horizontal'
-			? this.getNextColumn(e, this.direction === 'rtl')
-			: null;
+			  ? this.getNextColumn(e, this.direction === 'rtl')
+			  : null;
 	}
 	getKeyLeftOf(e) {
 		return this.layout === 'grid'
@@ -2810,8 +2810,8 @@ class Vt {
 				? this.getNextColumn(e, this.direction === 'ltr')
 				: this.findKey(e, (t) => this.getNextColumn(t, this.direction === 'ltr'), this.isSameColumn)
 			: this.orientation === 'horizontal'
-			? this.getNextColumn(e, this.direction === 'ltr')
-			: null;
+			  ? this.getNextColumn(e, this.direction === 'ltr')
+			  : null;
 	}
 	getFirstKey() {
 		let e = this.collection.getFirstKey();
@@ -3159,8 +3159,8 @@ function Ze(a, e, t) {
 	return l !== -1
 		? ((e = r[l]), (t = s[l]), e.index - t.index)
 		: r.findIndex((n) => n === t) >= 0
-		? 1
-		: (s.findIndex((n) => n === e) >= 0, -1);
+		  ? 1
+		  : (s.findIndex((n) => n === e) >= 0, -1);
 }
 function Pt(a, e) {
 	let t = [];
@@ -3429,9 +3429,9 @@ class fl {
 					? this.toggleSelection(e)
 					: this.replaceSelection(e)
 				: this.selectionBehavior === 'toggle' ||
-				  (t && (t.pointerType === 'touch' || t.pointerType === 'virtual'))
-				? this.toggleSelection(e)
-				: this.replaceSelection(e));
+				    (t && (t.pointerType === 'touch' || t.pointerType === 'virtual'))
+				  ? this.toggleSelection(e)
+				  : this.replaceSelection(e));
 	}
 	isSelectionEqual(e) {
 		if (e === this.state.selectedKeys) return !0;
@@ -4005,8 +4005,8 @@ function ta(a) {
 			return (!a.labelPlacement || a.labelPlacement === 'inside') && !l
 				? 'outside'
 				: (W = a.labelPlacement) != null
-				? W
-				: 'inside';
+				  ? W
+				  : 'inside';
 		}, [a.labelPlacement, l]),
 		ye = !!y || a.isClearable,
 		Pe = !!l || !!o || !!i,
@@ -4232,8 +4232,8 @@ var aa = ve((a, e) => {
 							children: g
 								? b.jsx('div', { ..._(), children: g })
 								: s
-								? b.jsx('div', { ...k(), children: s })
-								: null,
+								  ? b.jsx('div', { ...k(), children: s })
+								  : null,
 					  })
 					: null,
 			[i, g, s, C, _, k]
@@ -4513,8 +4513,8 @@ var jl = function (e) {
 						children: g
 							? b.jsx('div', { ...C(), children: g })
 							: p
-							? b.jsx('div', { ...$(), children: p })
-							: null,
+							  ? b.jsx('div', { ...$(), children: p })
+							  : null,
 					}),
 				],
 			});
@@ -4792,14 +4792,14 @@ var ql = ({
 					n === 'transparent'
 						? null
 						: o
-						? b.jsx('div', { ...f() })
-						: b.jsx(lt.div, {
-								animate: 'enter',
-								exit: 'exit',
-								initial: 'exit',
-								variants: Bt.fade,
-								...f(),
-						  }),
+						  ? b.jsx('div', { ...f() })
+						  : b.jsx(lt.div, {
+									animate: 'enter',
+									exit: 'exit',
+									initial: 'exit',
+									variants: Bt.fade,
+									...f(),
+						    }),
 				[n, o, f]
 			);
 		return b.jsxs(vr, {
@@ -5336,14 +5336,14 @@ function ls(a) {
 				],
 		  })
 		: n
-		? b.jsx('input', {
-				autoComplete: p.autoComplete,
-				disabled: d,
-				name: n,
-				type: 'hidden',
-				value: (e = [...t.selectedKeys].join(',')) != null ? e : '',
-		  })
-		: null;
+		  ? b.jsx('input', {
+					autoComplete: p.autoComplete,
+					disabled: d,
+					name: n,
+					type: 'hidden',
+					value: (e = [...t.selectedKeys].join(',')) != null ? e : '',
+		    })
+		  : null;
 }
 function ss(a) {
 	const {
@@ -5601,8 +5601,8 @@ function is(a) {
 			return (!a.labelPlacement || a.labelPlacement === 'inside') && !i
 				? 'outside'
 				: (K = a.labelPlacement) != null
-				? K
-				: 'inside';
+				  ? K
+				  : 'inside';
 		}, [a.labelPlacement, i]),
 		ze = !!S || !!v,
 		Ne = !!k,
@@ -5724,8 +5724,8 @@ function is(a) {
 							? L.selectedItems.length * 1e-8 +
 							  (((be = U.popoverProps) == null ? void 0 : be.offset) || 0)
 							: (Ge = U.popoverProps) == null
-							? void 0
-							: Ge.offset,
+							  ? void 0
+							  : Ge.offset,
 				};
 			},
 			[H, P?.popoverContent, U.popoverProps, Q, L, L.selectedItems]
@@ -6368,8 +6368,8 @@ function Ua(a, e) {
 							children: p
 								? b.jsx('div', { ...j(), children: p })
 								: i
-								? b.jsx('div', { ...O(), children: i })
-								: null,
+								  ? b.jsx('div', { ...O(), children: i })
+								  : null,
 					  })
 					: null,
 			[l, p, i, z, j, O]

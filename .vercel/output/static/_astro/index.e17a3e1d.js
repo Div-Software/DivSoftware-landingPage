@@ -1280,8 +1280,8 @@ function ii(t) {
 			c < s
 				? (a = a.replace(ti.token, r[c]))
 				: c < s + n
-				? (a = a.replace(ei.token, j.transform(r[c])))
-				: (a = a.replace(ni.token, Ct(r[c])));
+				  ? (a = a.replace(ei.token, j.transform(r[c])))
+				  : (a = a.replace(ni.token, Ct(r[c])));
 		return a;
 	};
 }
@@ -1296,10 +1296,10 @@ function oi(t, e) {
 	return typeof t == 'number'
 		? (n) => M(t, e, n)
 		: j.test(t)
-		? Js(t, e)
-		: t.startsWith('var(')
-		? ri(t, e)
-		: ci(t, e);
+		  ? Js(t, e)
+		  : t.startsWith('var(')
+		    ? ri(t, e)
+		    : ci(t, e);
 }
 const ai = (t, e) => {
 		const n = [...t],
@@ -1336,14 +1336,14 @@ function mo(t) {
 	return typeof t == 'number'
 		? Tn
 		: typeof t == 'string'
-		? j.test(t)
-			? Js
-			: ci
-		: Array.isArray(t)
-		? ai
-		: typeof t == 'object'
-		? fo
-		: Tn;
+		  ? j.test(t)
+				? Js
+				: ci
+		  : Array.isArray(t)
+		    ? ai
+		    : typeof t == 'object'
+		      ? fo
+		      : Tn;
 }
 function po(t, e, n) {
 	const s = [],
@@ -1770,8 +1770,8 @@ function Oo(t, e, { onUpdate: n, onComplete: s, ...i }) {
 		(m.startTime = k.isProcessing
 			? k.timestamp
 			: document.timeline
-			? document.timeline.currentTime
-			: performance.now());
+			  ? document.timeline.currentTime
+			  : performance.now());
 	const y = () => m.cancel(),
 		x = () => {
 			C.update(y), a(), l();
@@ -2342,11 +2342,11 @@ function da(t) {
 								? B(F)
 								: (p.protectedKeys[F] = !0)
 							: q !== void 0
-							? B(F)
-							: d.add(F)
+							  ? B(F)
+							  : d.add(F)
 						: q !== void 0 && d.has(F)
-						? B(F)
-						: (p.protectedKeys[F] = !0));
+						  ? B(F)
+						  : (p.protectedKeys[F] = !0));
 			}
 			(p.prevProp = T),
 				(p.prevResolvedValues = W),
@@ -2814,8 +2814,8 @@ class Oa {
 		e && dt(e)
 			? this.constraints || (this.constraints = this.resolveRefConstraints())
 			: e && s
-			? (this.constraints = Ca(s.layoutBox, e))
-			: (this.constraints = !1),
+			  ? (this.constraints = Ca(s.layoutBox, e))
+			  : (this.constraints = !1),
 			(this.elastic = Ma(n)),
 			i !== this.constraints &&
 				s &&
@@ -3739,11 +3739,11 @@ function Li({
 							? (this.forceRelativeParentToResolveTarget(),
 							  Va(this.target, this.relativeTarget, this.relativeParent.target))
 							: this.targetDelta
-							? (this.resumingFrom
-									? (this.target = this.applyTransform(this.layout.layoutBox))
-									: U(this.target, this.layout.layoutBox),
-							  Si(this.target, this.targetDelta))
-							: U(this.target, this.layout.layoutBox),
+							  ? (this.resumingFrom
+										? (this.target = this.applyTransform(this.layout.layoutBox))
+										: U(this.target, this.layout.layoutBox),
+							    Si(this.target, this.targetDelta))
+							  : U(this.target, this.layout.layoutBox),
 						this.attemptToResolveRelativeTarget)
 					) {
 						this.attemptToResolveRelativeTarget = !1;
@@ -4028,16 +4028,16 @@ function Li({
 									? c
 									: 1
 								: this.preserveOpacity
-								? this.latestValues.opacity
-								: f.opacityExit)
+								  ? this.latestValues.opacity
+								  : f.opacityExit)
 					: (l.opacity =
 							h === this
 								? f.opacity !== void 0
 									? f.opacity
 									: ''
 								: f.opacityExit !== void 0
-								? f.opacityExit
-								: 0);
+								  ? f.opacityExit
+								  : 0);
 			for (const y in Wt) {
 				if (f[y] === void 0) continue;
 				const { correct: x, applyTo: V } = Wt[y],
@@ -4492,8 +4492,8 @@ class Gc {
 				this.reducedMotionConfig === 'never'
 					? !1
 					: this.reducedMotionConfig === 'always'
-					? !0
-					: Le.current),
+					  ? !0
+					  : Le.current),
 			this.parent && this.parent.children.add(this),
 			this.update(this.props, this.presenceContext);
 	}
@@ -4657,8 +4657,8 @@ class Gc {
 		return this.latestValues[e] !== void 0 || !this.current
 			? this.latestValues[e]
 			: (n = this.getBaseTargetFromProps(this.props, e)) !== null && n !== void 0
-			? n
-			: this.readValueFromInstance(this.current, e, this.options);
+			  ? n
+			  : this.readValueFromInstance(this.current, e, this.options);
 	}
 	setBaseTarget(e, n) {
 		this.baseTarget[e] = n;
@@ -4677,8 +4677,8 @@ class Gc {
 		return o !== void 0 && !O(o)
 			? o
 			: this.initialValues[e] !== void 0 && i === void 0
-			? void 0
-			: this.baseTarget[e];
+			  ? void 0
+			  : this.baseTarget[e];
 	}
 	on(e, n) {
 		return this.events[e] || (this.events[e] = new Qe()), this.events[e].add(n);
