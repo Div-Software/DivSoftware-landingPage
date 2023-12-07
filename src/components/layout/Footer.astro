@@ -63,24 +63,11 @@ const links = [
 
 		<hr class='my-10 border-foreground-300 dark:border-foreground-400' />
 
-		<div class='flex flex-col items-center sm:flex-row sm:justify-between'>
-			<p class='text-sm text-foreground-50'>
+		<div class='flex flex-col items-center justify-center'>
+			<p class='text-center text-sm text-foreground-50'>
 				© {new Date().getFullYear()}{' '}
 				{t('home.footer.rights')}
 			</p>
-
-			<div class='-mx-2 mt-3 flex sm:mt-0'>
-				{
-					links.map((link) => (
-						<a
-							href={link.href}
-							class='mx-2 text-sm text-foreground-200 transition-colors duration-300 hover:text-foreground-200 dark:hover:text-foreground-400'
-						>
-							{link.text}
-						</a>
-					))
-				}
-			</div>
 		</div>
 	</motion.div>
 </footer>
