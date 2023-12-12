@@ -1,5 +1,4 @@
 import globalredex from '@assets/projects/globalredex-desktop.webp?url';
-import { t } from 'i18next';
 
 interface ProjectsI {
 	title: string;
@@ -15,8 +14,8 @@ interface ProjectsI {
  */
 export const projects: ProjectsI[] = [
 	{
-		title: t('home.projects.project.globalRedex.title'),
-		description: t('home.projects.project.globalRedex.description'),
+		title: 'home.projects.project.globalRedex.title',
+		description: 'home.projects.project.globalRedex.description',
 		image: globalredex,
 		url: 'https://globalredex.com/',
 	},

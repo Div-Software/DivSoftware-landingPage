@@ -23,12 +23,12 @@ import ServiceCard from './ServiceCard.astro';
 		{
 			servicesInfo.map((service) => (
 				<ServiceCard
-					title={service.title}
+					title={t(service.title)}
 					href={service.href}
 					hasGradient={service.hasGradient}
 					id={service.id}
 					img={service.img}
-					text={service.text}
+					text={t(service.text)}
 				/>
 			))
 		}
