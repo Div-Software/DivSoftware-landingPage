@@ -20,7 +20,7 @@ import {
 } from './index.8CcIiJ4E.js';
 import { t as oe } from './i18next.O_TauLNA.js';
 import { r as f } from './index.J00EDW8g.js';
-import { aj as nt, g as pe } from './index.9xSjhrF6.js';
+import { aj as nt, g as fe } from './index.9xSjhrF6.js';
 import './index.0PBxFPxt.js';
 import './_commonjsHelpers.5-cIlDoe.js';
 var H = function () {
@@ -749,10 +749,10 @@ function _t(e, t) {
 	return e.useMedium(t), Re;
 }
 var Oe = St(),
-	de = function () {},
-	fe = f.forwardRef(function (e, t) {
+	ve = function () {},
+	de = f.forwardRef(function (e, t) {
 		var n = f.useRef(null),
-			a = f.useState({ onScrollCapture: de, onWheelCapture: de, onTouchMoveCapture: de }),
+			a = f.useState({ onScrollCapture: ve, onWheelCapture: ve, onTouchMoveCapture: ve }),
 			o = a[0],
 			i = a[1],
 			l = e.forwardProps,
@@ -805,8 +805,8 @@ var Oe = St(),
 				: f.createElement(w, H({}, B, { className: c, ref: N }), u)
 		);
 	});
-fe.defaultProps = { enabled: !0, removeScrollBar: !0, inert: !1 };
-fe.classNames = { fullWidth: ue, zeroRight: ce };
+de.defaultProps = { enabled: !0, removeScrollBar: !0, inert: !1 };
+de.classNames = { fullWidth: ue, zeroRight: ce };
 var ye,
 	Ct = function () {
 		if (ye) return ye;
@@ -864,7 +864,7 @@ var Pt = function () {
 		return t;
 	},
 	Et = { left: 0, top: 0, right: 0, gap: 0 },
-	ve = function (e) {
+	he = function (e) {
 		return parseInt(e || '', 10) || 0;
 	},
 	Rt = function (e) {
@@ -872,7 +872,7 @@ var Pt = function () {
 			n = t[e === 'padding' ? 'paddingLeft' : 'marginLeft'],
 			a = t[e === 'padding' ? 'paddingTop' : 'marginTop'],
 			o = t[e === 'padding' ? 'paddingRight' : 'marginRight'];
-		return [ve(n), ve(a), ve(o)];
+		return [he(n), he(a), he(o)];
 	},
 	Ot = function (e) {
 		if ((e === void 0 && (e = 'margin'), typeof window > 'u')) return Et;
@@ -1028,19 +1028,19 @@ var Pt = function () {
 			);
 		return f.createElement(It, { styles: Mt(i, !t, o, n ? '' : '!important') });
 	},
-	he = !1;
+	pe = !1;
 if (typeof window < 'u')
 	try {
 		var se = Object.defineProperty({}, 'passive', {
 			get: function () {
-				return (he = !0), !0;
+				return (pe = !0), !0;
 			},
 		});
 		window.addEventListener('test', se, se), window.removeEventListener('test', se, se);
 	} catch {
-		he = !1;
+		pe = !1;
 	}
-var Q = he ? { passive: !1 } : !1,
+var Q = pe ? { passive: !1 } : !1,
 	Bt = function (e) {
 		return e.tagName === 'TEXTAREA';
 	},
@@ -1274,9 +1274,9 @@ function Yt(e) {
 }
 const qt = _t(Oe, Xt);
 var Le = f.forwardRef(function (e, t) {
-	return f.createElement(fe, H({}, e, { ref: t, sideCar: qt }));
+	return f.createElement(de, H({}, e, { ref: t, sideCar: qt }));
 });
-Le.classNames = fe.classNames;
+Le.classNames = de.classNames;
 const Zt = Le;
 var [Gt, K] = Ze({
 		name: 'NavbarContext',
@@ -1317,7 +1317,7 @@ var [Gt, K] = Ze({
 						mode: 'wait',
 						children: y
 							? p.jsx(w, {
-									children: p.jsx(pe.ul, {
+									children: p.jsx(fe.ul, {
 										ref: h,
 										layoutScroll: !0,
 										animate: 'enter',
@@ -1471,7 +1471,7 @@ var De = X((e, t) => {
 	return p.jsx(Gt, {
 		value: o,
 		children: o.shouldHideOnScroll
-			? p.jsx(pe.nav, {
+			? p.jsx(fe.nav, {
 					animate: o.isHidden ? 'hidden' : 'visible',
 					initial: !1,
 					variants: Jt,
@@ -1663,24 +1663,33 @@ function gr({ children: e }) {
 		l = ({ language: c, flagImage: v, currentPath: h }) => {
 			const g = (c === '' && h === '/') || h === `/${c}`;
 			return p.jsx('div', {
-				className: g ? 'rounded-sm p-1 outline outline-2 outline-[#7127BA]' : '',
+				className: g ? 'rounded-sm p-0.5 outline outline-2 outline-[#7127BA] xs:p-1' : '',
 				children: g
-					? p.jsx('img', { src: v, alt: `${c.toUpperCase()} Flag`, width: 25, height: 25 })
+					? p.jsx('img', {
+							src: v,
+							alt: `${c.toUpperCase()} Flag`,
+							width: 20,
+							height: 20,
+							className: 'sm:h-[25px] sm:w-[25px]',
+					  })
 					: p.jsx('a', {
 							href: `/${c}`,
 							children: p.jsx('img', {
 								src: v,
 								alt: `${c.toUpperCase()} Flag`,
-								width: 25,
-								height: 25,
+								width: 20,
+								height: 20,
+								className: 'sm:h-[25px] sm:w-[25px]',
 							}),
 					  }),
 			});
 		},
 		u = () =>
-			p.jsxs('div', {
+			p.jsxs(fe.div, {
+				initial: { x: -100, opacity: 0 },
+				animate: { x: 0, opacity: 1 },
 				className:
-					'flex items-center justify-center gap-3 rounded-lg bg-background p-2 backdrop-blur-sm',
+					'flex items-center justify-center gap-1.5 rounded-lg bg-background p-1.5 backdrop-blur-sm xs:p-2 sm:gap-2 md:gap-3',
 				children: [
 					p.jsx(l, { language: '', flagImage: je.icons.spanish, currentPath: a }),
 					p.jsx(l, { language: 'en', flagImage: je.icons.english, currentPath: a }),
@@ -1698,29 +1707,32 @@ function gr({ children: e }) {
 			children: [
 				p.jsx(nr, { children: e }),
 				p.jsxs(ar, {
-					className: 'sm:gap-8 md:gap-16 lg:gap-32',
+					className: 'sm:gap-4 md:gap-12 lg:gap-32 xl:gap-40',
 					justify: 'center',
 					children: [
-						i.map((c, v) =>
-							p.jsx(
-								or,
-								{
-									className: 'hidden cursor-pointer sm:flex',
-									children: p.jsx(pe.a, {
-										initial: { x: -100, opacity: 0 },
-										animate: { x: 0, opacity: 1 },
-										transition: { duration: 0.1 },
-										className: 'a-scroll w-full',
-										href: c.href,
-										children: p.jsx('p', {
-											className: 'font-bold text-foreground-50',
-											children: c.title,
+						p.jsx('div', {
+							className:
+								'hidden cursor-pointer flex-row items-center justify-between gap-[4vw] sm:flex lg:gap-[6vw] xl:gap-[10vw]',
+							children: i.map((c, v) =>
+								p.jsx(
+									or,
+									{
+										children: p.jsx(fe.a, {
+											initial: { x: -100, opacity: 0 },
+											animate: { x: 0, opacity: 1 },
+											transition: { duration: 0.1 },
+											className: 'a-scroll w-full',
+											href: c.href,
+											children: p.jsx('p', {
+												className: 'text-base font-bold text-foreground-50 md:text-lg',
+												children: c.title,
+											}),
 										}),
-									}),
-								},
-								`${c.title}-${v}`
-							)
-						),
+									},
+									`${c.title}-${v}`
+								)
+							),
+						}),
 						p.jsx(u, {}),
 					],
 				}),
