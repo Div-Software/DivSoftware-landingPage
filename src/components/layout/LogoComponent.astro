@@ -9,21 +9,21 @@ interface Props {
 const { size } = Astro.props;
 
 const imageSizeClasses = {
-	small: 'w-full h-4 lg:h-5 xl:h-6',
+	small: 'w-full h-3 xs:h-4 lg:h-5 xl:h-6',
 	medium: 'w-full h-6 lg:h-7 xl:h-8',
 	large: 'w-full h-6 sm:h-7 lg:h-8 xl:h-10',
 };
 
 const textSizeClasses = {
-	small: 'font-semibold text-xl lg:text-2xl xl:text-3xl',
+	small: 'font-semibold text-lg xs:text-xl lg:text-2xl xl:text-3xl',
 	medium: 'font-bold text-2xl lg:text-3xl xl:text-4xl',
 	large: 'font-bold text-3xl lg:text-4xl xl:text-5xl',
 };
 ---
 
-<a href='/' class='flex items-center gap-1 xs:gap-2'>
+<a href='/' class='flex items-center gap-1 md:gap-2'>
 	<Image src={logo} alt='Div Software' width={16} height={16} class={imageSizeClasses[size]} />
-	<div aria-label='logo name' class='flex flex-row gap-3'>
+	<div aria-label='logo name' class='flex flex-row gap-2 md:gap-3'>
 		<p class={`text-foreground-200 ${textSizeClasses[size]}`}>Div</p>
 		<p class={`text-primary-500 ${textSizeClasses[size]}`}>Software</p>
 	</div>

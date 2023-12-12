@@ -48,12 +48,26 @@ export function NavbarHome({ children }: Props) {
 		const isActive = (language === '' && currentPath === '/') || currentPath === `/${language}`;
 
 		return (
-			<div className={isActive ? 'rounded-sm p-1 outline outline-2 outline-[#7127BA]' : ''}>
+			<div
+				className={isActive ? 'rounded-sm p-0.5 outline outline-2 outline-[#7127BA] xs:p-1' : ''}
+			>
 				{isActive ? (
-					<img src={flagImage} alt={`${language.toUpperCase()} Flag`} width={25} height={25} />
+					<img
+						src={flagImage}
+						alt={`${language.toUpperCase()} Flag`}
+						width={20}
+						height={20}
+						className='sm:h-[25px] sm:w-[25px]'
+					/>
 				) : (
 					<a href={`/${language}`}>
-						<img src={flagImage} alt={`${language.toUpperCase()} Flag`} width={25} height={25} />
+						<img
+							src={flagImage}
+							alt={`${language.toUpperCase()} Flag`}
+							width={20}
+							height={20}
+							className='sm:h-[25px] sm:w-[25px]'
+						/>
 					</a>
 				)}
 			</div>
@@ -65,10 +79,14 @@ export function NavbarHome({ children }: Props) {
 	 * @returns {JSX.Element} The language switcher component.
 	 */
 	const LanguageSwitcher = (): JSX.Element => (
-		<div className='flex items-center justify-center gap-3 rounded-lg bg-background p-2 backdrop-blur-sm'>
+		<motion.div
+			initial={{ x: -100, opacity: 0 }}
+			animate={{ x: 0, opacity: 1 }}
+			className='flex items-center justify-center gap-1.5 rounded-lg bg-background p-1.5 backdrop-blur-sm xs:p-2 sm:gap-2 md:gap-3'
+		>
 			<Flag language='' flagImage={rootImages.icons.spanish} currentPath={pathname} />
 			<Flag language='en' flagImage={rootImages.icons.english} currentPath={pathname} />
-		</div>
+		</motion.div>
 	);
 
 	useEffect(() => {
@@ -87,20 +105,22 @@ export function NavbarHome({ children }: Props) {
 			<NavbarBrand>{children}</NavbarBrand>
 
 			{/* Navigation menu for Tablet - Desktop screens */}
-			<NavbarContent className='sm:gap-8 md:gap-16 lg:gap-32' justify='center'>
-				{menuItems.map((item, idx) => (
-					<NavbarItem key={`${item.title}-${idx}`} className='hidden cursor-pointer sm:flex'>
-						<motion.a
-							initial={{ x: -100, opacity: 0 }}
-							animate={{ x: 0, opacity: 1 }}
-							transition={{ duration: 0.1 }}
-							className='a-scroll w-full'
-							href={item.href}
-						>
-							<p className='font-bold text-foreground-50'>{item.title}</p>
-						</motion.a>
-					</NavbarItem>
-				))}
+			<NavbarContent className='sm:gap-4 md:gap-12 lg:gap-32 xl:gap-40' justify='center'>
+				<div className='hidden cursor-pointer flex-row items-center justify-between gap-[4vw] sm:flex lg:gap-[6vw] xl:gap-[10vw]'>
+					{menuItems.map((item, idx) => (
+						<NavbarItem key={`${item.title}-${idx}`}>
+							<motion.a
+								initial={{ x: -100, opacity: 0 }}
+								animate={{ x: 0, opacity: 1 }}
+								transition={{ duration: 0.1 }}
+								className='a-scroll w-full'
+								href={item.href}
+							>
+								<p className='text-base font-bold text-foreground-50 md:text-lg'>{item.title}</p>
+							</motion.a>
+						</NavbarItem>
+					))}
+				</div>
 
 				<LanguageSwitcher />
 			</NavbarContent>
