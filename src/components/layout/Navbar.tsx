@@ -22,6 +22,12 @@ interface FlagProps {
 	currentPath: string;
 }
 
+interface FlagProps {
+	language: string;
+	flagImage: string;
+	currentPath: string;
+}
+
 export function NavbarHome({ children }: Props) {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const [pathname, setPathname] = useState('');
