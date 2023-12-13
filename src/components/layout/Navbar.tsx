@@ -9,8 +9,8 @@ import {
 	NavbarMenuToggle,
 } from '@nextui-org/react';
 import { motion } from 'framer-motion';
-import { t } from 'i18next';
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface Props {
 	children: JSX.Element | JSX.Element[];
@@ -25,6 +25,8 @@ interface FlagProps {
 export function NavbarHome({ children }: Props) {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const [pathname, setPathname] = useState('');
+
+	const { t } = useTranslation();
 
 	/**
 	 * An object to identify each item from the Navigation menu
