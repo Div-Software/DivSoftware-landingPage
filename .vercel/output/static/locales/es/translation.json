@@ -24,19 +24,19 @@
       "service": {
         "web": {
           "title": "Desarrollo Web",
-          "description": "Nos especializamos en la construcción de aplicaciones web personalizadas adaptadas a tus necesidades únicas y objetivos de negocio. Nuestro equipo de expertos dará vida a tus ideas basadas en la web con tecnología de vanguardia y diseños amigables para el usuario."
+          "description": "Construimos aplicaciones web personalizadas con tecnología avanzada y diseños amigables."
         },
         "mobile": {
           "title": "Aplicaciones Móviles",
-          "description": "Nuestro equipo de desarrollo de aplicaciones móviles se dedica a crear aplicaciones de alto rendimiento, intuitivas y visualmente atractivas para las plataformas iOS y Android. Convertimos tu concepto de aplicación en realidad."
+          "description": "Creamos aplicaciones intuitivas y atractivas para iOS y Android."
         },
         "brands": {
           "title": "Creación de Marca",
-          "description": "Permítenos ayudarte a establecer una identidad de marca fuerte y memorable. Ofrecemos servicios de creación de marca, incluyendo diseño de logotipos, estrategia de marca y activos visuales que reflejan tus valores y visión."
+          "description": "Ayudamos a establecer identidades de marca fuertes con diseño de logotipos y estrategia de marca."
         },
         "design": {
           "title": "Diseño UI/UX",
-          "description": "Nuestros expertos en diseño web crean sitios web hermosos y responsivos que dejan una impresión duradera. Nos enfocamos en la experiencia del usuario, el rendimiento y la estética para asegurar que tu sitio se destaque."
+          "description": "Creamos sitios web hermosos y responsivos enfocados en la experiencia del usuario."
         }
       }
     },
