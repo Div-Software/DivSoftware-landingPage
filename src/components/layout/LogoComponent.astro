@@ -15,7 +15,7 @@ const imageSizeClasses = {
 };
 
 const textSizeClasses = {
-	small: 'font-semibold text-lg xs:text-xl lg:text-2xl xl:text-3xl',
+	small: 'font-semibold text-base xs:text-xl lg:text-2xl xl:text-3xl',
 	medium: 'font-bold text-2xl lg:text-3xl xl:text-4xl',
 	large: 'font-bold text-3xl lg:text-4xl xl:text-5xl',
 };
@@ -23,7 +23,7 @@ const textSizeClasses = {
 
 <a href='/' class='flex items-center gap-1 md:gap-2'>
 	<Image src={logo} alt='Div Software' width={16} height={16} class={imageSizeClasses[size]} />
-	<div aria-label='logo name' class='flex flex-row gap-2 md:gap-3'>
+	<div aria-label='logo name' class='flex flex-row gap-1 xs:gap-2 md:gap-3'>
 		<p class={`text-foreground-200 ${textSizeClasses[size]}`}>Div</p>
 		<p class={`text-primary-500 ${textSizeClasses[size]}`}>Software</p>
 	</div>
