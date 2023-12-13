@@ -106,7 +106,7 @@ export function NavbarHome({ children }: Props) {
 
 			{/* Navigation menu for Tablet - Desktop screens */}
 			<NavbarContent className='sm:gap-4 md:gap-12 lg:gap-32 xl:gap-40' justify='center'>
-				<div className='hidden cursor-pointer flex-row items-center justify-between gap-[4vw] sm:flex lg:gap-[6vw] xl:gap-[10vw]'>
+				<div className='hidden cursor-pointer flex-row items-center justify-between gap-[3vw] sm:flex lg:gap-[6vw] xl:gap-[10vw]'>
 					{menuItems.map((item, idx) => (
 						<NavbarItem key={`${item.title}-${idx}`}>
 							<motion.a
