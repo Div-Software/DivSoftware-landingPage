@@ -14,6 +14,7 @@ type TechnologiesProps = {
 // Technologies images root paths
 const technologiesPath = rootImages.technologies;
 const linesPath = rootImages.technologies.techLines;
+const techIcons = rootImages.technologies.techIcons;
 
 /**
  * Constant containing an array of technology object arrays.
@@ -92,7 +93,60 @@ const technologies: TechnologiesProps = [
 			alt: 'Figma',
 		},
 	],
+	[
+		{
+			img: techIcons.ai,
+			alt: 'ai',
+		},
+		{
+			img: techIcons.css,
+			alt: 'css',
+		},
+		{
+			img: techIcons.figma,
+			alt: 'figma',
+		},
+		{
+			img: techIcons.gmail,
+			alt: 'gmail',
+		},
+		{
+			img: techIcons.html,
+			alt: 'html',
+		},
+		{
+			img: techIcons.in,
+			alt: 'in',
+		},
+		{
+			img: techIcons.js,
+			alt: 'js',
+		},
+		{
+			img: techIcons.node,
+			alt: 'node',
+		},
+		{
+			img: techIcons.react,
+			alt: 'react',
+		},
+		{
+			img: techIcons.twitter,
+			alt: 'twitter',
+		},
+		{
+			img: techIcons.xd,
+			alt: 'xd',
+		},
+	],
 ];
+
+const randomPositionY = Array.from({ length: technologies[2].length }, () =>
+	Math.ceil(Math.floor(Math.random() * (100 + 1)))
+);
+const randomPositionX = Array.from({ length: technologies[2].length }, () =>
+	Math.ceil(Math.floor(Math.random() * (20 + 1)))
+);
 ---
 
 <section
@@ -201,6 +255,78 @@ const technologies: TechnologiesProps = [
 				class='absolute top-[40%] flex h-[150px] w-[270px] items-center justify-center rounded-[50%] border border-solid border-primary-400 xs:top-[60%] xs:w-[300px] sm:top-[60%] sm:h-[230px] sm:w-[600px] md:bottom-4 md:h-[230px] md:w-[730px] lg:top-[78%] lg:h-[250px] lg:w-[781px] xl:h-[250px] xl:w-[981px]'
 				style='clip-path: ellipse(100% 98% at 50% 100%); '
 			>
+				<!-- tecnologies icons start here -->
+				<img
+					src={techIcons.ai}
+					alt='ai'
+					class='absolute right-[70%] top-[5%] z-10 h-[25px] w-[25px]'
+				/>
+
+				<img
+					src={techIcons.css}
+					alt='css'
+					class='absolute bottom-[20%] right-[90%] z-10 h-[25px] w-[25px]'
+				/>
+
+				<img
+					src={techIcons.figma}
+					alt='figma'
+					class='absolute bottom-[10%] left-[85%] z-10 h-[25px] w-[25px]'
+				/>
+				<img
+					src={techIcons.gmail}
+					alt='gmail'
+					class='absolute bottom-[50%] right-[83%] z-10 h-[25px] w-[25px]'
+				/>
+				<img
+					src={techIcons.html}
+					alt='html'
+					class='absolute left-[74%] top-[8%] z-10 h-[25px] w-[25px]'
+				/>
+				<img
+					src={techIcons.in}
+					alt='linkedIn'
+					class='absolute right-[82%] top-[10%] z-10 h-[25px] w-[25px]'
+				/>
+				<img
+					src={techIcons.js}
+					alt='javascript'
+					class='absolute left-[82%] top-[10%] z-10 h-[25px] w-[25px]'
+				/>
+				<img
+					src={techIcons.node}
+					alt='node'
+					class='absolute bottom-[45%] left-[98%] z-10 h-[25px] w-[25px]'
+				/>
+				<img
+					src={techIcons.react}
+					alt='react'
+					class='absolute bottom-[68%] left-[90%] z-10 h-[25px] w-[25px]'
+				/>
+				<img
+					src={techIcons.twitter}
+					alt='twitter'
+					class='absolute bottom-[20%] right-[78%] z-10 h-[25px] w-[25px]'
+				/>
+				<img
+					src={techIcons.xd}
+					alt='xd'
+					class='absolute bottom-[38%] left-[89%] z-10 h-[25px] w-[25px]'
+				/>
+
+				<!-- {
+					technologies[2].map((info, idx) => {
+						return (
+							<img
+								src={info.img}
+								alt={info.alt}
+								class={`absolute right-[${[
+									-56, -35, -45, -76, -87, -79, -96, -99, -89, -49,
+								]}%] top-[${idx}%] z-10 h-[25px] w-[25px]`}
+							/>
+						);
+					})
+				} -->
 				<div
 					id='second-border-line'
 					class='absolute flex h-[150px] w-[240px] items-center justify-center rounded-[50%] border border-solid border-primary-400 xs:w-[270px] sm:h-[230px] sm:w-[520px] md:h-[230px] md:w-[610px] lg:h-[250px] lg:w-[681px] xl:w-[781px]'
@@ -242,5 +368,3 @@ const technologies: TechnologiesProps = [
 		</div>
 	</div>
 </section>
-
-<style></style>
